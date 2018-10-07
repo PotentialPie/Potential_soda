@@ -1,0 +1,1383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>贫困村全视图</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery-easyui-1.4.5/themes/icon.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery-easyui-1.4.5/themes/bootstrap/easyui.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/jquery.modal.js" type="text/javascript"></script>
+    <script src="jquery-easyui-1.4.5/jquery.easyui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/startMove.js"></script>
+    <script type="text/javascript" src="echarts/build/dist/echarts.js"></script>
+    <script src="js/jquery.nicescroll.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var aPicLi = document.getElementById('pic_list').getElementsByTagName('li');
+            var aIcoLi = document.getElementById('ico_list').getElementsByTagName('li');
+            var oIcoUl = document.getElementById('ico_list').getElementsByTagName('ul')[0];
+            var oDiv = document.getElementById('box');
+            var i = 0;
+            var iNowUlLeft = 0;
+            var iNow = 0;
+            for (i = 0; i < aIcoLi.length; i++) {
+                aIcoLi[i].index = i;
+                aIcoLi[i].onclick = function () {
+                    if (iNow == this.index) {
+                        return false;
+                    }
+                    iNow = this.index;
+                    tab();
+                }
+            }
+
+            function tab() {
+                for (i = 0; i < aIcoLi.length; i++) {
+                    aIcoLi[i].className = '';
+                    aPicLi[i].style.filter = 'alpha(opacity:0)';
+                    aPicLi[i].style.opacity = 0;
+                    miaovStopMove(aPicLi[i]);
+                }
+                aIcoLi[iNow].className = 'active';
+                //aPicLi[this.index].style.filter='alpha(opacity:100)';
+                //aPicLi[this.index].style.opacity=1;
+                miaovStartMove(aPicLi[iNow], {opacity: 100}, MIAOV_MOVE_TYPE.BUFFER);
+            }
+
+            function oUlleft() {
+                oIcoUl.style.left = -aIcoLi[0].offsetWidth * iNowUlLeft + 'px';
+            }
+
+            function autoplay() {
+                iNow++;
+                if (iNow >= aIcoLi.length) {
+                    iNow = 0;
+                }
+                if (iNow < iNowUlLeft) {
+                    iNowUlLeft = iNow;
+                } else if (iNow >= iNowUlLeft + 7) {
+                    iNowUlLeft = iNow - 6;
+                }
+                oUlleft();
+                tab();
+            }
+
+            var time = setInterval(autoplay, 3000);
+            oDiv.onmouseover = function () {
+                clearInterval(time);
+            };
+            oDiv.onmouseout = function () {
+                time = setInterval(autoplay, 3000);
+            }
+        }
+    </script>
+</head>
+<body style="background-color: #558db3;">
+<div class="analysis ">
+    <div class="view2">
+        <div class="Title">太平洞村全视图</div>
+        <hr class="hr-linebt"/>
+        <table class="table-view mt5">
+            <tr>
+                <th>村名称</th>
+                <th>行政区划</th>
+                <th>村属性</th>
+                <th>地形地貌</th>
+                <th>村负责人</th>
+            </tr>
+            <tr>
+                <td>太平东村</td>
+                <td>广东省-清远市-阳山县-秤架瑶族乡</td>
+                <td>贫困村</td>
+                <td>山区</td>
+                <td>占江峰</td>
+            </tr>
+        </table>
+        <div class="clearfix">
+            <div class="fl widP70">
+                <h3 class="title-view">村发展情况照片比对</h3>
+                <ul class="banner clearfix">
+                    <li>
+                        <p>2016年</p>
+
+                        <div id="box" class="boxB">
+                            <ul id="pic_list" class="pic_list">
+                                <li style="z-index:2;opacity:1;fliter:alpha(opacity=100);"><a href="#"><img
+                                        src="images/pic/pic01.jpg" alt=""/></a></li>
+                                <li><a href="#"><img src="images/pic/pic02.jpg" alt=""/></a></li>
+                            </ul>
+                            <div id="ico_list" class="ico_list">
+                                <ul>
+                                    <li class="active"><a href="javascript:void(0)"><img src="images/pic/pic011.jpg"
+                                                                                         alt=""/></a></li>
+                                    <li><a href="javascript:void(0)"><img src="images/pic/pic021.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>2017年</p>
+
+                        <div class="boxB">
+                            <ul class="pic_list">
+                                <li style="z-index:2;opacity:1;fliter:alpha(opacity=100);"><a href="#"><img
+                                        src="images/pic/pic01.jpg" alt=""/></a></li>
+                                <li><a href="#"><img src="images/pic/pic02.jpg" alt=""/></a></li>
+                            </ul>
+                            <div class="ico_list">
+                                <ul>
+                                    <li class="active"><a href="javascript:void(0)"><img src="images/pic/pic011.jpg"
+                                                                                         alt=""/></a></li>
+                                    <li><a href="javascript:void(0)"><img src="images/pic/pic021.jpg" alt=""/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <p>2018年</p>
+
+                        <div class="pic"><img src="images/pic/pic03.jpg"></div>
+                        <p class="ptitle">暂无照片</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="fl widP30">
+                <h3 class="title-view">村人均收入情况</h3>
+
+                <div class="charts-view">
+                    <div id="zzz" style="height: 275px"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab">
+            <ul class="title clearfix">
+                <li class="cur" _id="container1"><span><i class="icon_tab01"></i><br>基础信息</span></li>
+                <li _id="container2" class=""><span><i class="icon_tab02"></i><br>发展现状</span></li>
+                <li _id="container3" class=""><span><i class="icon_tab03"></i><br>驻村工作队</span></li>
+                <li _id="container4" class=""><span><i class="icon_tab04"></i><br>帮扶计划</span></li>
+                <li _id="container5" class=""><span><i class="icon_tab05"></i><br>帮扶措施</span></li>
+                <li _id="container6" class=""><span><i class="icon_tab06"></i><br>帮扶资金投入</span></li>
+                <li _id="container7" class=""><span><i class="icon_tab07"></i><br>帮扶动态</span></li>
+                <li _id="container8" class=""><span><i class="icon_tab08"></i><br>数据轨迹</span></li>
+            </ul>
+            <div class="contant cur" id="container1">
+                <i class="cord"></i>
+                <table class="table_tab">
+                    <tr>
+                        <th>行政区划</th>
+                        <td colspan="5"></td>
+                    </tr>
+                    <tr>
+                        <th>村属性</th>
+                        <td>XXXXXXXXXX</td>
+                        <th>发展方向</th>
+                        <td>XXXXXXXXXX</td>
+                        <th>地形地貌</th>
+                        <td>XXXXXXXXXX</td>
+                    </tr>
+                    <tr>
+                        <th>村负责人</th>
+                        <td>3456</td>
+                        <th>村办公室电话</th>
+                        <td>XXX-XXXXXXX</td>
+                        <th>村委负责人职务</th>
+                        <td>XXX-XXXXXXX</td>
+                    </tr>
+                    <tr>
+                        <th>村官人数</th>
+                        <td>3456</td>
+                        <th>B1自然村(村民小组)数（个）</th>
+                        <td>3456</td>
+                        <th>B2总户数（户）</th>
+                        <td>3456</td>
+                    </tr>
+                    <tr>
+                        <th>B2a贫困户数（户）</th>
+                        <td>3456</td>
+                        <th>B2b低保户数（户）</th>
+                        <td>3456</td>
+                        <th>B2c五保户数（户）</th>
+                        <td>3456</td>
+                    </tr>
+                    <tr>
+                        <th>B3总人口数（人）</th>
+                        <td>3456</td>
+                        <th>B3a贫困人口数（人）</th>
+                        <td>3456</td>
+                        <th>B3b低保人口数（人）</th>
+                        <td>3456</td>
+                    </tr>
+                    <tr>
+                        <th>B3c五保人口数（人）</th>
+                        <td>3456</td>
+                        <th>B3d少数民族人口数（人）</th>
+                        <td>3456</td>
+                        <th>B3e妇女人口数（人）</th>
+                        <td>3456</td>
+                    </tr>
+                    <tr>
+                        <th>B3f残疾人口数（人）</th>
+                        <td>3456</td>
+                        <th>B4劳动力人数（人）</th>
+                        <td>3456</td>
+                        <th>B4a外出务工人数（人）</th>
+                        <td>3456</td>
+                    </tr>
+                    <tr>
+                        <th>B5耕地面积（亩）</th>
+                        <td>3456</td>
+                        <th>B5a有效灌溉面积（亩）</th>
+                        <td>3456</td>
+                        <th>B4劳动力人数（人）</th>
+                        <td>3456</td>
+                    </tr>
+                    <tr>
+                        <th>B6a退耕还林面积（亩）</th>
+                        <td>3456</td>
+                        <th>B6b林果面积（亩）</th>
+                        <td>3456</td>
+                        <th>B6林地面积（亩）</th>
+                        <td>3456</td>
+                    </tr>
+                    <tr>
+                        <th>B8水域面积（亩）</th>
+                        <td>3456</td>
+                        <th>B9牲畜存栏数（头）</th>
+                        <td>3456</td>
+                        <th>B7牧草地面积（亩）</th>
+                        <td>3456</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="contant" id="container2">
+                <i class="cord"></i>
+                <table class="table_tab">
+                    <tr>
+                        <th width="10%" style="background-color: #acc4d4;text-align: center;">收入情况</th>
+                        <th width="25%">B10农民年人均纯收入（元）</th>
+                        <td width="20%">3456</td>
+                        <th width="25%">B11村级集体经济收入（万元）</th>
+                        <td width="20%">12332</td>
+                    </tr>
+                    <tr>
+                        <th width="10%" rowspan="2" style="background-color: #acc4d4;text-align: center;">社会保障</th>
+                        <th width="25%">B12参加城乡居民医疗保险人数<br>（人）</th>
+                        <td width="20%">3456</td>
+                        <th width="25%">B13参加城乡居民基本养老保险人数<br>（人次）</th>
+                        <td width="20%">12332</td>
+                    </tr>
+                    <tr>
+                        <th>B14获得医疗救助人次<br>（人）
+                        </th>
+                        <td>1234</td>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                    </tr>
+
+
+                    <tr>
+                        <th rowspan="2" style="background-color: #acc4d4;text-align: center;">村级道路畅通</th>
+                        <th>B15行政村到乡镇未<br>通沥青(水泥)路里程<br>（公里）</th>
+                        <td>3456</td>
+                        <th>B18自然村到行政村未通沥青(水泥)路里程（公里）</th>
+                        <td>12332</td>
+                    </tr>
+                    <tr>
+                        <th>B16行政村是否通客运班车</th>
+                        <td>是</td>
+                        <th>B17自然村到行政村未通沥青(水泥)路村数（个）</th>
+                        <td>3456</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background-color: #acc4d4;text-align: center;">饮水安全</th>
+                        <th>B19未实现饮水安全户数（户）</th>
+                        <td>3456</td>
+                        <th>B20饮水困难户数（户）</th>
+                        <td>12332</td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="2" style="background-color: #acc4d4;text-align: center;">农村电力保障</th>
+                        <th>B21未通生活用电的自然村数（个）</th>
+                        <td>3456</td>
+                        <th>B23未通生活用电的户数（户）</th>
+                        <td>12332</td>
+                    </tr>
+                    <tr>
+                        <th>B22未通生产用电的自然村数（个）</th>
+                        <td>是</td>
+                        <th>B24已通电自然村(20户以上)数（个）</th>
+                        <td>3456</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background-color: #acc4d4;text-align: center;">危房改造</th>
+                        <th>B25危房户数（户）</th>
+                        <td>3456</td>
+                        <th></th>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="2" style="background-color: #acc4d4;text-align: center;">特色产业增收</th>
+                        <th>B26特色产业农民专业合作社（个）</th>
+                        <td>3456</td>
+                        <th>B26农民专业合作社个数</th>
+                        <td>12332</td>
+                    </tr>
+                    <tr>
+                        <th>B27参加特色产业专业合作社的贫困户数（户）</th>
+                        <td>1212</td>
+                        <th></th>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="2" style="background-color: #acc4d4;text-align: center;">乡村旅游</th>
+                        <th>B28开展乡村旅游的户数（户）</th>
+                        <td>3456</td>
+                        <th>B29乡村旅游从业人员数（个）</th>
+                        <td>12332</td>
+                    </tr>
+                    <tr>
+                        <th>B31经营农家乐户年均收入（元）</th>
+                        <td>1212</td>
+                        <th></th>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <th rowspan="2" style="background-color: #acc4d4;text-align: center;">卫生和计划生育</th>
+                        <th>B32行政村卫生室个数（个）</th>
+                        <td>3456</td>
+                        <th>B33行政村执业(助理)医师（个）</th>
+                        <td>12332</td>
+                    </tr>
+                    <tr>
+                        <th>B34行政村公共卫生厕所个数（个）</th>
+                        <td>1212</td>
+                        <th>B35行政村生产生活垃圾集中堆放点个数（个）</th>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <th style="background-color: #acc4d4;text-align: center;">文化建设</th>
+                        <th>B36行政村文化(图书)室个数（个）</th>
+                        <td>3456</td>
+                        <th>B37通广播电视户数（户）</th>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <th rowspan="2" style="background-color: #acc4d4;text-align: center;">贫困村信息化</th>
+                        <th>B38通宽带户数（户）</th>
+                        <td>3456</td>
+                        <th>B39能用手机上网的户数（户）</th>
+                        <td>12332</td>
+                    </tr>
+                    <tr>
+                        <th>B40已通电自然村(20户以上)中通宽带的村数（个）</th>
+                        <td>1212</td>
+                        <th>B41通宽带的村小学个数（个）</th>
+                        <td>12323</td>
+                    </tr>
+
+
+                    <tr>
+                        <th rowspan="3" style="background-color: #acc4d4;text-align: center;">贫困村信息化</th>
+                        <th>B38通宽带户数（户）</th>
+                        <td>3456</td>
+                        <th>B39能用手机上网的户数（户）</th>
+                        <td>12332</td>
+                    </tr>
+                    <tr>
+                        <th>B40已通电自然村(20户以上)中通宽带的村数（个）</th>
+                        <td>1212</td>
+                        <th>B41通宽带的村小学个数（个）</th>
+                        <td>12323</td>
+                    </tr>
+                    <tr>
+                        <th>B42行政村信息员（个）
+                        </th>
+                        <td>12121</td>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                    </tr>
+
+
+                    <tr>
+                        <th rowspan="2" style="background-color: #acc4d4;text-align: center;">雨露计划</th>
+                        <th>B43a已经参加雨露计划人数（人）</th>
+                        <td>3456</td>
+                        <th>B44a已经参加雨露计划人数（人）</th>
+                        <td>12332</td>
+                    </tr>
+                    <tr>
+                        <th>B43初中毕业未升入普通高中的新成长劳动力数（人）</th>
+                        <td>1212</td>
+                        <th>B44高中毕业未升入大学、专科学校的新成长劳动力数（人）</th>
+                        <td>12323</td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="2" style="background-color: #acc4d4;text-align: center;">扶贫小额信贷</th>
+                        <th>B45批复的扶贫小额信贷户数（户）</th>
+                        <td>3456</td>
+                        <th>B45a当年贷款户数（户）</th>
+                        <td>12332</td>
+                    </tr>
+                    <tr>
+                        <th>B45b逾期未还款户数（户）</th>
+                        <td>1212</td>
+                        <th></th>
+                        <td>12323</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background-color: #acc4d4;text-align: center;">易地扶贫搬迁</th>
+                        <th>B46符合两不具备搬迁扶持条件，有搬迁意愿(2016-2018年)（户）</th>
+                        <td>3456</td>
+                        <th>B47符合两不具备搬迁扶持条件，有搬迁意愿(2016-2018年)（人）</th>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <th style="background-color: #acc4d4;text-align: center;">党员情况</th>
+                        <th>B48中共党员数（人）</th>
+                        <td>3456</td>
+                        <th></th>
+                        <td></td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <div class="contant" id="container3">
+                <i class="cord"></i>
+
+                <table class="table_tab3">
+                    <tr>
+                        <th width="2%">序号</th>
+                        <th width="8%">驻村工作<br>队员姓名</th>
+                        <th width="10%">政治面貌</th>
+                        <th width="10%">证件号码</th>
+                        <th width="10%">帮扶（派驻）<br>单位名称</th>
+                        <th width="10%">单位隶属<br>关系</th>
+                        <th width="10%">联系电话</th>
+                        <th width="10%">驻村<br>开始时间</th>
+                        <th width="10%">驻村<br>结束时间</th>
+                        <th width="10%">是否队长</th>
+                        <th width="10%">是否<br>第一书记</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>杨小风</td>
+                        <td>党员</td>
+                        <td>440015198552465314</td>
+                        <td>佛冈县文广新局</td>
+                        <td>县</td>
+                        <td>18912345678</td>
+                        <td>2016-01-01</td>
+                        <td>2018-12-31</td>
+                        <td>是</td>
+                        <td>是</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>杨小风</td>
+                        <td>党员</td>
+                        <td>440015198552465314</td>
+                        <td>佛冈县文广新局</td>
+                        <td>县</td>
+                        <td>18912345678</td>
+                        <td>2016-01-01</td>
+                        <td>2018-12-31</td>
+                        <td>是</td>
+                        <td>是</td>
+                    </tr>
+                </table>
+
+
+            </div>
+            <div class="contant" id="container4">
+                <i class="cord"></i>
+
+                <div id="lib_Tab1_sx" class="lib_tabborder_sx">
+                    <div class="lib_Menubox_sx ">
+                        <ul>
+                            <li id="one1" onclick="setTab('one',1,5)" class="hover">三年帮扶总体规划</li>
+                            <li id="one2" onclick="setTab('one',2,5)">2016年帮扶计划</li>
+                            <li id="one3" onclick="setTab('one',3,5)">2017年帮扶计划</li>
+                            <li id="one4" onclick="setTab('one',4,5)">2018年帮扶计划</li>
+
+                        </ul>
+                    </div>
+                    <div class="lib_Contentbox_sx ">
+                        <div id="con_one_1">
+                            <table class="table_tab2">
+                                <tr>
+                                    <th width="33%">驻村干部签名： 张国平</th>
+                                    <th width="33%">村委负责人签名：詹江峰</th>
+                                    <th width="33%">制定日期：2015-07-26</th>
+                                </tr>
+                            </table>
+                            <div class="article_txt">
+                                <h1>太平洞村帮扶总体规划</h1>
+
+                                <p>
+                                    按照县委、县政府扶贫开发“规划到户、责任到人”工作的部署，县委组织部、县民政局、县水务局、县民宗局从2013年至2015年对口帮扶游溪镇江背村委会。为了确实做好游溪镇江背村委的对口帮扶工作，着力改善江背村的生产生活条件，早日改变贫穷落后面貌，特制订本实施方案。
+                                </p>
+                                <br>
+                                <p>
+                                    一、基本情况<br>
+                                    　　江背村位于乳源县游溪镇东北部，乳桂线贯穿其中，是一个交通比较便利、农业耕地较为丰富，且适宜种植经济农作物的行政村。全村有8个自然村，总户数383户，总人口1408人，其中贫困户有94户315人（包括扶贫户77户，低保户12户，五保户5户）。全村林地面积900亩，耕地面积1280亩，其中水田1053亩，旱地227亩。新农保参保率为45.11%，新农合参保率为100%。2012年全村人均年纯收入是4803元
+                                    。2012年村集体经济收入约1.7万元。主要产业以种植香芋、水稻、西瓜、花生为主。
+
+                                </p>
+                                <br>
+                                <p>
+                                    二、指导思想<br>
+
+
+                                    全面贯彻落实党的“十八”大精神，以邓小平理论和“三个代表”重要思想为指导，深入贯彻落实科学发展观，按照“政府主导、社会参与、自力更生、开发扶贫”的方针，以贫困村、贫困农户、贫困人口为工作对象，以增加贫困农户收入和改善贫困村发展环境为目的，以“规划到户、责任到人”为基本要求，拓宽扶贫思路，创新扶贫方式，完善扶贫机制，落实扶贫单位、镇、村和贫困农户四方责任，调动各方力量，着力改善贫困村的发展环境，提高贫困人口的自我发展能力，加快脱贫致富奔康步伐。
+                                    <br>
+                                    <br>
+                                    　　三、目标任务<br>
+
+
+                                    从2013年7月份开始，用三年的时间，通过“扶志气、扶智能、扶资金”，对江背村委及94户贫困户，其中有劳动能力的有80户，实施“规划到户、责任到人”扶贫开发工作责任制，确保贫困户实现稳定脱贫。根据全省近年农村经济和农民收入情况，全县初步以2015年全省农村人均纯收入15000元为基准推算各地农民增收目标，即有劳动力的贫困户人均纯收入达到6750元以上，贫困村村集体经济收入（经营性经济收入）超过5万元，使江背村的落后面貌得到根本性改变，被帮扶贫困户基本实现稳定脱贫。村“两委”组织建设达到领导班子好、党员队伍好、工作机制好、农村建设好、群众反映好的“五个好”标准。
+                                    <br>
+                                    <br>
+                                    　　四、具体工作措施<br>
+
+
+                                    　　（一）核定对象，建档立卡。深入到江背村委8个自然村的贫困户家进行了调查摸底，对贫困户家庭的人口、居住状况、子女入学情况、耕地面积、家庭年人均收入、主要经济来源、劳务输出情况、新农村医疗合作参保情况、要求帮扶项目等内容，逐家逐户重新进行调查核实，并在村栏里张榜公布，接受群众监督。对经调查核实后确认的贫困户，其家庭的基本情况进行造册登记，同时报扶贫办备案，做到户有卡（对每户贫困户派发《贫困户卡》）、村有表（册）。
+
+                                    <br>
+
+                                    　　（二）改变江背村的落后面貌，实现“六有”的工作目标，即：有较强的领导班子、有科学的发展规划、有稳定的集体收入、有整洁的村容村貌、有民主的管理制度、有文明的社会风尚。同时通过以入股电站的方式，使江背村委的集体经济年纯收入达到5万元以上。
+
+                                    <br>
+
+                                    　　（三）对适宜发展种养业的农户，实行分类指导。发展特色种养业。因势利导，根据市场前景和贫困户的意愿，鼓励贫困户大力发展西瓜、香芋、红心番薯等种植项目。实行分类指导，上门提供种养实用技术。对参与种养业的贫困户，帮扶单位给予一定的生产启动资金。对不参与种养业的贫困户采取劳务输出的办法，拓宽贫困户收入的渠道。
+                                    <br>
+
+
+                                    　　（四）抓好基础设施建设。积极争取有关资金，认真抓好江背村的基础设施建设：一是黄泥潭河提为主的水利建设，兴修水圳，维修陂头，改善江背1200亩农田的灌溉，增加贫困户收入；二是300人以上的自然村村道全部实现硬底化以及对村容村貌进行整治，给群众营造美好的生活环境。三是帮助解决江背村群众饮水难问题。
+                                    <br>
+
+
+                                    　　（五）技能培训
+                                    。组织对有意愿外出务工的贫困户劳动力进行技能培训，实施转移就业。计划2013—2015年培训300人次，让贫困户劳动力每人掌握1-2门技术，促进贫困户创业脱贫致富。
+                                    <br>
+
+
+                                    　　（六）支持落实各项农村保障政策。推动落实各项农村政策。进一步推动当地落实贫困户最低生活保障政策，将尚未脱贫的人口纳入最低生活保障范围，开展医疗扶贫，支持让每个贫困人口100%参加农村合作医疗和新型农村养老保险。
+
+                                    <br>
+
+                                    　　（七）危房改造方面。完成上级下达给江背村委会低收入贫困户危房改造任务数，70户。2013年完成20户，2014年完成20户，2015年完成30户。
+
+                                    <br>
+
+                                    　　（八）实施好贫困家庭子女奖学金政策。帮扶期间，针对江背贫困家庭的学龄青少年出台措施，义务教育期间需住校的每人每学年补助600元，就读高中的贫困家庭子女每人每学年补助800元，就读高校的贫困家庭子女补助1000元生活特别困难的视情况而定。
+
+                                    <br>
+                                    <br>
+                                    　　五、工作要求<br>
+
+
+                                    　　（一）提高认识，加强指导。
+                                    扶贫工作人员要统一思想，提高认识，把扶贫纳入日常工作议程。要求各单位领导一年至少3次对挂点扶贫村进行调研指导工作，各帮扶责任人每年至少6次下乡进行指导，并保持与挂点帮扶村的电话沟通指导。
+                                    <br>
+
+
+                                    　　（二）明确任务，责任到人。扶贫开发“规划到户责任到人”工作，涉及面广、工作量大，帮扶干部对所帮扶贫困户负有脱贫的直接责任，要认真履行职责，积极主动与帮扶对象沟通联系，充分利用各方面有利条件，从资金、技术、项目、信息等方面扶持贫困户，确保帮扶措施和帮扶任务落实到位。
+
+                                    <br>
+
+                                    　　（三）加强协调，扎实工作。帮扶工作领导小组要加强与当地政府及县扶贫办的沟通、协调和配合，及时研究和解决工作中出现的新情况、新问题，共同做好帮扶工作。此外，要充分调动贫困人口的积极性，让贫困户主动参与扶贫开发工作。
+                                    <br>
+
+
+                                    　　（四）成立行业生产经济协会。在江背村成立行业生产经济协会，提高扶贫生产水平，拓宽产品销售渠道，确保贫困户通过扶贫项目实现增收。
+                                    <br>
+
+
+                                    　　（五）建立动态档案和台账。对确定的贫困户逐户登记造册，建立统一的《帮扶记录卡》台帐，实行动态管理，及时做好电脑信息录入管理工作，按时报送月、季、年报表等有关材料。
+                                </p>
+                            </div>
+                        </div>
+                        <div id="con_one_2" style="display:none">
+                            <table class="table_tab2">
+                                <tr>
+                                    <th width="33%">驻村干部签名： 林桥忠、张国平、林梓云、李虹</th>
+                                    <th width="33%">村委负责人签名：詹江峰</th>
+                                    <th width="33%">制定日期：2015-07-26</th>
+                                </tr>
+                            </table>
+                            <div class="article_txt">
+                                <h1>2016年扶贫开发双到工作实施计划 </h1>
+
+                                <p>
+                                    （一）前期工作阶段（2016年1月—2016年6月）
+                                    <br>
+
+                                    　　1、基础调查研究。开展贫困户入户摸底调查，全面掌握贫困户基本情况，确定贫困户名单，张榜公示拟列为帮扶贫困户名单，接受村民及社会各界人士的监督并修正调查数据偏差，调查工作已于2016年2月前完成，公示工作已于2016年4月底完成。
+
+                                    <br>
+                                    　　2、驻村工作组于2016年6月组建并进驻游溪镇江背村委开展工作。通过走访农户及与当地政府、村委干部座谈等方式，合理确定帮扶具体措施，并形成了扶贫开发工作调查报告。
+
+                                    <br>
+                                    　　3、研究制订对口帮扶游溪镇江背村委实施方案。在入户调查及调研的基础上，编制《乳源县游溪镇江背村委扶贫开发“规划到户责任到人”工作实施方案》，把规划措施尽可能落实到贫困户，同时初步落实具体的帮扶项目和措施。
+                                    <br>
+                                    <br>
+                                    　　（二）项目实施方案（2016年7月—12月）
+
+                                    <br>
+                                    　　1、宣传发动全体村民。召开江背村扶贫开发动员大会，征求对帮扶江背村的工作目的，帮扶方式及帮扶措施等作详细介绍，号召江背村的广大贫困户，发扬自力更生、勤劳致富的光荣传统，积极踊跃地选择适合自己的帮扶项目；号召已经脱贫的广大农户，积极参与扶贫开发项目建设；倡议全体村民要更加热爱自己的家园，更加关心江背村的公益事业和爱护本村的公共环境，为建设富裕、文明、和谐的社会主义新农村而奋斗。此项工作计划于2016年6月底完成，并视情况作进一步的宣传发动。
+                                    <br>
+
+                                    　　2、贫困户劳动力培训。游溪镇江背村组织开展生猪饲养技术和疫病防治技术等农业技术培训，计划劳动力就业培训40人，农业生产技能培训50人，争取对外输出务工35人。
+                                    <br>
+
+                                    　　3、发展种植项目。根据贫困户的意愿和市场需求，带动贫困户种植香芋、水稻、西瓜、花生等，增加贫困户养殖收入。
+                                    <br>
+
+                                    　　4、推动落实各项农村政策。进一步推动当地落实贫困户最低生活保障政策，将尚未脱贫的人口纳入最低生活保障范围，继续推动提高农村合作医疗参与率，帮助扶贫人口100%参加农村合作医疗。
+                                    <br>
+
+                                    　　5、加强“两委”班子建设，改善村委会办公条件。加强村委会班子团结，党员队伍发挥作用好，帮助村委会建设立村民自治各项规章制度，改善村委会办公条件（会议室、电教设备、宣传栏等）。
+                                    <br>
+
+                                    　　6、完成上级下达给江背村委会低收入贫困户危房改造任务数，70户。2016年完成20户。
+                                </p>
+
+                            </div>
+
+                        </div>
+                        <div id="con_one_3" style="display:none">
+                            <table class="table_tab2">
+                                <tr>
+                                    <th width="33%">驻村干部签名： 张国平</th>
+                                    <th width="33%">村委负责人签名：詹江峰</th>
+                                    <th width="33%">制定日期：2015-07-26</th>
+                                </tr>
+                            </table>
+                            <div class="article_txt">
+                                <h1>2017年扶贫开发双到工作实施计划 </h1>
+
+                                <p>
+                                    （一）前期工作阶段（2017年1月—2017年6月）
+                                    <br>
+
+                                    　　1、基础调查研究。开展贫困户入户摸底调查，全面掌握贫困户基本情况，确定贫困户名单，张榜公示拟列为帮扶贫困户名单，接受村民及社会各界人士的监督并修正调查数据偏差，调查工作已于2017年2月前完成，公示工作已于2017年4月底完成。
+                                    <br>
+
+                                    　　2、驻村工作组于2017年6月组建并进驻游溪镇江背村委开展工作。通过走访农户及与当地政府、村委干部座谈等方式，合理确定帮扶具体措施，并形成了扶贫开发工作调查报告。
+
+                                    <br>
+                                    　　3、研究制订对口帮扶游溪镇江背村委实施方案。在入户调查及调研的基础上，编制《乳源县游溪镇江背村委扶贫开发“规划到户责任到人”工作实施方案》，把规划措施尽可能落实到贫困户，同时初步落实具体的帮扶项目和措施。
+                                    <br>
+                                    <br>
+                                    　　（二）项目实施方案（2017年7月—12月）
+                                    <br>
+
+                                    　　1、宣传发动全体村民。召开江背村扶贫开发动员大会，征求对帮扶江背村的工作目的，帮扶方式及帮扶措施等作详细介绍，号召江背村的广大贫困户，发扬自力更生、勤劳致富的光荣传统，积极踊跃地选择适合自己的帮扶项目；号召已经脱贫的广大农户，积极参与扶贫开发项目建设；倡议全体村民要更加热爱自己的家园，更加关心江背村的公益事业和爱护本村的公共环境，为建设富裕、文明、和谐的社会主义新农村而奋斗。此项工作计划于2017年6月底完成，并视情况作进一步的宣传发动。
+
+                                    <br>
+                                    　　2、贫困户劳动力培训。游溪镇江背村组织开展生猪饲养技术和疫病防治技术等农业技术培训，计划劳动力就业培训40人，农业生产技能培训50人，争取对外输出务工35人。
+
+                                    <br>
+                                    　　3、发展种植项目。根据贫困户的意愿和市场需求，带动贫困户种植香芋、水稻、西瓜、花生等，增加贫困户养殖收入。
+
+                                    <br>
+                                    　　4、推动落实各项农村政策。进一步推动当地落实贫困户最低生活保障政策，将尚未脱贫的人口纳入最低生活保障范围，继续推动提高农村合作医疗参与率，帮助扶贫人口100%参加农村合作医疗。
+                                    <br>
+
+                                    　　5、加强“两委”班子建设，改善村委会办公条件。加强村委会班子团结，党员队伍发挥作用好，帮助村委会建设立村民自治各项规章制度，改善村委会办公条件（会议室、电教设备、宣传栏等）。
+                                    <br>
+
+                                    　　6、完成上级下达给江背村委会低收入贫困户危房改造任务数，70户。2017年完成20户。
+                                </p>
+
+
+                            </div>
+                        </div>
+                        <div id="con_one_4" style="display:none">
+                            <table class="table_tab2">
+                                <tr>
+                                    <th>驻村干部签名： 张国平</th>
+                                    <th>村委负责人签名：詹江峰</th>
+                                    <th>制定日期：2015-07-26</th>
+                                </tr>
+                            </table>
+                            <div class="article_txt">
+                                <h1>2018年扶贫开发双到工作实施计划 </h1>
+
+
+                                <p>
+                                    　（一）前期工作阶段（2018年1月—2018年6月）
+                                    <br>
+
+
+                                    　　1、基础调查研究。开展贫困户入户摸底调查，全面掌握贫困户基本情况，确定贫困户名单，张榜公示拟列为帮扶贫困户名单，接受村民及社会各界人士的监督并修正调查数据偏差，调查工作已于2018年2月前完成，公示工作已于2018年4月底完成。
+                                    <br>
+
+
+                                    　　2、驻村工作组于2018年6月组建并进驻游溪镇江背村委开展工作。通过走访农户及与当地政府、村委干部座谈等方式，合理确定帮扶具体措施，并形成了扶贫开发工作调查报告。
+
+                                    <br>
+
+                                    　　3、研究制订对口帮扶游溪镇江背村委实施方案。在入户调查及调研的基础上，编制《乳源县游溪镇江背村委扶贫开发“规划到户责任到人”工作实施方案》，把规划措施尽可能落实到贫困户，同时初步落实具体的帮扶项目和措施。
+
+                                    <br>
+                                    <br>
+                                    　　（二）项目实施方案（2018年7月—12月）
+                                    <br>
+
+
+                                    　　1、宣传发动全体村民。召开江背村扶贫开发动员大会，征求对帮扶江背村的工作目的，帮扶方式及帮扶措施等作详细介绍，号召江背村的广大贫困户，发扬自力更生、勤劳致富的光荣传统，积极踊跃地选择适合自己的帮扶项目；号召已经脱贫的广大农户，积极参与扶贫开发项目建设；倡议全体村民要更加热爱自己的家园，更加关心江背村的公益事业和爱护本村的公共环境，为建设富裕、文明、和谐的社会主义新农村而奋斗。此项工作计划于2018年6月底完成，并视情况作进一步的宣传发动。
+
+                                    <br>
+
+                                    　　2、贫困户劳动力培训。游溪镇江背村组织开展生猪饲养技术和疫病防治技术等农业技术培训，计划劳动力就业培训40人，农业生产技能培训50人，争取对外输出务工35人。
+
+                                    <br>
+
+                                    　　3、发展种植项目。根据贫困户的意愿和市场需求，带动贫困户种植香芋、水稻、西瓜、花生等，增加贫困户养殖收入。
+
+                                    <br>
+
+                                    　　4、推动落实各项农村政策。进一步推动当地落实贫困户最低生活保障政策，将尚未脱贫的人口纳入最低生活保障范围，继续推动提高农村合作医疗参与率，帮助扶贫人口100%参加农村合作医疗。
+
+                                    <br>
+
+                                    　　5、加强“两委”班子建设，改善村委会办公条件。加强村委会班子团结，党员队伍发挥作用好，帮助村委会建设立村民自治各项规章制度，改善村委会办公条件（会议室、电教设备、宣传栏等）。
+
+                                    <br>
+
+                                    　　6、完成上级下达给江背村委会低收入贫困户危房改造任务数，70户。2018年完成20户。
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="contant" id="container5">
+                <i class="cord"></i>
+                <table class="">
+                    <tr>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="contant" id="container6">
+                <i class="cord"></i>
+                <table class="table_tab4">
+                    <tr>
+                        <th>总投入资金（单位：万元）</th>
+                        <th>村总投入资金（单位：万元）</th>
+                        <th>户总投入资金（单位：万元）</th>
+                    </tr>
+                    <tr>
+                        <td><span class="b">2300</span></td>
+                        <td><span class="b">1000</span></td>
+                        <td><span class="b">1300</span></td>
+                    </tr>
+                </table>
+                <div class="titleA">资金分类表（按帮扶块汇总）</div>
+
+                <table class="table_tab4">
+                    <tr>
+                        <th width="113" height="70" valign="top"><p>块名称</p></th>
+                        <th width="75" valign="top"><p>贫困村数</p></th>
+                        <th width="74" valign="top">总投入<br>
+                            扶持资金<br>
+                            （万元）</th>
+                        <th width="84" valign="top"><p>村总投入资金<br>
+                            （万元）</p></th>
+                        <th width="141" valign="top"> <p>户总投入资金<br>
+                            （万元）</p>                        </th>
+                        <th width="497" rowspan="6" valign="top" style="width:300px;  overflow-x: scroll; ">
+                            <table width="150%" border="0">
+                                <tr>
+                                    <th height="35">A01</th>
+                                    <th>A02</th>
+                                    <th>A03</th>
+                                    <th>A04</th>
+                                    <th>A05</th>
+                                    <th>A06</th>
+                                    <th>A07</th>
+                                    <th>A08</th>
+                                    <th>A09</th>
+                                    <th>A10</th>
+                                </tr>
+                                <tr>
+                                    <th height="35"><p>单位自筹资金 （万元）</p></th>
+                                    <th><p>各级财政专项 资金 （万元）</p></th>
+                                    <th><p>中央财政专项扶贫 资金 （万元）</p></th>
+                                    <th><p>省级财政专项扶贫 资金 （万元）</p></th>
+                                    <th><p>市级财政专项扶贫 资金 （万元）</p></th>
+                                    <th><p>县（区）级财政专项扶贫 资金 （万元）</p>
+                                    </th>
+                                    <th><p>行业扶贫 资金 （万元）</p></th>
+                                    <th><p>金融信贷资金 （万元）</p></th>
+                                    <th><p>社会扶持 资金 （万元）</p></th>
+                                    <th><p>其他（万元）</p></th>
+                                </tr>
+                                <tr>
+                                    <td height="35"><p>19.2083</p></td>
+                                    <td>48.3410</td>
+                                    <td>0.0000</td>
+                                    <td>500</td>
+                                    <td><p>48.3410</p></td>
+                                    <td><p>0.0000</p></td>
+                                    <td><p>33.7000</p></td>
+                                    <td><p>0.0000</p></td>
+                                    <td><p>6.9600</p></td>
+                                    <td><p>0.000</p></td>
+                                </tr>
+                                <tr>
+                                    <td height="35">19.2083</td>
+                                    <td>48.3410</td>
+                                    <td>0.0000</td>
+                                    <td>500</td>
+                                    <td>48.3410</td>
+                                    <td>0.0000</td>
+                                    <td>33.7000</td>
+                                    <td>0.0000</td>
+                                    <td>6.9600</td>
+                                    <td>0.0000</td>
+                                </tr>
+                                <tr>
+                                    <td height="35">19.2083</td>
+                                    <td>48.3410</td>
+                                    <td>0.0000</td>
+                                    <td>500</td>
+                                    <td>48.3410</td>
+                                    <td>0.0000</td>
+                                    <td>33.7000</td>
+                                    <td>0.0000</td>
+                                    <td>6.9600</td>
+                                    <td>0.0000</td>
+                                </tr>
+                                <tr>
+                                    <td height="35">19.2083</td>
+                                    <td>48.3410</td>
+                                    <td>0.0000</td>
+                                    <td>500</td>
+                                    <td>48.3410</td>
+                                    <td>0.0000</td>
+                                    <td>33.7000</td>
+                                    <td>0.0000</td>
+                                    <td>6.9600</td>
+                                    <td>0.0000</td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th height="35" valign="top">本地帮扶</th>
+                        <th valign="top">13</th>
+                        <th valign="top"><p>108.2093</p></th>
+                        <th valign="top">108.2093</th>
+                        <th valign="top"><p>1.7240</p></th>
+                    </tr>
+                    <tr>
+                        <th height="35" valign="top">
+
+                            <p>珠三角地市单位帮扶</p>
+
+                        </th>
+                        <th valign="top">13</th>
+                        <th valign="top">108.2093</th>
+                        <th valign="top">108.2093</th>
+                        <th valign="top">1.7240</th>
+                    </tr>
+                    <tr>
+                        <th height="35" valign="top">
+
+                            <p>省直中直驻粤帮扶</p>
+
+                        </th>
+                        <th valign="top">13</th>
+                        <th valign="top">108.2093</th>
+                        <th valign="top">108.2093</th>
+                        <th valign="top">1.7240</th>
+                    </tr>
+                    <tr>
+                        <th height="35" valign="top">合计</th>
+                        <th valign="top">13</th>
+                        <th valign="top">108.2093</th>
+                        <th valign="top">108.2093</th>
+                        <th valign="top">1.7240</th>
+                    </tr>
+
+                </table>
+
+
+            </div>
+            <div class="contant" id="container7">
+                <i class="cord"></i>
+                <table class="">
+                    <tr>
+                        <th></th>
+                    </tr>
+                </table>
+                <div class="activity_head">
+                    帮扶动态类型：
+                    <input name="" type="checkbox" value="">全部
+                    <input name="" type="checkbox" value="">只看图片
+                    <input name="" type="checkbox" value="">只看文字
+                </div>
+                <div class="activity_con">
+
+
+                    <div class="process">
+                        <table>
+                            <tr>
+                                <th class="win_date" width="10%">
+                                    <div class="activity_con_lf">
+                                        <a href="#"><img src="images/icon_sz01.png" alt=""/></a>
+                                        <span>2016年</span>
+                                    </div>
+                                </th>
+                                <th class="win_dot" width="5%"><i></i></th>
+                                <td width="75%">
+                                    <div class="activity_con_rg">
+                                        <i class="icon_c"></i>
+
+                                        <div class="box_activity">
+                                            <h4>
+                                                <span><img src="images/icon_bell.png" alt=""/></span> 2016-5-23 12:20:20
+                                                <span><img src="images/icon_ren.png" alt=""/></span> 张三
+                                            </h4>
+
+                                            <p>2016年5月23日，肇庆市委赖泽华书记视察了怀集县连麦镇文岗村扶贫工作</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="win_date">
+
+                                </th>
+                                <th class="win_dot"><i></i></th>
+                                <td>
+                                    <div class="activity_con_rg">
+                                        <i class="icon_c"></i>
+
+                                        <div class="box_activity">
+                                            <h4>
+                                                <span><img src="images/icon_bell.png" alt=""/></span> 2016-5-23 12:20:20
+                                                <span><img src="images/icon_ren.png" alt=""/></span> 张三
+                                            </h4>
+
+                                            <p>
+                                                2016年5月23日，肇庆市委赖泽华书记视察了怀集县连麦镇文岗村扶贫工作，与南方航空集团驻村干部进行亲切交谈。赖泽华书记听取了南航驻村干部对贫困户发自内心的
+                                                有感认识和初步扶贫想法，对南航的扶贫工作给予了高度评价，强调扶贫工作要发自内心，要把贫困户作为知心人来进行帮扶。</p>
+
+                                            <p>
+                                                <img src="images/pic001.jpg" alt=""/>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="win_date" width="10%">
+                                    <div class="activity_con_lf">
+                                        <a href="#"><img src="images/icon_sz01.png" alt=""/></a>
+                                        <span>2016年</span>
+                                    </div>
+                                </th>
+                                <th class="win_dot" width="5%"><i></i></th>
+                                <td width="75%">
+                                    <div class="activity_con_rg">
+                                        <i class="icon_c"></i>
+
+                                        <div class="box_activity">
+                                            <h4>
+                                                <span><img src="images/icon_bell.png" alt=""/></span>2016-5-23 12:20:20
+                                                <span><img src="images/icon_ren.png" alt=""/></span>张三
+                                            </h4>
+
+                                            <p>2016年5月23日，肇庆市委赖泽华书记视察了怀集县连麦镇文岗村扶贫工作</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="win_date">
+
+                                </th>
+                                <th class="win_dot"><i></i></th>
+                                <td>
+                                    <div class="activity_con_rg">
+                                        <i class="icon_c"></i>
+
+                                        <div class="box_activity">
+                                            <h4>
+                                                <span><img src="images/icon_bell.png" alt=""/></span> 2016-5-23 12:20:20
+                                                <span><img src="images/icon_ren.png" alt=""/></span> 张三
+                                            </h4>
+
+                                            <p>
+                                                2016年5月23日，肇庆市委赖泽华书记视察了怀集县连麦镇文岗村扶贫工作，与南方航空集团驻村干部进行亲切交谈。赖泽华书记听取了南航驻村干部对贫困户发自内心的
+                                                有感认识和初步扶贫想法，对南航的扶贫工作给予了高度评价，强调扶贫工作要发自内心，要把贫困户作为知心人来进行帮扶。</p>
+
+                                            <p>
+                                                <img src="images/pic001.jpg" alt=""/>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="win_date" width="10%">
+                                    <div class="activity_con_lf">
+                                        <a href="#"><img src="images/icon_sz01.png" alt=""/></a>
+                                        <span>2016年</span>
+                                    </div>
+                                </th>
+                                <th class="win_dot" width="5%"><i></i></th>
+                                <td width="75%">
+                                    <div class="activity_con_rg">
+                                        <i class="icon_c"></i>
+
+                                        <div class="box_activity">
+                                            <h4>
+                                                <span><img src="images/icon_bell.png" alt=""/></span> 2016-5-23 12:20:20
+                                                <span><img src="images/icon_ren.png" alt=""/></span>张三
+                                            </h4>
+
+                                            <p>2016年5月23日，肇庆市委赖泽华书记视察了怀集县连麦镇文岗村扶贫工作</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="win_date">
+
+                                </th>
+                                <th class="win_dot"><i></i></th>
+                                <td>
+                                    <div class="activity_con_rg">
+                                        <i class="icon_c"></i>
+
+                                        <div class="box_activity">
+                                            <h4>
+                                                <span><img src="images/icon_bell.png" alt=""/></span> 2016-5-23 12:20:20
+                                                <span><img src="images/icon_ren.png" alt=""/></span>张三
+                                            </h4>
+
+                                            <p>
+                                                2016年5月23日，肇庆市委赖泽华书记视察了怀集县连麦镇文岗村扶贫工作，与南方航空集团驻村干部进行亲切交谈。赖泽华书记听取了南航驻村干部对贫困户发自内心的
+                                                有感认识和初步扶贫想法，对南航的扶贫工作给予了高度评价，强调扶贫工作要发自内心，要把贫困户作为知心人来进行帮扶。</p>
+
+                                            <p>
+                                                <img src="images/pic001.jpg" alt=""/>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="win_date" width="10%">
+                                    <div class="activity_con_lf">
+                                        <a href="#"><img src="images/icon_sz02.png" alt=""/></a>
+                                        <span>2015年</span>
+                                    </div>
+                                </th>
+                                <th class="win_dot" width="5%"><i></i></th>
+                                <td width="75%">
+                                    <div class="activity_con_rg">
+                                        <i class="icon_c"></i>
+
+                                        <div class="box_activity">
+
+
+                                            <p>2016年5月23日，肇庆市委赖泽华书记视察了怀集县连麦镇文岗村扶贫工作</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!--  <table>
+                          <tr>
+                              <th width="10%" >
+                                  <div class="activity_con_lf">
+                                      <a href="#"><img src="images/icon_sz01.png" alt=""/></a>
+                                      <span>2016年</span>
+                                  </div>
+                              </th>
+                              <th width="5%">
+                                  <div class="activity_con_mid">
+                                      <img src="images/icon_dd01.png" alt=""/>
+                                      <i class="line"></i>
+                                  </div>
+                              </th>
+                              <td width="75%">
+                                  <div class="activity_con_rg">
+                                      <i class="icon_c"></i>
+
+                                      <div class="box_activity">
+                                          <h4>
+                                              <img src="images/icon_bell.png" alt=""/> 2016-5-23 12:20:20
+                                              <img src="images/icon_ren.png" alt=""/>张三
+                                          </h4>
+
+                                          <p>2016年5月23日，肇庆市委赖泽华书记视察了怀集县连麦镇文岗村扶贫工作</p>
+                                      </div>
+                                  </div>
+                              </td>
+                          </tr>
+                      </table>-->
+
+
+                </div>
+            </div>
+            <div class="contant" id="container8">
+                <i class="cord"></i>
+
+                <div class="process">
+                    <table>
+                        <tr>
+                            <th class="win_date" width="10%">
+                                <div class="activity_con_lf">
+                                    <a href="#"><img src="images/icon_sz01.png" alt=""/></a>
+                                    <span>2016年</span>
+                                </div>
+                            </th>
+                            <th class="win_dot" width="2%"><i></i></th>
+                            <td width="78%">
+                                <div class="activity_con_rg">
+                                    <i class="icon_c"></i>
+
+                                    <div class="box_activity">
+                                        <h4>
+                                            <span><img src="images/icon_bell.png" alt=""/></span> 2016-5-23 12:20:20
+                                            <span><img src="images/icon_ren.png" alt=""/></span> 张三
+                                            <span><img src="images/icon_bg.png" alt=""/></span><span class="color-red">变更基础信息</span>
+                                        </h4>
+
+                                        <table class="table_tab" style="width: 100%;">
+                                            <tr>
+                                                <th width="20%" style="text-align: center;">变更项目</th>
+                                                <th width="40%" style="text-align: center;">原有值</th>
+                                                <th width="40%" style="text-align: center;">变更值</th>
+                                            </tr>
+                                            <tr>
+                                                <th width="20%" style="text-align: center;">B3总人口数（人）</th>
+                                                <td width="40%" style="text-align: center;">3456</td>
+                                                <td width="40%" style="text-align: center;">90988</td>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: center;">B2b低保户数（户）</th>
+                                                <td style="text-align: center;">3456</td>
+                                                <td style="text-align: center;">90988</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="win_date">
+
+                            </th>
+                            <th class="win_dot"><i></i></th>
+                            <td>
+                                <div class="activity_con_rg">
+                                    <i class="icon_c"></i>
+
+                                    <div class="box_activity">
+                                        <h4>
+                                            <span><img src="images/icon_bell.png" alt=""/></span> 2016-5-23 12:20:20
+                                            <span><img src="images/icon_ren.png" alt=""/></span> 张三
+                                            <span><img src="images/icon_bg.png" alt=""/></span> <span class="color-red"> 变更发展现状</span>
+                                        </h4>
+
+                                        <table class="table_tab" style="width: 100%;">
+                                            <tr>
+                                                <th width="20%" style="text-align: center;">变更项目</th>
+                                                <th width="40%" style="text-align: center;">原有值</th>
+                                                <th width="40%" style="text-align: center;">变更值</th>
+                                            </tr>
+                                            <tr>
+                                                <th width="20%" style="text-align: center;">B10农民年人均纯收入（元）</th>
+                                                <td width="40%" style="text-align: center;">3456</td>
+                                                <td width="40%" style="text-align: center;">90988</td>
+                                            </tr>
+                                            <tr>
+                                                <th style="text-align: center;">B11村级集体经济收入（万元）</th>
+                                                <td style="text-align: center;">3456</td>
+                                                <td style="text-align: center;">90988</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="win_date" width="10%">
+                                <div class="activity_con_lf">
+                                    <a href="#"><img src="images/icon_sz01.png" alt=""/></a>
+                                    <span>2016年</span>
+                                </div>
+                            </th>
+                            <th class="win_dot" width="5%"><i></i></th>
+                            <td width="75%">
+                                <div class="activity_con_rg">
+                                    <i class="icon_c"></i>
+
+                                    <div class="box_activity">
+                                        <h4>
+                                            <span><img src="images/icon_bell.png" alt="" class="img"/></span>2016-5-23 12:20:20
+                                            <span><img src="images/icon_ren.png" alt=""/></span> 张三
+                                            <span><img src="images/icon_bg.png" alt=""/></span> <span class="color-red"> 创建贫困户信息</span>
+                                        </h4>
+
+                                        <p>2016年5月23日，肇庆市委赖泽华书记视察了怀集县连麦镇文岗村扶贫工作</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".tab .title li").click(function () {
+        $(".tab .title li.cur").removeClass("cur");
+        $(this).addClass("cur");
+        $(".tab .contant").removeClass("cur");
+        $("#" + $(this).attr("_id")).addClass("cur");
+    });
+</script>
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/bar'
+            ],
+            function (ec) {
+                var myChartZzz = ec.init(document.getElementById('zzz'));
+                var ecConfig = require('echarts/config');
+                var cx = {
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    color: ["#ffec00", "#2786fc"],
+                    calculable: true,
+                    legend: {
+                        data: ['计划数', '实际数'],
+                        x: 'right',
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            data: ['2016年', '2017年', '2018年'],
+                            axisLabel: {
+                                show: true,
+                                interval: '0',
+                                rotate: 0,
+                                formatter: null,
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '人均可支配收入',
+                            axisLabel: {
+                                formatter: '{value} 元',
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ],
+                    series: [
+
+                        {
+                            name: '计划数',
+                            type: 'bar',
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: true,
+                                        position: 'top'
+                                    }
+                                }
+                            },
+                            data: [3600, 3900, 4200]
+                        },
+                        {
+                            name: '实际数',
+                            type: 'bar',
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: true,
+                                        position: 'top'
+                                    }
+                                }
+                            },
+                            data: [3900, 2000, 1000]
+                        }
+                    ]
+                };
+
+                myChartZzz.setOption(cx);
+            });
+
+</script>
+<script>
+    <!--
+    function setTab(name, cursel, n) {
+        for (i = 1; i <= n; i++) {
+            var menu = document.getElementById(name + i);
+            var con = document.getElementById("con_" + name + "_" + i);
+            menu.className = i == cursel ? "hover" : "";
+            con.style.display = i == cursel ? "block" : "none";
+        }
+    }
+    //-->
+</script>
+</body>
+</html>

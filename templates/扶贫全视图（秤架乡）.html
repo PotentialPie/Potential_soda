@@ -1,0 +1,1332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>精准分析</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery-easyui-1.4.5/themes/icon.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery-easyui-1.4.5/themes/bootstrap/easyui.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/jquery.modal.js" type="text/javascript"></script>
+    <script src="jquery-easyui-1.4.5/jquery.easyui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="echarts/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#Edit").click(function () {
+                $("#detailModal").modal("hide")
+                $("#addModal").modal("show")
+            })
+        })
+    </script>
+</head>
+<body style="background-color: #558db3;">
+<div class="header">
+    <div class="logo">
+    	<h1><a title="广东省精准扶贫大数据管理平台" href="index.html">广东省精准扶贫大数据管理平台</a></h1>
+    </div>
+    <div class="login-info">
+        <a class="down-a" href="javascript:;">
+            <img src="images/thumb.jpg"/>
+            <span class="s-round-mask"></span>
+            <span class="ell">中心管理员</span>
+            <i class="arrow-down"></i>
+        </a>
+
+        <div class="downlist">
+            <a class="icon_user">个人信息</a>
+            <a class="icon_pw">修改密码</a>
+            <a class="icon_quit" href="login.html">退出系统</a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="sidebar fold">
+        <h2>菜单</h2>
+        <ul class="menu-first">
+            <li>
+                <a class="title icon_sy">我的首页</a>
+            </li>
+            <li>
+                <a class="title icon_jzsp" data-toggle="dropdown">精准识贫</a>
+               	<ul class="menu-second">
+                    <li><a href="贫困村管理.html">贫困村管理</a></li>
+                    <li><a href="贫困户管理.html">贫困户管理</a></li>
+                    <li><a href="帮扶单位管理.html">帮扶单位管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="title icon_jzfp" data-toggle="dropdown">精准扶贫</a>
+               	<ul class="menu-second">
+                    <li><a>二级菜单</a></li>
+                    <li><a>二级菜单</a></li>
+                    <li><a>二级菜单</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="title icon_tpys" data-toggle="dropdown">脱贫验收</a>
+               	<ul class="menu-second">
+                    <li><a>二级菜单</a></li>
+                    <li><a>二级菜单</a></li>
+                    <li><a>二级菜单</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="title icon_fpyj" data-toggle="dropdown">返贫预警</a>
+               	<ul class="menu-second">
+                    <li><a>二级菜单</a></li>
+                    <li><a>二级菜单</a></li>
+                    <li><a>二级菜单</a></li>
+                </ul>
+            </li>
+            <li class="active" >
+                <a class="title icon_jzfx" data-toggle="dropdown">精准分析</a>
+               	<ul class="menu-second">
+                    <li><a class="active" href="扶贫全视图（广东省）.html">广东</a></li>
+                    <li><a>二级菜单</a></li>
+                    <li><a>二级菜单</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="title icon_fpkh" data-toggle="dropdown">扶贫考核</a>
+               	<ul class="menu-second">
+                    <li><a>二级菜单</a></li>
+                    <li><a>二级菜单</a></li>
+                    <li><a>二级菜单</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="title icon_xtgl" data-toggle="dropdown">系统管理</a>
+               	<ul class="menu-second">
+                    <li><a  href="用户管理.html">用户管理</a></li>
+                    <li><a  href="角色管理.html">角色管理</a></li>
+                    <li><a  href="区域管理.html">区域管理</a></li>
+                    <li><a  href="行政单位管理.html">行政单位管理</a></li>
+                    <li><a  href="系统参数.html">系统参数</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--内容-->
+    <div class="cell analysis">
+        <div class="viewBox">
+            <div class="view">
+                <!--<div class="Title">秤架瑶族乡贫困人口分布</div>-->
+                <div class="crumb">
+                    贫困人口分布：<a href="扶贫全视图（广东省）.html"> 广东省 </a> > <a href="扶贫全视图（清远市）.html"> 清远市</a>  > <a href="扶贫全视图（阳山县）.html"> 阳山县 </a> > <a> 秤架瑶族乡 </a>
+                </div>
+                <hr class="hr-linebt"/>
+                <div class="viewCon">
+                    <div class="total">
+                        <select>
+                            <option selected>2016</option>
+                            <option>2017</option>
+                        </select>
+                        <span>总户数28万 总人口08万</span>
+                    </div>
+                    <div class="Charts" id="main"></div>
+                </div>
+            </div>
+            <div class="data mt10">
+                <div class="Title">秤架瑶族乡扶贫基础数据</div>
+                <hr class="hr-linebt"/>
+                <div class="dataCon clearfix">
+                    <ul>
+                        <li>
+                            <img src="images/icon_list01.png" alt=""/>
+                            <span>贫困村数</span>
+                            <span><a data-toggle="modal" href="#addModal">8678</a> 个</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list02.png" alt=""/>
+                            <span>贫困户数</span>
+                            <span><a data-toggle="modal" href="#addModal2">8678</a> 万户</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list03.png" alt=""/>
+                            <span>五保低保数</span>
+                            <span><a data-toggle="modal" href="#addModal3">8678</a> 户</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list04.png" alt=""/>
+                            <span>驻村干部数</span>
+                            <span><a data-toggle="modal" href="#addModal4">8678</a> 个</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list05.png" alt=""/>
+                            <span>帮扶单位数</span>
+                            <span><a data-toggle="modal" href="#addModal5">8678</a> 个</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list06.png" alt=""/>
+                            <span>总投入扶持资金</span>
+                            <span><a data-toggle="modal" href="#addModal6">8678</a> 万元</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list07.png" alt=""/>
+                            <span>单位自筹占比</span>
+                            <span><a data-toggle="modal" href="#addModal7">80</a> %</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list08.png" alt=""/>
+                            <span>措施精准度</span>
+                            <span><a data-toggle="modal" href="#addModal8">86</a> %</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="assistantBox">
+            <ul>
+                <li class="view01">
+                    <div class="Title">秤架瑶族乡脱贫攻坚目标</div>
+                    <hr class="hr-linebt"/>
+                    <div class="Charts" id="option"></div>
+
+                </li>
+                <li class="view02">
+                    <div class="Title">秤架瑶族乡主要致贫原因</div>
+                    <hr class="hr-linebt"/>
+                    <div class="Charts" id="zz"></div>
+                </li>
+                <li class="view03">
+                    <div class="Title">秤架瑶族乡贫困户年人均可支配收入情况</div>
+                    <hr class="hr-linebt"/>
+                    <div class="Charts" id="zzz"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<!--弹出框 addModal-->
+<div data-backdrop="false" class="modal mid fade in hide" id="addModal">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4>贫困村列表</h4>
+    </div>
+    <div class="modal-body win_bg01">
+        <div class="win_container">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="label color-white">行政村：</label>
+                    <input class="form-control" type="input">
+                </div>
+                <div class="form-group">
+                    <label class="label color-white">村属性：</label>
+                    <input class="form-control" type="input">
+                </div>
+                <a class="btn"><i class="icon icon-search-b"></i> 查询</a>
+            </form>
+            <table class="tableB">
+                <tr>
+                    <th>序号</th>
+                    <th>行政村</th>
+                    <th>户属性</th>
+                    <th>发展方向</th>
+                    <th>地形地貌</th>
+                    <th>村委负责人</th>
+                    <th>村办公电话</th>
+                    <th>总户数</th>
+                    <th>贫困户户数</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a class="" href="贫困村全视图.html" target="_blank">茅坪村</a></td>
+                    <td>十二五贫困村</td>
+                    <td>中心村镇</td>
+                    <td>山区村镇</td>
+                    <td>张峰</td>
+                    <td>XXX-XXXXXXX</td>
+                    <td>4566</td>
+                    <td>2550</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>茅坪村</td>
+                    <td>十二五贫困村</td>
+                    <td>中心村镇</td>
+                    <td>山区村镇</td>
+                    <td>张峰</td>
+                    <td>XXX-XXXXXXX</td>
+                    <td>4566</td>
+                    <td>2550</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>茅坪村</td>
+                    <td>十二五贫困村</td>
+                    <td>中心村镇</td>
+                    <td>山区村镇</td>
+                    <td>张峰</td>
+                    <td>XXX-XXXXXXX</td>
+                    <td>4566</td>
+                    <td>2550</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>茅坪村</td>
+                    <td>十二五贫困村</td>
+                    <td>中心村镇</td>
+                    <td>山区村镇</td>
+                    <td>张峰</td>
+                    <td>XXX-XXXXXXX</td>
+                    <td>4566</td>
+                    <td>2550</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>茅坪村</td>
+                    <td>十二五贫困村</td>
+                    <td>中心村镇</td>
+                    <td>山区村镇</td>
+                    <td>张峰</td>
+                    <td>XXX-XXXXXXX</td>
+                    <td>4566</td>
+                    <td>2550</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>茅坪村</td>
+                    <td>十二五贫困村</td>
+                    <td>中心村镇</td>
+                    <td>山区村镇</td>
+                    <td>张峰</td>
+                    <td>XXX-XXXXXXX</td>
+                    <td>4566</td>
+                    <td>2550</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>茅坪村</td>
+                    <td>十二五贫困村</td>
+                    <td>中心村镇</td>
+                    <td>山区村镇</td>
+                    <td>张峰</td>
+                    <td>XXX-XXXXXXX</td>
+                    <td>4566</td>
+                    <td>2550</td>
+                </tr>
+            </table>
+            <div class="pege"><a href="#">上一页</a><a href="#">下一页</a></div>
+            <!--<div class="paging clearfix">
+                <p class="fl">
+                    <select><option>10</option></select>
+                    <span class="split">|</span>
+                    <a class="btn-first disable"></a>
+                    <a class="btn-prev disable"></a>
+                    <span class="split">|</span>
+                    <span><input value="1" type="text"> / <b>5</b> </span>
+                    <span class="split">|</span>
+                    <a class="btn-end"></a>
+                    <a class="btn-next"></a>
+                    <span class="split">|</span>
+                    <a class="btn-refresh"></a>
+                </p>
+                <p class="fr">显示从1到10，总共48条。每页10条</p>
+            </div>-->
+        </div>
+    </div>
+</div>
+<!--弹出框 addModal2-->
+<div data-backdrop="false" class="modal mid fade in hide" id="addModal2">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4>贫困村列表</h4>
+    </div>
+    <div class="modal-body win_bg01">
+        <div class="win_container">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="label color-white">户主姓名：</label>
+                    <input class="form-control" type="input">
+                </div>
+                <div class="form-group">
+                    <label class="label color-white">A6证件号码：</label>
+                    <input class="form-control" type="input">
+                </div>
+                <a class="btn"><i class="icon icon-search-b"></i> 查询</a>
+            </form>
+            <table class="tableB">
+                <tr>
+                    <th>序号</th>
+                    <th>户主姓名</th>
+                    <th>家庭人口数</th>
+                    <th>贫困户属性</th>
+                    <th>主要致贫原因</th>
+                    <th>家庭住址</th>
+                    <th>人均可支配收入</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a class="" href="贫困户全视图.html" target="_blank">张大大</a></td>
+                    <td>5</td>
+                    <td>一般贫困户</td>
+                    <td>交通条件落后</td>
+                    <td>清远市阳山县秤架瑶族乡太平洞村</td>
+                    <td>3400</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>XXXX</td>
+                    <td>5</td>
+                    <td>一般贫困户</td>
+                    <td>交通条件落后</td>
+                    <td>清远市阳山县秤架瑶族乡太平洞村</td>
+                    <td>3400</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>XXXX</td>
+                    <td>5</td>
+                    <td>一般贫困户</td>
+                    <td>交通条件落后</td>
+                    <td>清远市阳山县秤架瑶族乡太平洞村</td>
+                    <td>3400</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>XXXX</td>
+                    <td>5</td>
+                    <td>一般贫困户</td>
+                    <td>交通条件落后</td>
+                    <td>清远市阳山县秤架瑶族乡太平洞村</td>
+                    <td>3400</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>XXXX</td>
+                    <td>5</td>
+                    <td>一般贫困户</td>
+                    <td>交通条件落后</td>
+                    <td>清远市阳山县秤架瑶族乡太平洞村</td>
+                    <td>3400</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>XXXX</td>
+                    <td>5</td>
+                    <td>一般贫困户</td>
+                    <td>交通条件落后</td>
+                    <td>清远市阳山县秤架瑶族乡太平洞村</td>
+                    <td>3400</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>XXXX</td>
+                    <td>5</td>
+                    <td>一般贫困户</td>
+                    <td>交通条件落后</td>
+                    <td>清远市阳山县秤架瑶族乡太平洞村</td>
+                    <td>3400</td>
+                </tr>
+            </table>
+            <div class="pege"><a href="#">上一页</a><a href="#">下一页</a></div>
+           <!-- <div class="paging clearfix">
+                <p class="fl">
+                    <select><option>10</option></select>
+                    <span class="split">|</span>
+                    <a class="btn-first disable"></a>
+                    <a class="btn-prev disable"></a>
+                    <span class="split">|</span>
+                    <span><input value="1" type="text"> / <b>5</b> </span>
+                    <span class="split">|</span>
+                    <a class="btn-end"></a>
+                    <a class="btn-next"></a>
+                    <span class="split">|</span>
+                    <a class="btn-refresh"></a>
+                </p>
+                <p class="fr">显示从1到10，总共48条。每页10条</p>
+            </div>-->
+        </div>
+    </div>
+</div>
+<!--弹出框 addModal3-->
+<div data-backdrop="false" class="modal mid fade in hide" id="addModal3">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4>各属性贫困户统计</h4>
+    </div>
+    <div class="modal-body win_bg02">
+        <div class="container">
+           <div class="tips" id="tips01"></div>
+        </div>
+    </div>
+</div>
+<!--弹出框 addModal4-->
+<div data-backdrop="false" class="modal mid fade in hide" id="addModal4">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4>驻村干部列表</h4>
+    </div>
+    <div class="modal-body win_bg01">
+        <div class="win_container">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="label color-white">帮扶单位：</label>
+                    <select class="form-control"><option>-全部-</option><option>广东省档案局</option></select>
+                </div>
+                <div class="form-group">
+                    <label class="label color-white">姓名：</label>
+                    <input class="form-control" type="input">
+                </div>
+                <a class="btn"><i class="icon icon-search-b"></i> 查询</a>
+            </form>
+            <table class="tableB">
+                <tr>
+                    <th>序号</th>
+                    <th>帮扶单位</th>
+                    <th>姓名</th>
+                    <th>职务</th>
+                    <th>政治面貌</th>
+                    <th>文化程度</th>
+                    <th>技术特长</th>
+                    <th>联系电话</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>广东省档案局</td>
+                    <td>XXXX</td>
+                    <td>国家级正职</td>
+                    <td>中共党员</td>
+                    <td>博士研究生</td>
+                    <td>种植</td>
+                    <td>18912345678</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>广东省档案局</td>
+                    <td>XXXX</td>
+                    <td>国家级正职</td>
+                    <td>中共党员</td>
+                    <td>博士研究生</td>
+                    <td>种植</td>
+                    <td>18912345678</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>广东省档案局</td>
+                    <td>XXXX</td>
+                    <td>国家级正职</td>
+                    <td>中共党员</td>
+                    <td>博士研究生</td>
+                    <td>种植</td>
+                    <td>18912345678</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>广东省档案局</td>
+                    <td>XXXX</td>
+                    <td>国家级正职</td>
+                    <td>中共党员</td>
+                    <td>博士研究生</td>
+                    <td>种植</td>
+                    <td>18912345678</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>广东省档案局</td>
+                    <td>XXXX</td>
+                    <td>国家级正职</td>
+                    <td>中共党员</td>
+                    <td>博士研究生</td>
+                    <td>种植</td>
+                    <td>18912345678</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>广东省档案局</td>
+                    <td>XXXX</td>
+                    <td>国家级正职</td>
+                    <td>中共党员</td>
+                    <td>博士研究生</td>
+                    <td>种植</td>
+                    <td>18912345678</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>广东省档案局</td>
+                    <td>XXXX</td>
+                    <td>国家级正职</td>
+                    <td>中共党员</td>
+                    <td>博士研究生</td>
+                    <td>种植</td>
+                    <td>18912345678</td>
+                </tr>
+            </table>
+            <div class="pege"><a href="#">上一页</a><a href="#">下一页</a></div>
+           <!-- <div class="paging clearfix">
+                <p class="fl">
+                    <select><option>10</option></select>
+                    <span class="split">|</span>
+                    <a class="btn-first disable"></a>
+                    <a class="btn-prev disable"></a>
+                    <span class="split">|</span>
+                    <span><input value="1" type="text"> / <b>5</b> </span>
+                    <span class="split">|</span>
+                    <a class="btn-end"></a>
+                    <a class="btn-next"></a>
+                    <span class="split">|</span>
+                    <a class="btn-refresh"></a>
+                </p>
+                <p class="fr">显示从1到10，总共48条。每页10条</p>
+            </div>-->
+        </div>
+    </div>
+</div>
+<!--弹出框 addModal5-->
+<div data-backdrop="false" class="modal mid fade in hide" id="addModal5">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4>贫困村列表</h4>
+    </div>
+    <div class="modal-body win_bg02">
+        <div class="container">
+            <div class="tips" id="tips02"></div>
+        </div>
+    </div>
+</div>
+<!--弹出框 addModal6-->
+<div data-backdrop="false" class="modal mid fade in hide" id="addModal6">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4>贫困村列表</h4>
+    </div>
+    <div class="modal-body win_bg02">
+        <div class="container">
+            <div class="tips" id="tips03"></div>
+        </div>
+    </div>
+</div>
+<!--弹出框 addModal7-->
+<div data-backdrop="false" class="modal mid fade in hide" id="addModal7">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4>贫困村列表</h4>
+    </div>
+    <div class="modal-body win_bg02">
+        <div class="container">
+            <div class="tips" id="tips04"></div>
+        </div>
+    </div>
+</div>
+<!--弹出框 addModal8-->
+<div data-backdrop="false" class="modal mid fade in hide" id="addModal8">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4>贫困村列表</h4>
+    </div>
+    <div class="modal-body win_bg02">
+        <div class="container">
+            <div class="tips" id="tips05"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/bar' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                var myChartZz = ec.init(document.getElementById('main'));
+                var ecConfig = require('echarts/config');
+                var zz = {
+                    tooltip : {
+                        trigger: 'axis',
+                        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                            type : 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                        },
+                        textStyle:{// 字体样式
+                            color:'#FFF',
+                            fontSize:14,
+                            fontFamily: 'MicroSoft YaHei'
+                        },
+                    },
+                    calculable: false,
+                    grid: {
+                        borderWidth: 0,y2:140
+                    },
+                    calculable : true,
+                    xAxis : [
+                        {
+                            type : 'category',
+                            axisTick : false,
+                            data : ['茅坪村','漏水坪村','秤架村','杜菜村','炉田村','大陂村','大坳村','五元村','东坑村','太平洞村'],
+                            axisLabel:{
+                                show: true,
+                                interval: '0',
+                                rotate:45,
+                                formatter: null,
+                                textStyle: {
+                                    color: '#FFF'
+                                }
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            show: true,
+                            splitNumber: 3
+                        }
+                    ],
+                    series : [
+                        {
+                            type:'stack',
+                            radius : '50%',
+                            center: ['50%', '50%']
+                        },
+                        {
+                            name:'贫困人口',
+                            type:'bar',
+                            barWidth :30,
+                            itemStyle: {
+                                normal: {
+                                    color:function(params) {
+                                        // build a color map as your need.
+                                        var colorList = [
+                                            '#ff7f50','#87cefa','#da70d6','#32cd32','#6495ed',
+                                            '#ff69b4','#ba55d3','#cd5c5c','#ffa500','#40e0d0',
+                                            '#1e90ff','#ff6347','#7b68ee','#00fa9a','#ffd700',
+                                            '#6b8e23','#ff00ff','#3cb371','#b8860b','#30e0e0',
+                                            '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                                            '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                            '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                                        ];
+                                        return colorList[params.dataIndex]
+                                    },
+                                    label: {
+                                        show: true,
+                                        position: 'top'
+                                    }
+                                }
+                            },
+                            data:[60, 75, 80, 90, 50, 20, 50, 40, 30, 90]
+                        }
+                    ]
+                };
+                myChartZz.setOption(zz);
+            });
+
+</script>
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/gauge'
+            ],
+            function (ec) {
+                var myChart = ec.init(document.getElementById('option'));
+                var ecConfig = require('echarts/config');
+                var option = {
+                    tooltip : {
+                        formatter: "{a} <br/>{b} : {c}%"
+                    },
+                    series : [
+                        {
+                            name:'已脱贫人口',
+                            type:'gauge',
+                            startAngle: 180,
+                            endAngle: 0,
+                            center : ['50%', '90%'],    // 默认全局居中
+                            radius : 180,
+                            axisLine: {            // 坐标轴线
+                                lineStyle: {       // 属性lineStyle控制线条样式
+                                    width:100
+                                }
+                            },
+                            axisTick: {            // 坐标轴小标记
+                                splitNumber: 10,   // 每份split细分多少段
+                                length :12,        // 属性length控制线长
+                            },
+                            axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
+                                formatter: function(v){
+                                    switch (v+''){
+                                        case '10': return '2016年目标';
+                                        case '50': return '2017年目标';
+                                        case '90': return '2018年目标';
+                                        default: return '';
+                                    }
+                                },
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: '#fff',
+                                    fontSize: 14,
+                                    fontWeight: 'bolder'
+                                }
+                            },
+                            pointer: {
+                                width:20,
+                                length: '90%',
+                                color: 'rgba(255, 255, 255, 0.8)'
+                            },
+                            title : {
+                                show : true,
+                                offsetCenter: [0, '-60%'],       // x, y，单位px
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    color: '#fff',
+                                    fontSize: 20
+                                }
+                            },
+                            detail : {
+                                show : true,
+                                backgroundColor: 'rgba(0,0,0,0)',
+                                borderWidth: 0,
+                                borderColor: '#ccc',
+                                width: 100,
+                                height: 40,
+                                offsetCenter: [0, -40],       // x, y，单位px
+                                formatter:'{value}%',
+                                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                    fontSize : 30
+                                }
+                            },
+                            data:[{value: 20, name: '当前完成率'}]
+                        }
+                    ]
+                };
+                clearInterval(timeTicket);
+                var timeTicket = setInterval(function (){
+                    console.log(option);
+                    option.series[0].data[0].value = (Math.random()*100).toFixed(2) - 0;
+                    myChart.setOption(option,true);
+                },2000);
+                myChart.setOption(option);
+
+            });
+
+</script>
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/pie'
+            ],
+            function (ec) {
+                var myChartZz = ec.init(document.getElementById('zz'));
+                var ecConfig = require('echarts/config');
+                var zz = {
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'致贫原因',
+                            type:'pie',
+                            radius : [20, 70],
+                            center : ['50%','50%'],
+                            roseType : 'area',
+                            x: '50%',               // for funnel
+                            max: 40,                // for funnel
+                            sort : 'ascending',     // for funnel
+                            data:[
+                                {value:10, name:'因病'},
+                                {value:15, name:'因残'},
+                                {value:15, name:'因灾'},
+                                {value:15, name:'因学'},
+                                {value:25, name:'缺技术'},
+                                {value:2, name:'缺资金'},
+                                {value:10, name:'缺水'},
+                                {value:28, name:'缺劳力'},
+                                {value:10, name:'缺土地'},
+                                {value:11, name:'交通条件落后'},
+                                {value:20, name:'自身发展动力不足'},
+                                {value:5, name:'其他'}
+                            ]
+                        }
+                    ]
+                };
+
+                myChartZz.setOption(zz);
+            });
+
+</script>
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/bar'
+            ],
+            function (ec) {
+                var myChartZzz = ec.init(document.getElementById('zzz'));
+                var ecConfig = require('echarts/config');
+                var cx = {
+                    tooltip : {
+                        trigger: 'axis'
+                    },
+                    color:["#ffec00","#2786fc"],
+                    calculable : true,
+                    legend: {
+                        data:['计划数','实际数'],
+                        x : 'right',
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    xAxis : [
+                        {
+                            type : 'category',
+                            data : ['2016年','2017年','2018年'],
+                            axisLabel:{
+                                show: true,
+                                interval: '0',
+                                rotate:0,
+                                formatter: null,
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ],
+                    yAxis : [
+                        {
+                            type : 'value',
+                            name : '人均可支配收入',
+                            axisLabel : {
+                                formatter: '{value} 元',
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ],
+                    series : [
+
+                        {
+                            name:'计划数',
+                            type:'bar',
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: true,
+                                        position: 'top'
+                                    }
+                                }
+                            },
+                            data:[3600, 3900, 4200]
+                        },
+                        {
+                            name:'实际数',
+                            type:'bar',
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: true,
+                                        position: 'top'
+                                    }
+                                }
+                            },
+                            data:[3900, 2000, 1000]
+                        }
+                    ]
+                };
+
+                myChartZzz.setOption(cx);
+            });
+
+</script>
+
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/bar'
+            ],
+            function (ec) {
+                var myChart01 = ec.init(document.getElementById('tips01'));
+                var ecConfig = require('echarts/config');
+                var tips01 = {
+                    tooltip : {
+                        trigger: 'axis',
+                        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                            type : 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                        },
+                        textStyle:{// 字体样式
+                            color:'#FFF',
+                            fontSize:14,
+                            fontFamily: 'MicroSoft YaHei'
+                        }
+                    },
+                    grid: {
+                        borderWidth: 0,y2:140
+                    },
+                    calculable : true,
+                    xAxis : [
+                        {
+                            type : 'category',
+                            axisTick : false,
+                            data : ['扶贫户','低保户','扶贫低保','五保户','水库移民','残疾户','国家标准','省定标准','其他'],
+                            axisLabel:{
+                                show: true,
+                                interval: '0',
+                                rotate:45,
+                                formatter: null,
+                                textStyle: {
+                                    color: '#999'
+                                }
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            show: true,
+                            splitNumber: 3
+                        }
+                    ],
+                    series : [
+                        {
+                            name:'贫困户分布（按户属性）',
+                            type:'bar',
+                            barWidth :40,
+                            itemStyle: {
+                                normal: {
+                                    color:function(params) {
+                                        // build a color map as your need.
+                                        var colorList = [
+                                            '#ff7f50','#87cefa','#da70d6','#32cd32','#6495ed',
+                                            '#ff69b4','#ba55d3','#cd5c5c','#ffa500','#40e0d0',
+                                            '#1e90ff','#ff6347','#7b68ee','#00fa9a','#ffd700',
+                                            '#6b8e23','#ff00ff','#3cb371','#b8860b','#30e0e0',
+                                            '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                                            '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                            '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                                        ];
+                                        return colorList[params.dataIndex]
+                                    },
+                                    label: {
+                                        show: true,
+                                        position: 'top'
+                                    }
+                                }
+                            },
+                            data:[600, 750, 800, 900, 500, 200, 0, 2200, 500]
+                        }
+                    ]
+                };
+                myChart01.setOption(tips01);
+
+            });
+
+</script>
+
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/pie'
+            ],
+            function (ec){
+                var myChartZz = ec.init(document.getElementById('tips02'));
+                var ecConfig = require('echarts/config');
+                var zz = {
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        textStyle:{// 字体样式
+                            color:'#999',
+                            fontSize:14,
+                            fontFamily: 'MicroSoft YaHei'
+                        },
+                        data:['国家机关','社会团体','高等院校','国有企业','东部对口帮扶省市','其他']
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'帮扶单位数量',
+                            type:'pie',
+                            radius : '55%',
+                            center: ['50%', '50%'],
+                            data:[
+                                {value:1335, name:'国家机关'},
+                                {value:310, name:'社会团体'},
+                                {value:234, name:'高等院校'},
+                                {value:135, name:'国有企业'},
+                                {value:148, name:'东部对口帮扶省市'},
+                                {value:135, name:'其他'}
+                            ]
+                        }
+                    ]
+                };
+                myChartZz.setOption(zz);
+            });
+
+</script>
+
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/pie'
+            ],
+            function (ec){
+                var myChartZz = ec.init(document.getElementById('tips03'));
+                var ecConfig = require('echarts/config');
+                var zz = {
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        textStyle:{// 字体样式
+                            color:'#999',
+                            fontSize:14,
+                            fontFamily: 'MicroSoft YaHei'
+                        },
+                        data:['本地帮扶','珠三角地市单位帮扶','省直中直驻粤帮扶']
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'总投入扶持资金（万元）',
+                            type:'pie',
+                            radius : '55%',
+                            center: ['50%', '50%'],
+                            data:[
+                                {value:108.2003, name:'本地帮扶'},
+                                {value:58.9094, name:'珠三角地市单位帮扶'},
+                                {value:18.8093, name:'省直中直驻粤帮扶'}
+                            ]
+                        }
+                    ]
+                };
+                myChartZz.setOption(zz);
+            });
+
+</script>
+
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/pie'
+            ],
+            function (ec){
+                var myChartZz = ec.init(document.getElementById('tips04'));
+                var ecConfig = require('echarts/config');
+                var zz = {
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        textStyle:{// 字体样式
+                            color:'#999',
+                            fontSize:14,
+                            fontFamily: 'MicroSoft YaHei'
+                        },
+                        data:['单位自筹资金','各级财政专项资金','中央财政专项扶贫资金','省级财政专项扶贫资金','市级财政专项扶贫资金','县（区）级财政专项扶贫资金']
+                    },
+                    calculable : false,
+                    series : [
+                        {
+                            name:'帮扶资金（万元）',
+                            type:'pie',
+                            selectedMode: 'single',
+                            radius : [0, 70],
+
+                            // for funnel
+                            x: '20%',
+                            width: '40%',
+                            funnelAlign: 'right',
+                            max: 1548,
+
+                            itemStyle : {
+                                normal : {
+                                    label : {
+                                        position : 'inner'
+                                    },
+                                    labelLine : {
+                                        show : false
+                                    }
+                                }
+                            },
+                            data:[
+                                {value:819, name:'各级财政专项资金'},
+                                {value:1935, name:'单位自筹资金', selected:true}
+                            ]
+                        },
+                        {
+                            name:'帮扶资金（万元）',
+                            type:'pie',
+                            radius : [100, 140],
+
+                            // for funnel
+                            x: '60%',
+                            width: '35%',
+                            funnelAlign: 'left',
+                            max: 1048,
+
+                            data:[
+                                {value:1935, name:'单位自筹资金'},
+                                {value:310, name:'中央财政专项扶贫资金'},
+                                {value:234, name:'省级财政专项扶贫资金'},
+                                {value:135, name:'市级财政专项扶贫资金'},
+                                {value:148, name:'县（区）级财政专项扶贫资金'}
+                            ]
+                        }
+                    ]
+                };
+                myChartZz.setOption(zz);
+            });
+
+</script>
+
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/bar'
+            ],
+            function (ec){
+                var myChart05 = ec.init(document.getElementById('tips05'));
+                var ecConfig = require('echarts/config');
+                var tips05 = {
+                    tooltip : {
+                        trigger: 'axis',
+                        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                            type : 'line'        // 默认为直线，可选为：'line' | 'shadow'
+                        },
+                        textStyle:{// 字体样式
+                            color:'#999',
+                            fontSize:14,
+                            fontFamily: 'MicroSoft YaHei'
+                        }
+                    },
+                    grid: {
+                        borderWidth: 0,
+                        y2:140
+                    },
+                    calculable : true,
+                    xAxis : [
+                        {
+                            type : 'category',
+                            axisTick : false,
+                            data : ['教育扶贫','扶贫措施1','扶贫措施2','扶贫措施3','扶贫措施4','扶贫措施5','扶贫措施6','扶贫措施7','扶贫措施8'],
+                            axisLabel:{
+                                show: true,
+                                interval: '0',
+                                rotate:45,
+                                formatter: null,
+                                textStyle: {
+                                    color: '#999'
+                                }
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            show: true,
+                            axisLabel : {
+                                formatter: '{value} %'
+                            },
+                            splitNumber: 3
+                        }
+                    ],
+                    series : [
+                        {
+                            name:'措施精准度（%）',
+                            type:'bar',
+                            barWidth :40,
+                            itemStyle: {
+                                normal: {
+                                    color:function(params) {
+                                        // build a color map as your need.
+                                        var colorList = [
+                                            '#ff7f50','#87cefa','#da70d6','#32cd32','#6495ed',
+                                            '#ff69b4','#ba55d3','#cd5c5c','#ffa500','#40e0d0',
+                                            '#1e90ff','#ff6347','#7b68ee','#00fa9a','#ffd700',
+                                            '#6b8e23','#ff00ff','#3cb371','#b8860b','#30e0e0',
+                                            '#C1232B','#B5C334','#FCCE10','#E87C25','#27727B',
+                                            '#FE8463','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                            '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                                        ];
+                                        return colorList[params.dataIndex]
+                                    },
+                                    label: {
+                                        show: true,
+                                        position: 'top'
+                                    }
+                                }
+                            },
+                            data:[60, 75, 80, 90, 50, 20, 0, 20, 50]
+                        }
+                    ]
+                };
+                myChart05.setOption(tips05);
+
+            });
+
+</script>
+</body>
+</html>

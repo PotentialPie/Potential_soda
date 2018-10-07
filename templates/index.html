@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>首页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="jquery-easyui-1.4.5/themes/icon.css" rel="stylesheet" type="text/css" />
+<link href="jquery-easyui-1.4.5/themes/bootstrap/easyui.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/jquery.modal.js" type="text/javascript"></script>
+<script src="jquery-easyui-1.4.5/jquery.easyui.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	$(".content").height($(window).height()-$(".header").height()-1)
+})
+</script>
+</head>
+<body class="index">
+<div class="header">
+	<div class="logo">
+    	<h1><a title="广东省精准扶贫大数据管理平台" href="index.html">广东省精准扶贫大数据管理平台</a></h1>
+    </div>
+    <div class="login-info">
+          <a class="down-a" href="javascript:;">
+            <img src="images/thumb.jpg"/>
+            <span class="s-round-mask"></span>
+            <span class="ell">中心管理员</span>
+            <i class="arrow-down"></i>
+          </a>
+          <div  class="downlist">
+                <a class="icon_user">个人信息</a>
+                <a class="icon_pw">修改密码</a>
+                <a class="icon_quit" href="login.html">退出系统</a>
+          </div>
+	</div>
+</div>
+<div class="content">
+	<p class="title"></p>
+    <p class="sub-title">广东省扶贫开发办公室</p>
+    <ul class="list">
+    	<li>
+        	<p>精准扶贫</p>
+            <div>
+            	<a class="icon-jzsp" href="贫困村管理.html">精准识贫</a>
+                <a class="icon-jzfp">精准扶贫</a>
+            </div>
+        </li>
+        <li>
+        	<p>精准脱贫</p>
+            <div>
+            	<a class="icon-tpys">脱贫验收</a>
+                <a class="icon-fpyj">返贫预警</a>
+            </div>
+        </li>
+        <li>
+        	<p>精准管理</p>
+            <div>
+            	<a class="icon-jzfx" href="扶贫全视图（广东省）.html">精准分析</a>
+                <a class="icon-fpkh">扶贫考核</a>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="bg-index"><img src="images/bg_index.jpg"/></div>
+</body>
+</html>

@@ -3,7 +3,7 @@ import json
 
 from flask_restplus import reqparse
 from flask_restplus import Namespace
-
+from flask import make_response
 from app import sodaVisualizationService
 from app.common.soda_common import SDResource, SDCodeMsg, SDCommonJsonRet, SDRequestParser
 import requests
@@ -41,7 +41,9 @@ class GetFlowInterface(SDResource):
                                   success=False,
                                   msg=SDCodeMsg.PARAMS_ERROR.msg,
                                   data=SDCodeMsg.PARAMS_ERROR.msg)
-            return ret.toJson()
+            ret = make_response(ret.toJsonStr())
+            ret.headers['Access-Control-Allow-Origin'] = '*'
+            return ret
 
         # 查询当日当前站点人流量数据
         flow_data = sodaVisualizationService.query24hourFlowBySiteAndData(site,date,year)
@@ -58,7 +60,9 @@ class GetFlowInterface(SDResource):
                                   success=True,
                                   msg=SDCodeMsg.SUCCESS.msg,
                                   data=flow_data.as_dict())
-        return ret.toJson()
+        ret = make_response(ret.toJsonStr())
+        ret.headers['Access-Control-Allow-Origin'] = '*'
+        return ret
 
 @base_ns.route("/query_site_by_line_num")
 class GetSiteByLineNum(SDResource):
@@ -91,7 +95,9 @@ class GetSiteByLineNum(SDResource):
                                   success=True,
                                   msg=SDCodeMsg.SUCCESS.msg,
                                   data=site_list)
-        return ret.toJson()
+        ret = make_response(ret.toJsonStr())
+        ret.headers['Access-Control-Allow-Origin'] = '*'
+        return ret
 
 @base_ns.route("/query_site_flow_records_by_site_num_and_date")
 class GetFlowRecordsBySiteNumAndDate(SDResource):
@@ -118,7 +124,9 @@ class GetFlowRecordsBySiteNumAndDate(SDResource):
                                   success=False,
                                   msg=SDCodeMsg.PARAMS_ERROR.msg,
                                   data=SDCodeMsg.PARAMS_ERROR.msg)
-            return ret.toJson()
+            ret = make_response(ret.toJsonStr())
+            ret.headers['Access-Control-Allow-Origin'] = '*'
+            return ret
 
 
         # 查询线路的所有站点列表
@@ -136,4 +144,6 @@ class GetFlowRecordsBySiteNumAndDate(SDResource):
                                   success=True,
                                   msg=SDCodeMsg.SUCCESS.msg,
                                   data=site_totalNum_dict)
-        return ret.toJson()
+        ret = make_response(ret.toJsonStr())
+        ret.headers['Access-Control-Allow-Origin'] = '*'
+        return ret

@@ -17,9 +17,8 @@ base_ns = Namespace("base_api", description="base_api doc and test")
 class GetFlowInterface(SDResource):
     @base_ns.doc("query_flow",
                  params={"site": "站点名称",
-                         "date": "日期",
-                         "year": "年份"},
-                 description=u"根据站点名称，日期，年份来获取24小时的人流量数据。\n"
+                         "date": "日期"},
+                 description=u"根据站点名称，日期来获取24小时的人流量数据。\n"
                              u"年份参数必须为2016或者2018"
                              u"返回200：成功\n"
                              u"返回101：没有查询到相关人流量记录\n"
@@ -28,25 +27,13 @@ class GetFlowInterface(SDResource):
         parser_ = SDRequestParser()
         parser_.add_argument("site", type=str, required=True)
         parser_.add_argument("date", type=str, required=True)
-        parser_.add_argument("year", type=str, required=True)
 
         params = parser_.parse_args()
         site = params['site']
         date = params['date']
-        year = params['year']
-
-        # 判断年份参数是否合法
-        if year is None or (year != '2016' and year != '2018'):
-            ret = SDCommonJsonRet(code=SDCodeMsg.PARAMS_ERROR.code,
-                                  success=False,
-                                  msg=SDCodeMsg.PARAMS_ERROR.msg,
-                                  data=SDCodeMsg.PARAMS_ERROR.msg)
-            ret = make_response(ret.toJsonStr())
-            ret.headers['Access-Control-Allow-Origin'] = '*'
-            return ret
 
         # 查询当日当前站点人流量数据
-        flow_data = sodaVisualizationService.query24hourFlowBySiteAndData(site,date,year)
+        flow_data = sodaVisualizationService.query24hourFlowBySiteAndData(site,date)
 
         # 判断人流量数据是否为空，为空则返回错误
         if flow_data is None or flow_data == '':

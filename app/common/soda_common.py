@@ -42,6 +42,8 @@ class SDCodeMsg():
     SUCCESS = CM(200, "success")
     FLOW_RECORD_NOT_FOUND = CM(101, "没有查询到相关的人流量记录")
     PARAMS_ERROR = CM(102, "请检查相关参数")
+    SITE_RECORD_NOT_FOUND = CM(103, "没有查询到相关的站点记录")
+    SITE_FLOW_RECORD_NOT_FOUND = CM(104, "某有查询到相关线路所有站点的人流总量记录")
 
 class SDResource(Resource):
     def __init__(self, api=None, *args, **kwargs):

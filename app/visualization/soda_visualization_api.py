@@ -59,3 +59,81 @@ class GetFlowInterface(SDResource):
                                   msg=SDCodeMsg.SUCCESS.msg,
                                   data=flow_data.as_dict())
         return ret.toJson()
+
+@base_ns.route("/query_site_by_line_num")
+class GetSiteByLineNum(SDResource):
+    @base_ns.doc("query_site_by_line_num",
+                 params={"site_num": "地铁线路"},
+                 description=u"根据地铁线号查询所有站点。\n"
+                             u"地铁线路若为空，默认查询所有站点"
+                             u"返回200：成功\n"
+                             u"返回103：没有查询到相关站点记录\n"
+                             u"返回102：参数错误，检查参数")
+    def get(self):
+        parser_ = SDRequestParser()
+        parser_.add_argument("site_num", type=str, required=False)
+
+        params = parser_.parse_args()
+        site_num = params['site_num']
+
+        # 查询线路的所有站点列表
+        site_list = sodaVisualizationService.querySiteByNum(site_num)
+
+        # 判断站点数据是否为空，为空则返回错误
+        if site_list is None or site_list == '' or len(site_list) == 0:
+            ret = SDCommonJsonRet(code=SDCodeMsg.SITE_RECORD_NOT_FOUND.code,
+                                  success=False,
+                                  msg=SDCodeMsg.SITE_RECORD_NOT_FOUND.msg,
+                                  data=SDCodeMsg.SITE_RECORD_NOT_FOUND.msg)
+        else:
+            # 不为空，则返回数据
+            ret = SDCommonJsonRet(code=SDCodeMsg.SUCCESS.code,
+                                  success=True,
+                                  msg=SDCodeMsg.SUCCESS.msg,
+                                  data=site_list)
+        return ret.toJson()
+
+@base_ns.route("/query_site_flow_records_by_site_num_and_date")
+class GetFlowRecordsBySiteNumAndDate(SDResource):
+    @base_ns.doc("query_site_flow_records_by_site_num_and_date",
+                 params={"site_num": "地铁线路",
+                         "date": "日期"},
+                 description=u"根据地铁线号和日期查询所有站点的某日总人流量记录。\n"
+                             u"地铁线路若为空，默认查询所有站点"
+                             u"返回200：成功\n"
+                             u"返回104：某有查询到相关线路所有站点的人流总量记录\n"
+                             u"返回102：参数错误，检查参数")
+    def get(self):
+        parser_ = SDRequestParser()
+        parser_.add_argument("site_num", type=str, required=False)
+        parser_.add_argument("date", type=str, required=True)
+
+        params = parser_.parse_args()
+        site_num = params['site_num']
+        date = params['date']
+
+        # 判断date是否合法
+        if date is None or date == '' or (not str(date).startswith('2016') and not str(date).startswith('2018')):
+            ret = SDCommonJsonRet(code=SDCodeMsg.PARAMS_ERROR.code,
+                                  success=False,
+                                  msg=SDCodeMsg.PARAMS_ERROR.msg,
+                                  data=SDCodeMsg.PARAMS_ERROR.msg)
+            return ret.toJson()
+
+
+        # 查询线路的所有站点列表
+        site_totalNum_dict = sodaVisualizationService.querySiteTotalRecordsBySiteNumAndDate(site_num, date)
+
+        # 判断站点数据是否为空，为空则返回错误
+        if site_totalNum_dict is None or site_totalNum_dict == '' or len(site_totalNum_dict) == 0:
+            ret = SDCommonJsonRet(code=SDCodeMsg.SITE_FLOW_RECORD_NOT_FOUND.code,
+                                  success=False,
+                                  msg=SDCodeMsg.SITE_FLOW_RECORD_NOT_FOUND.msg,
+                                  data=SDCodeMsg.SITE_FLOW_RECORD_NOT_FOUND.msg)
+        else:
+            # 不为空，则返回数据
+            ret = SDCommonJsonRet(code=SDCodeMsg.SUCCESS.code,
+                                  success=True,
+                                  msg=SDCodeMsg.SUCCESS.msg,
+                                  data=site_totalNum_dict)
+        return ret.toJson()

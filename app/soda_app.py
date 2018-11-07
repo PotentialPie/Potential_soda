@@ -4,8 +4,15 @@ from flask import Flask
 from flask_restplus import reqparse
 from flask_environments import Environments
 from flask_restplus import Resource, Api
-from app.soda_log import init_log
+# import os
+# import sys
+# print(os.path.dirname(__file__))
+# print(os.path.dirname(os.path.abspath(__file__)))
+# sys.path.append(os.path.dirname(__file__))
+# sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# print(sys.path)
 from app import init_beas_when_app_start
+from app.soda_log import init_log
 from app.visualization.soda_visualization_api import base_ns
 from app.common.soda_common import SDCommonJsonRet, SDResource, SDCodeMsg, SDRequestParser
 

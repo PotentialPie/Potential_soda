@@ -123,6 +123,8 @@ class SubwayStaByHourModel(digiccyDB.Model):
     TIME21 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
     TIME22 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
     TIME23 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TOTALAMOUNT = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TOTALDISCOUNT = digiccyDB.Column(digiccyDB.INTEGER, primary_key=False, nullable=True)
 
     def as_dict(self):
         return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}

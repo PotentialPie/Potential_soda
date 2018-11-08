@@ -137,7 +137,7 @@
                 <li class="view03">
                     <div class="Title"><a data-toggle="modal" href="#addModal11">该站点当日人流量变化曲线</a></div>
                     <hr class="hr-linebt"/>
-                    <div class="Charts" id="zzz" style="width: 600px; height: 250px"></div>
+                    <div class="Charts" id="zzz" style="width: 550px; height: 280px"></div>
                 </li>
             </ul>
         </div>
@@ -364,6 +364,8 @@
 </script>
 
 <script type="text/javascript">
+	
+	
     // 路径配置
     require.config({
         paths: {
@@ -379,23 +381,55 @@
             function (ec) {
                 var myChartZzz = ec.init(document.getElementById('zzz'));
                 var ecConfig = require('echarts/config');
-                var cx = {
+
+                
+				//myChartZzz.setOption(cx);
+				myChartZzz.showLoading();
+				
+				var data={
+						'site':'2号线中山公园',
+						'date':'2018-03-06'
+						};
+				var pnum = [];
+				
+				$.ajax({
+						type:'GET',
+						url: 'http://localhost:58480/v1/api/soda/base/query_flow',
+						data:data,
+						dataType:'json',
+        				success:function(data){
+
+			
+						for(var i=5;i < 24; i++){
+							var tem = 'TIME'+i
+							pnum.push(data["data"][tem])
+
+							}
+						
+							//alert(pnum)
+							
+							myChartZzz.hideLoading();
+							
+							
+							var cx = {
                     tooltip : {
                         trigger: 'axis'
                     },
                     color:["#ffec00","#2786fc"],
                     calculable : true,
-                    legend: {
-                        data:['出站人数','进站人数'],
-                        x : 'right',
-                        textStyle: {
-                            color: '#fff'
-                        }
-                    },
+                    <!--legend: {-->
+                        <!--data:['站点人数'],-->
+                        <!--x : 'right',-->
+                        <!--textStyle: {-->
+                            <!--color: '#fff'-->
+                        <!--}-->
+                    <!--},-->
                     xAxis : [
                         {
                             type : 'category',
-                            data : ['8:00~9:00','9:00~10:00','10:00~11:00','11:00~12:00','12:00~13:00','13:00~14:00'],
+							//data:['0:00~1:00', '1:00~2:00', '2:00~3:00', '3:00~4:00', '4:00~5:00', '5:00~6:00', '6:00~7:00', '7:00~8:00', '8:00~9:00', '9:00~10:00', '10:00~11:00', '11:00~12:00', '12:00~13:00', '13:00~14:00', '14:00~15:00', '15:00~16:00', '16:00~17:00', '17:00~18:00', '18:00~19:00', '19:00~20:00', '20:00~21:00', '21:00~22:00', '22:00~23:00', '23:00~24:00'],
+							data:['5:00~6:00', '6:00~7:00', '7:00~8:00', '8:00~9:00', '9:00~10:00', '10:00~11:00', '11:00~12:00', '12:00~13:00', '13:00~14:00', '14:00~15:00', '15:00~16:00', '16:00~17:00', '17:00~18:00', '18:00~19:00', '19:00~20:00', '20:00~21:00', '21:00~22:00', '22:00~23:00', '23:00~24:00'],
+
                             axisLabel:{
                                 show: true,
                                 interval: '0',
@@ -409,6 +443,7 @@
                     ],
                     yAxis : [
                         {
+
                             type : 'value',
                             name : '乘客数量',
                             axisLabel : {
@@ -421,8 +456,8 @@
                     ],
                     series : [
 
-                        {
-                            name:'出站人数',
+                        {  
+                            name:'站点人数',
                             type:'bar',
                             itemStyle: {
                                 normal: {
@@ -432,32 +467,35 @@
                                     }
                                 }
                             },
-                            data:[3600, 3900, 4200, 1680, 9900, 4900]
-                        },
-                        {
-                            name:'进站人数',
-                            type:'bar',
-                            itemStyle: {
-                                normal: {
-                                    label: {
-                                        show: true,
-                                        position: 'top'
-                                    }
-                                }
-                            },
-                            data:[3900, 2000, 1000, 3920, 6377, 1036]
+                            data:pnum,
+							barWidth:10,
+
+
                         }
                     ]
                 };
+							
+							myChartZzz.setOption(cx);
+							
+			 
 
-                myChartZzz.setOption(cx);
+											}
+						});
+				
+				
             });
 
 </script>
 
 
 
+<script type="text/javascript">
+        
 
+
+
+
+</script>
 
 
 

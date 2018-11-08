@@ -5,14 +5,743 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e7773ac-c0fc-4428-846a-a02fccd2c5cd" name="Default" comment="v0.0.1项目结构搭建">
-      <change afterPath="$PROJECT_DIR$/app/templates/datatest2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/SODA-DPUR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SODA-DPUR.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/zhangyunfeng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/zhangyunfeng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/common/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/common/soda_common.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/soda_common.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/soda_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/soda_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/扶贫全视图（广东省）.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/soda_log.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/soda_log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/datatest.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/datatest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/datatest2.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/datatest2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/bar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/bar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/chord.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/chord.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/eventRiver.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/eventRiver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/force.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/force.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/funnel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/funnel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/gauge.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/gauge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/heatmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/heatmap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/k.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/k.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/line.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/line.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/pie.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/pie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/radar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/radar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/scatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/scatter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/treemap.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/treemap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/venn.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/venn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/wordCloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/chart/wordCloud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/echarts-all.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/echarts-all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/echarts.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/echarts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/event.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/accMath.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/accMath.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/coordinates.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/coordinates.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/date.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/date.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/ecAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/ecAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/ecData.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/ecData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/ecEffect.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/ecEffect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/ecQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/ecQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/kwargs.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/kwargs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoCoord.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoCoord.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/an_hui_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/an_hui_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/ao_men_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/ao_men_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/bei_jing_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/bei_jing_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/china_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/china_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/chong_qing_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/chong_qing_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/fu_jian_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/fu_jian_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/gan_su_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/gan_su_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/guang_dong_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/guang_dong_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/guang_xi_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/guang_xi_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/gui_zhou_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/gui_zhou_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/hai_nan_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/hai_nan_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/he_bei_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/he_bei_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/he_nan_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/he_nan_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/hei_long_jiang_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/hei_long_jiang_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/hu_bei_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/hu_bei_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/hu_nan_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/hu_nan_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/ji_lin_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/ji_lin_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/jiang_su_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/jiang_su_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/jiang_xi_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/jiang_xi_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/liao_ning_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/liao_ning_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/nei_meng_gu_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/nei_meng_gu_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/ning_xia_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/ning_xia_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/qing_hai_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/qing_hai_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/qingyuan_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/qingyuan_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/shan_dong_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/shan_dong_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/shan_xi_1_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/shan_xi_1_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/shan_xi_2_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/shan_xi_2_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/shang_hai_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/shang_hai_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/si_chuan_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/si_chuan_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/tai_wan_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/tai_wan_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/tian_jin_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/tian_jin_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/world_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/world_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/xi_zang_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/xi_zang_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/xiang_gang_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/xiang_gang_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/xin_jiang_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/xin_jiang_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/yun_nan_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/yun_nan_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/zhe_jiang_geo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/geoJson/zhe_jiang_geo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/params.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/params.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/encode.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/encode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/441802_geo(1).json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/441802_geo(1).json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/an_hui_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/an_hui_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/ao_men_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/ao_men_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/bei_jing_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/bei_jing_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/beijing.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/beijing.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/china_city.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/china_city.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/china_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/china_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/chong_qing_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/chong_qing_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/fu_jian_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/fu_jian_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/gan_su_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/gan_su_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/guang_dong_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/guang_dong_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/guang_xi_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/guang_xi_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/gui_zhou_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/gui_zhou_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/hai_nan_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/hai_nan_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/he_bei_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/he_bei_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/he_nan_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/he_nan_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/hei_long_jiang_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/hei_long_jiang_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/hu_bei_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/hu_bei_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/hu_nan_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/hu_nan_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/ji_lin_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/ji_lin_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/jiang_su_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/jiang_su_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/jiang_xi_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/jiang_xi_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/liao_ning_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/liao_ning_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/nei_meng_gu_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/nei_meng_gu_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/ning_xia_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/ning_xia_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/qing_hai_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/qing_hai_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/qingyuan_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/qingyuan_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/shan_dong_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/shan_dong_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/shan_xi_1_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/shan_xi_1_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/shan_xi_2_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/shan_xi_2_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/shang_hai_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/shang_hai_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/si_chuan_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/si_chuan_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/tai_wan_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/tai_wan_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/tian_jin_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/tian_jin_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/world_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/world_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/xi_zang_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/xi_zang_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/xiang_gang_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/xiang_gang_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/xin_jiang_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/xin_jiang_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/yun_nan_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/yun_nan_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/zhe_jiang_geo.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/rawData/geoJson/zhe_jiang_geo.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/textFixed.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/mapData/textFixed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/ndarray.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/ndarray.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/number.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/number.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/projection/albers.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/projection/albers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/projection/mercator.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/projection/mercator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/projection/normal.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/projection/normal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/projection/svg.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/projection/svg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Candle.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Candle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Chain.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Chain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Cross.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Cross.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/GaugePointer.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/GaugePointer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/HalfSmoothPolygon.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/HalfSmoothPolygon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/HandlePolygon.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/HandlePolygon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Icon.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/MarkLine.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/MarkLine.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Ribbon.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Ribbon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Symbol.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/Symbol.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/normalIsCover.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/shape/normalIsCover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/smartSteps.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/dist/util/smartSteps.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/echarts/build/echarts-optimize-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/echarts/build/echarts-optimize-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/i-贫困村管理.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/i-贫困村管理.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/bg_index.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/bg_index.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/bg_t_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/bg_t_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/btn_zd.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/btn_zd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/btn_zk.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/btn_zk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/code.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/code.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/demo/demo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/demo/demo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/demo/demo2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/demo/demo2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/expand.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/expand.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/expand2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/expand2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/fold.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/fold.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/fold2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/fold2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/i_fpkh.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/i_fpkh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/i_fpyj.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/i_fpyj.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/i_jzfp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/i_jzfp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/i_jzfx.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/i_jzfx.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/i_jzsp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/i_jzsp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/i_sub_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/i_sub_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/i_title.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/i_title.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/i_tpys.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/i_tpys.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_add.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_add.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_an.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_an.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_bell.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_bell.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_dd01.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_dd01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_dd02.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_dd02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_delete.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_delete.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_dot.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_dot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_edit.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_edit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_end.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_end.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_end_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_end_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_ex.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_ex.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_export.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_export.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_first.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_first.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_first_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_first_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_home.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_list01.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_list01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_list02.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_list02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_list03.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_list03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_list04.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_list04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_list05.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_list05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_list06.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_list06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_list07.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_list07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_list08.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_list08.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_list_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_list_bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_man.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_man.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_modal.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_modal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_next.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_next.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_next_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_next_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_pd.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_pd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_po.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_po.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_prev.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_prev.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_prev_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_prev_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_pw.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_pw.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_pw_h.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_pw_h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_quit.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_quit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_quit_h.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_quit_h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_refresh.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_refresh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_ren.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_ren.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_search.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_search_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_search_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_sz01.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_sz01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_sz02.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_sz02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab01.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab02.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab03.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab04.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab05.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab06.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab07.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab07.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab08.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab08.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab09.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab09.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab10.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_tab11.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_tab11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_time.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_time.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_upload.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_upload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_user.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_user_h.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_user_h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/icon_verson.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/icon_verson.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/l_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/l_bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/l_icon_pw.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/l_icon_pw.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/l_icon_user.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/l_icon_user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/l_log.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/l_log.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/logo_lg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/logo_lg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/a_hover.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/a_hover.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/icon_001.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/icon_001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/icon_002.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/icon_002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/icon_003.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/icon_003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/icon_004.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/icon_004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/icon_005.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/icon_005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/icon_006.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/icon_006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/icon_007.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/icon_007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/icon_008.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/icon_008.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/pic01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/pic01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/pic01.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/pic01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/pic011.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/pic011.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/pic012.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/pic012.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/pic02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/pic02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/pic02.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/pic02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/pic021.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/pic021.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/pic03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/pic03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/pic03.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/pic03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic/pic04.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic/pic04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pic001.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pic001.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pw_lg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pw_lg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pw_mid.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pw_mid.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/pw_xs.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/pw_xs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/riqi_pic_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/riqi_pic_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/round-mask.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/round-mask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_arrow_l.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_arrow_l.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_arrow_r.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_arrow_r.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_fpkh.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_fpkh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_fpkh_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_fpkh_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_fpyj.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_fpyj.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_fpyj_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_fpyj_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_jzfp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_jzfp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_jzfp_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_jzfp_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_jzfx.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_jzfx.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_jzfx_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_jzfx_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_jzsp.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_jzsp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_jzsp_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_jzsp_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_sy.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_sy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_sy_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_sy_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_tpys.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_tpys.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_tpys_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_tpys_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_xtgl.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_xtgl.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/s_xtgl_on.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/s_xtgl_on.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/thumb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/thumb.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/touxiang_pic_03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/touxiang_pic_03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/touxiangpic_17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/touxiangpic_17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/images/touxx.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/images/touxx.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/easyloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/easyloader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/jquery.easyui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/jquery.easyui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-af.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-af.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-am.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-am.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-cz.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-cz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-da.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-de.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-el.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-en.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-es.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-fr.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-fr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-it.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-it.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-jp.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-jp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-ko.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-ko.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-pl.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-pl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-pt_BR.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-pt_BR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-ru.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-ru.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-sv_SE.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-sv_SE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-zh_CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-zh_CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-zh_TW.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/locale/easyui-lang-zh_TW.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.accordion.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.accordion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.combo.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.combo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.combobox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.combobox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.combogrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.combogrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.combotree.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.combotree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.datagrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.datagrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.datalist.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.datalist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.datebox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.datebox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.datetimebox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.datetimebox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.datetimespinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.datetimespinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.dialog.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.dialog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.draggable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.draggable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.droppable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.droppable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.filebox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.filebox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.linkbutton.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.linkbutton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.menubutton.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.menubutton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.messager.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.messager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.numberbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.numberbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.numberspinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.numberspinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.pagination.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.pagination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.panel.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.panel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.progressbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.progressbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.propertygrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.propertygrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.resizable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.resizable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.searchbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.searchbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.splitbutton.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.splitbutton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.switchbutton.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.switchbutton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.textbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.textbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.timespinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.timespinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.tooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.tooltip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.treegrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.treegrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.validatebox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.validatebox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.window.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/plugins/jquery.window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/easyloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/easyloader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.accordion.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.accordion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.combobox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.combobox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.datebox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.datebox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.draggable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.draggable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.droppable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.droppable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.form.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.linkbutton.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.linkbutton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.progressbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.progressbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.propertygrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.propertygrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.resizable.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.resizable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.tabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.tabs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.window.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/src/jquery.window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/accordion.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/accordion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/combo.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/combo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/combobox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/combobox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/datagrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/datagrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/datalist.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/datalist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/datebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/datebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/easyui.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/easyui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/filebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/filebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/accordion_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/accordion_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/blank.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/blank.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/calendar_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/calendar_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/combo_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/combo_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/datagrid_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/datagrid_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/datebox_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/datebox_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/layout_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/layout_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/linkbutton_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/linkbutton_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/menu_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/menu_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/messager_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/messager_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/pagination_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/pagination_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/panel_tools.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/panel_tools.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/searchbox_button.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/searchbox_button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/slider_handle.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/slider_handle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/spinner_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/spinner_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/tabs_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/tabs_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/tree_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/tree_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/validatebox_warning.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/images/validatebox_warning.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/linkbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/linkbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/menubutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/menubutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/messager.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/messager.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/numberbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/numberbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/progressbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/progressbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/propertygrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/propertygrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/searchbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/searchbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/spinner.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/spinner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/splitbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/splitbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/switchbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/switchbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/textbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/textbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/tooltip.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/tooltip.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/tree.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/tree.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/validatebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/validatebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/black/window.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/accordion.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/accordion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/combo.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/combo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/combobox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/combobox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/datagrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/datagrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/datalist.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/datalist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/datebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/datebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/easyui.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/easyui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/filebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/filebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/accordion_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/accordion_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/blank.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/blank.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/calendar_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/calendar_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/combo_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/combo_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/datagrid_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/datagrid_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/datebox_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/datebox_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/layout_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/layout_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/linkbutton_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/linkbutton_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/menu_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/menu_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/messager_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/messager_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/pagination_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/pagination_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/panel_tools.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/panel_tools.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/searchbox_button.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/searchbox_button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/slider_handle.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/slider_handle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/spinner_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/spinner_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/tabs_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/tabs_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/tree_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/tree_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/validatebox_warning.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/images/validatebox_warning.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/linkbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/linkbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/menubutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/menubutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/messager.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/messager.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/numberbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/numberbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/progressbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/progressbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/propertygrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/propertygrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/searchbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/searchbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/spinner.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/spinner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/splitbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/splitbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/switchbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/switchbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/textbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/textbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/tooltip.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/tooltip.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/tree.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/tree.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/validatebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/validatebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/bootstrap/window.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/color.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/color.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/accordion.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/accordion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/combo.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/combo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/combobox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/combobox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/datagrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/datagrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/datalist.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/datalist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/datebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/datebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/easyui.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/easyui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/filebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/filebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/accordion_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/accordion_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/blank.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/blank.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/calendar_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/calendar_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/combo_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/combo_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/datagrid_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/datagrid_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/datebox_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/datebox_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/layout_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/layout_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/linkbutton_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/linkbutton_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/menu_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/menu_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/messager_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/messager_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/pagination_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/pagination_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/panel_tools.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/panel_tools.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/searchbox_button.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/searchbox_button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/slider_handle.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/slider_handle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/spinner_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/spinner_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/tabs_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/tabs_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/tree_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/tree_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/validatebox_warning.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/images/validatebox_warning.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/linkbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/linkbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/menubutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/menubutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/messager.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/messager.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/numberbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/numberbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/progressbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/progressbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/propertygrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/propertygrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/searchbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/searchbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/spinner.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/spinner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/splitbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/splitbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/switchbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/switchbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/textbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/textbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/tooltip.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/tooltip.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/tree.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/tree.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/validatebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/validatebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/default/window.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/accordion.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/accordion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/combo.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/combo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/combobox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/combobox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/datagrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/datagrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/datalist.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/datalist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/datebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/datebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/easyui.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/easyui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/filebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/filebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/accordion_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/accordion_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/blank.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/blank.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/calendar_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/calendar_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/combo_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/combo_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/datagrid_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/datagrid_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/datebox_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/datebox_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/layout_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/layout_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/linkbutton_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/linkbutton_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/menu_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/menu_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/messager_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/messager_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/pagination_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/pagination_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/panel_tools.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/panel_tools.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/searchbox_button.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/searchbox_button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/slider_handle.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/slider_handle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/spinner_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/spinner_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/tabs_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/tabs_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/tree_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/tree_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/validatebox_warning.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/images/validatebox_warning.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/linkbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/linkbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/menubutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/menubutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/messager.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/messager.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/numberbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/numberbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/progressbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/progressbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/propertygrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/propertygrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/searchbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/searchbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/spinner.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/spinner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/splitbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/splitbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/switchbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/switchbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/textbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/textbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/tooltip.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/tooltip.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/tree.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/tree.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/validatebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/validatebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/gray/window.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icon.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/back.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/blank.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/blank.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/cancel.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/cancel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/clear.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/clear.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/cut.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/cut.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/edit_add.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/edit_add.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/edit_remove.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/edit_remove.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/filesave.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/filesave.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/filter.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/filter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/help.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/help.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/large_chart.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/large_chart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/large_clipart.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/large_clipart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/large_picture.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/large_picture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/large_shapes.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/large_shapes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/large_smartart.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/large_smartart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/lock.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/lock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/man.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/man.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/mini_add.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/mini_add.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/mini_edit.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/mini_edit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/mini_refresh.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/mini_refresh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/more.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/more.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/no.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/no.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/ok.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/ok.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/pencil.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/pencil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/print.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/print.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/redo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/redo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/reload.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/reload.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/search.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/sum.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/sum.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/tip.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/tip.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/undo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/icons/undo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/accordion.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/accordion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/combo.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/combo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/combobox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/combobox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/datagrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/datagrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/datalist.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/datalist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/datebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/datebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/easyui.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/easyui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/filebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/filebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/accordion_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/accordion_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/blank.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/blank.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/calendar_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/calendar_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/combo_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/combo_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/datagrid_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/datagrid_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/datebox_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/datebox_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/layout_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/layout_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/linkbutton_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/linkbutton_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/menu_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/menu_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/messager_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/messager_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/pagination_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/pagination_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/panel_tools.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/panel_tools.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/searchbox_button.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/searchbox_button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/slider_handle.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/slider_handle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/spinner_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/spinner_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/tabs_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/tabs_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/tree_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/tree_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/validatebox_warning.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/images/validatebox_warning.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/linkbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/linkbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/menubutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/menubutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/messager.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/messager.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/numberbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/numberbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/progressbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/progressbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/propertygrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/propertygrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/searchbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/searchbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/spinner.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/spinner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/splitbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/splitbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/switchbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/switchbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/textbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/textbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/tooltip.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/tooltip.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/tree.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/tree.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/validatebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/validatebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/material/window.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/accordion.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/accordion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/combo.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/combo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/combobox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/combobox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/datagrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/datagrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/datalist.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/datalist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/datebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/datebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/dialog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/easyui.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/easyui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/filebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/filebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/accordion_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/accordion_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/blank.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/blank.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/calendar_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/calendar_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/combo_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/combo_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/datagrid_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/datagrid_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/datebox_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/datebox_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/layout_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/layout_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/linkbutton_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/linkbutton_bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/menu_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/menu_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/messager_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/messager_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/pagination_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/pagination_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/panel_tools.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/panel_tools.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/searchbox_button.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/searchbox_button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/slider_handle.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/slider_handle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/spinner_arrows.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/spinner_arrows.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/tabs_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/tabs_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/tree_icons.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/tree_icons.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/validatebox_warning.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/images/validatebox_warning.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/layout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/linkbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/linkbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/menubutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/menubutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/messager.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/messager.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/numberbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/numberbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/panel.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/panel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/progressbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/progressbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/propertygrid.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/propertygrid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/searchbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/searchbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/spinner.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/spinner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/splitbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/splitbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/switchbutton.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/switchbutton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/tabs.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/textbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/textbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/tooltip.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/tooltip.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/tree.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/tree.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/validatebox.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/validatebox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/window.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/metro/window.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/jquery-easyui-1.4.5/themes/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/echarts-all.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/echarts-all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/jquery-1.8.0.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/jquery-1.8.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/jquery.modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/jquery.modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/jquery.nicescroll.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/jquery.nicescroll.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/jquery.placeholder.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/jquery.placeholder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/layer/extend/layer.ext.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/layer/extend/layer.ext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/layer/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/layer/layer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/layer/skin/default/icon-ext.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/layer/skin/default/icon-ext.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/layer/skin/default/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/layer/skin/default/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/layer/skin/default/loading-0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/layer/skin/default/loading-0.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/layer/skin/default/loading-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/layer/skin/default/loading-1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/layer/skin/default/loading-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/layer/skin/default/loading-2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/layer/skin/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/layer/skin/layer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/layer/skin/layer.ext.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/layer/skin/layer.ext.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/js/startMove.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/js/startMove.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/扶贫全视图（秤架乡）.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/扶贫全视图（秤架乡）.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/贫困村全视图.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/贫困村全视图.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/visualization/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/visualization/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/visualization/soda_visualization_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/visualization/soda_visualization_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/visualization/soda_visualization_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/visualization/soda_visualization_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoapp_nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/demoapp_nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoapp_uwsgi.ini" beforeDir="false" afterPath="$PROJECT_DIR$/demoapp_uwsgi.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gunicorn.conf" beforeDir="false" afterPath="$PROJECT_DIR$/gunicorn.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/upload.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wsgi_gunicorn.py" beforeDir="false" afterPath="$PROJECT_DIR$/wsgi_gunicorn.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,11 +791,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="soda_visualization_api.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/visualization/soda_visualization_api.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-520">
-              <caret line="48" column="59" lean-forward="true" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+            <state relative-caret-position="720">
+              <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
               <folding>
                 <element signature="e#15#26#0" expanded="true" />
               </folding>
@@ -74,20 +803,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="soda_app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/soda_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state relative-caret-position="90">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="soda_visualization_service.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/visualization/soda_visualization_service.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="132" column="71" lean-forward="true" selection-start-line="132" selection-start-column="71" selection-end-line="132" selection-end-column="71" />
+            <state relative-caret-position="1980">
+              <caret line="132" column="29" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -95,14 +824,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/datatest.html">
+      <file leaf-file-name="gunicorn.conf" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gunicorn.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3400">
-              <caret line="422" column="43" lean-forward="true" selection-start-line="422" selection-start-column="43" selection-end-line="422" selection-end-column="43" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -156,7 +882,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="78" />
     <option name="y" value="100" />
     <option name="width" value="1125" />
@@ -174,29 +900,6 @@
             <path>
               <item name="SODA-DPUR" type="b2602c69:ProjectViewProjectNode" />
               <item name="SODA-DPUR" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SODA-DPUR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SODA-DPUR" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SODA-DPUR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SODA-DPUR" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SODA-DPUR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SODA-DPUR" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SODA-DPUR" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SODA-DPUR" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="visualization" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -249,14 +952,12 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/soda_app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="soda_visualization_service" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="SODA-DPUR" />
@@ -276,9 +977,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="Flask" type="Python.FlaskServer" factoryName="Flask server" nameIsGenerated="true">
       <module name="SODA-DPUR" />
@@ -309,6 +1007,8 @@
       <option name="launchJavascriptDebuger" value="false" />
     </configuration>
     <list>
+      <item itemvalue="Flask server.Flask" />
+      <item itemvalue="Flask server.SODA-DPUR" />
       <item itemvalue="Python.soda_visualization_service" />
       <item itemvalue="Python.soda_app" />
     </list>
@@ -357,29 +1057,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32900944" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.48788926" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32900944" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32900944" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.48788926" />
+      <window_info anchor="bottom" id="Version Control" order="11" visible="true" weight="0.32900944" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3298292" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24930556" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900944" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,6 +1105,43 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/visualization/soda_visualization_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="59" lean-forward="true" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+          <folding>
+            <element signature="e#15#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/soda_app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/visualization/soda_visualization_service.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="132" column="29" lean-forward="true" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/datatest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6330">
+          <caret line="422" column="43" lean-forward="true" selection-start-line="422" selection-start-column="43" selection-end-line="422" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py" />
     <entry file="file://$PROJECT_DIR$/upload.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -424,13 +1161,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/扶贫全视图（广东省）.html" />
-    <entry file="file://$PROJECT_DIR$/gunicorn.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/soda_log.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
@@ -468,13 +1198,7 @@
     <entry file="file://$PROJECT_DIR$/app/common/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://D:/Anaconda3/envs/soda/Lib/site-packages/pymysql/connections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="429" column="11" lean-forward="true" selection-start-line="429" selection-start-column="11" selection-end-line="429" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Anaconda3/envs/soda/Lib/site-packages/pymysql/connections.py" />
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -527,8 +1251,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/visualization/soda_visualization_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-520">
-          <caret line="48" column="59" lean-forward="true" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+        <state relative-caret-position="720">
+          <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
           <folding>
             <element signature="e#15#26#0" expanded="true" />
           </folding>
@@ -537,15 +1261,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/soda_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        <state relative-caret-position="90">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/visualization/soda_visualization_service.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="132" column="71" lean-forward="true" selection-start-line="132" selection-start-column="71" selection-end-line="132" selection-end-column="71" />
+        <state relative-caret-position="1980">
+          <caret line="132" column="29" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="29" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -554,11 +1278,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/datatest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3400">
+        <state relative-caret-position="6330">
           <caret line="422" column="43" lean-forward="true" selection-start-line="422" selection-start-column="43" selection-end-line="422" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#div#1;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gunicorn.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>

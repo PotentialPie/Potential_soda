@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import logging
-from flask import Flask
+from flask import Flask,request,jsonify,render_template  # add something important
 from flask_restplus import reqparse
 from flask_environments import Environments
 from flask_restplus import Resource, Api
+from functools import wraps
+from flask_cors import cross_origin
 # import os
 # import sys
 # print(os.path.dirname(__file__))
@@ -15,6 +17,7 @@ from app import init_beas_when_app_start
 from app.soda_log import init_log
 from app.visualization.soda_visualization_api import base_ns
 from app.common.soda_common import SDCommonJsonRet, SDResource, SDCodeMsg, SDRequestParser
+from app import sodaVisualizationService
 
 SERVICE_NAME = "soda_potentialpie_pyservice"
 APP_URL_PREFIX = "/v1/api/soda"
@@ -38,6 +41,26 @@ BASE_URL_PREFIX = "/base"
 api_plus.add_namespace(base_ns,BASE_URL_PREFIX)
 
 
+#@app.route('/v1/api/soda/base/query_flow')#,methods=['POST','GET'])
+@app.route('/datatest')
+@cross_origin()
+def test_get():
+    #获取POST数据
+
+    site=request.args.get('site','')#'10s'
+    date=request.args.get('date','200')#'19'#data.get('num')
+    year=request.args.get('year','500')
+
+    # return 'http://localhost:58480/v1/api/soda/base/query_flow'
+    # site = '10s'
+    # num = '17'
+    #返回
+    # return jsonify({'result':'ok','site':site,'num':num})
+    if date=='2018-03-06' and year=='2018':
+        return jsonify({'result':'ok','site':site,'date':date})
+    else:
+        return render_template('datatest.html')
+        # return jsonify({'result': 'error', 'site': site, 'date': date})
 
 
 @app.route("/")

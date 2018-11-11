@@ -24,7 +24,7 @@
     <div class="cell analysis">
         <div class="viewBox">
             <div class="view">
-                <select>
+                <select id="sitenoselected">
                     <option>地铁1号线</option>
                     <option selected>地铁2号线</option>
                     <option>地铁3号线</option>
@@ -67,7 +67,7 @@
             </div>
             <div class="data mt10">
                 <div class="Title">广兰路地铁口人流量数据汇总
-                    <select>
+                    <select id="sitenameselected">
                             <option selected>广兰路</option>
                             <option>金科路</option>
                             <option>龙阳路</option>
@@ -99,8 +99,8 @@
                         </li>
                         <li>
                             <img src="images/icon_list06.png" alt=""/>
-                            <span>当日该站点总营业额</span>
-                            <span><a data-toggle="modal" href="#addModal5">78</a> 万元</span>
+                            <span >当日该站点总营业额</span>
+                            <span><a id="totalamount" data-toggle="modal" href="#addModal5">78</a> 万元</span>
                         </li>
                         <li>
                             <img src="images/icon_list06.png" alt=""/>
@@ -110,7 +110,7 @@
                         <li>
                             <img src="images/icon_list08.png" alt=""/>
                             <span>当日该站点出站优惠卡数</span>
-                            <span><a data-toggle="modal" href="#addModal7">871</a> 次</span>
+                            <span><a id = "totaldiscount" data-toggle="modal" href="#addModal7">871</a> 次</span>
                         </li>
                         <li>
                             <img src="images/icon_list08.png" alt=""/>
@@ -364,9 +364,98 @@
 </script>
 
 <script type="text/javascript">
+	var siteno = '2号线'
+	
+
+	$(function(){
+			showFlow('2号线广兰路');
+		});
+	
+
+	$('#sitenoselected').change(function(){
+		siteno = $('#sitenoselected').val().split('地铁')[1];
+		
+		$(function(){
+			listSiteName(siteno);
+		});
+		
+		$(function(){
+			addSiteitem(siteno);
+		});
+
+	});
+	
+	$('#sitenameselected').change(function(){
+		var sitename = $('#sitenameselected').val();
+		$(function(){
+			showFlow(siteno+sitename);
+		});
+			
+	});
+	
+
+</script>
+
+
+
+<script>
+    //all the functions
+	//选择线路后，显示实时的人流量
+	function listSiteName(siteno){
+	$.ajax({
+		type:'GET',
+		url: 'http://localhost:58480/v1/api/soda/base/query_site_flow_records_by_site_num_and_date',
+		data:{'site_num':siteno,'date':'2018-03-06'},
+		dataType:'json',
+		success:function(data){
+		$('.city>ul').empty();
+		
+		
+		for(var key in data["data"]){			
+			$(".city>ul").append("<li><span>"+key.split(siteno)[1]+"</span> <em>"+data["data"][key]+"</em></li>")//"<li>"+sitename[i]+","+sitepnum[i]+"</li>")
+
+			}
+		
+		}//success
+
+		});//ajax0
+
+	}
 	
 	
-    // 路径配置
+	//加载在选择线路后可以选择的站点名字
+	function addSiteitem(siteno){
+	$.ajax({
+		type:'GET',
+		url: 'http://localhost:58480/v1/api/soda/base/query_site_by_line_num',
+		data:{'site_num':siteno},
+		dataType:'json',
+		success:function(data){
+		
+		$("#sitenameselected").empty();
+
+		for(var i=0;i < data["data"].length; i++){
+			var temname = data["data"][i]['SITE_NAME'].split(siteno)[1]
+		
+			$("#sitenameselected").append("<option>"+temname+"</option>")
+			}
+			
+		var sitename = $('#sitenameselected').val();
+			$(function(){
+			showFlow(siteno+sitename);
+		});
+
+		
+		}//success
+		
+		
+
+			});//ajax1
+	}
+	
+	
+	function showFlow(siteNoName){
+	// 路径配置
     require.config({
         paths: {
             echarts: 'echarts/build/dist/'
@@ -381,13 +470,13 @@
             function (ec) {
                 var myChartZzz = ec.init(document.getElementById('zzz'));
                 var ecConfig = require('echarts/config');
-
+ 
                 
 				//myChartZzz.setOption(cx);
 				myChartZzz.showLoading();
 				
 				var data={
-						'site':'2号线中山公园',
+						'site':siteNoName,
 						'date':'2018-03-06'
 						};
 				var pnum = [];
@@ -398,6 +487,7 @@
 						data:data,
 						dataType:'json',
         				success:function(data){
+							//alert(JSON.stringify(data));
 
 			
 						for(var i=5;i < 24; i++){
@@ -405,8 +495,18 @@
 							pnum.push(data["data"][tem])
 
 							}
+							
+							totalamount = data["data"]["TOTALAMOUNT"]
+							totaldiscount = data["data"]["TOTALDISCOUNT"]
+							
+							
+							$("#totalamount").empty();
+							$("#totalamount").append(totalamount);
+							$("totaldiscount").empty();
+							$("#totaldiscount").append(totaldiscount);
+							
+							
 						
-							//alert(pnum)
 							
 							myChartZzz.hideLoading();
 							
@@ -484,18 +584,13 @@
 				
 				
             });
+			}
 
 </script>
 
 
 
-<script type="text/javascript">
-        
 
-
-
-
-</script>
 
 
 

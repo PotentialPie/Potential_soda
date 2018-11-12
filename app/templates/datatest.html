@@ -47,7 +47,7 @@
                         <span>全市上地铁在站总人数： 12万人</span>
                     </div>
                     <div class="Charts" id="main"></div>
-                    <div class="city" style="overflow:scroll; height:450px">
+                    <div class="city" style="overflow-x:hidden;overflow-y:scroll; height:435px">
                         <ul>
 
                         </ul>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="data mt10">
-                <div class="Title">广兰路地铁口人流量数据汇总
+                <div class="Title">站点当日人流量变化曲线
                     <select id="sitenameselected">
                             <option selected>广兰路</option>
                             <option>金科路</option>
@@ -109,7 +109,7 @@
                         </li>
                     </ul>
                     -->
-                     <div class="Charts" id="zzz" style="width: 850px; height: 250px"></div>
+                     <div class="Charts" id="zzz" style="width:110%; height:230px"></div>
                 </div>
             </div>
         </div>
@@ -129,12 +129,7 @@
                 </li>
                 <li class="view03" style="height:282px;">
                     <div class="data mt10">
-                    <div class="Title"><a data-toggle="modal" href="#addModal11">该站点当日人流量变化曲线</a>
-                        <select id="sitenameselected">
-                            <option selected>广兰路</option>
-                            <option>金科路</option>
-                            <option>龙阳路</option>
-                        </select>
+                    <div class="Title"><a data-toggle="modal" href="#addModal11">该站点数据汇总</a>
                     </div>
                     <hr class="hr-linebt"/>
                     <div class="dataCon clearfix">
@@ -549,18 +544,19 @@
 			
 						for(var i=5;i < 24; i++){
 							var tem = 'TIME'+i
-							pnum.push(data["data"][tem])
+							//pnum.push(data["data"][tem])
+							pnum.push(parseInt(data["data"][tem]))
 
 							}
 							
-							totalamount = data["data"]["TOTALAMOUNT"]
-							totaldiscount = data["data"]["TOTALDISCOUNT"]
+							totalamount = (parseInt(data["data"]["TOTALAMOUNT"])/10000).toFixed(2)
+							totaldiscount = parseInt(data["data"]["TOTALDISCOUNT"])
 							
 							
-							//$("#totalamount").empty();
 							$("#totalamount").text(totalamount);
-							//$("totaldiscount").empty();
 							$("#totaldiscount").text(totaldiscount);
+							
+							$(".view03>.data.mt10>.Title").text(siteNoName+" 数据汇总")
 							
 							
 						
@@ -589,8 +585,8 @@
 
                             axisLabel:{
                                 show: true,
-                                interval: '0',
-                                rotate:0,
+                                interval: '1',
+                                rotate:+35,
                                 formatter: null,
                                 textStyle: {
                                     color: '#fff'
@@ -611,6 +607,11 @@
                             }
                         }
                     ],
+					grid:{
+						x:50,
+						y:20//,
+						//y2:4
+					},
                     series : [
 
                         {  
@@ -630,6 +631,8 @@
 
                         }
                     ]
+				 
+
                 };
 							
 							myChartZzz.setOption(cx);
@@ -644,10 +647,6 @@
 			}
 
 </script>
-
-
-
-
 
 
 

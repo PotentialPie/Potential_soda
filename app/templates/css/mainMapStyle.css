@@ -1,0 +1,137 @@
+html,body{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100%;
+  position: relative;
+  overflow:hidden;
+  background-color: #0a0a0a;
+}
+.top,.bottom{
+  color:#eee;
+  width:100%;
+  position: fixed;
+}
+.top{
+  height:10%;
+  top:0;
+  left:0;
+  background: -webkit-linear-gradient(top, #607c87 0%,#000000 100%);
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.bottom{
+  height:8%;
+  bottom:0;
+  left:0;
+  background: #1b1b1b;
+  display: flex;
+  align-items:center;
+}
+.dayTime{
+  width:300px;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+}
+.time{
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+}
+.day{
+  margin-right: 20px;
+}
+.tips{
+  height:20px;
+  line-height: 20px;
+  width:80px;
+  text-align: center;
+  color:#eee;
+  background-color: #f00;
+}
+.title{
+  font-size: 18px;
+  display: flex;
+  align-items:center;
+}
+.title img{
+  width:40px;
+  height:40px;
+}
+.passengerNum{
+  color:#d4d4d4;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 14px;
+  margin-right: 30px
+}
+.erroTitle{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 18px;
+  height:100%;
+  background-color: #272727;
+  width:170px;
+  color:#e12059;
+}
+.erroTime{
+  margin-left: 20px;
+  font-size: 16px;
+  color:#e12059;
+}
+.erroInfo{
+  margin-left: 20px;
+  font-size: 18px;
+}
+.chartsLeft,.chartsRight{
+  width:28%;
+  height:80%;
+  position: fixed;
+  top:11%;
+}
+.chartsLeft{
+  left:0;
+}
+.chartsRight{
+  right:0;
+}
+#chart01,#chart02,#chart03,#chart04,#chart05{
+  background-color: #171719;
+  width:100%;
+}
+#chart01{
+  height:40%;
+}
+#chart02{
+  height:56%;
+  margin-top: 3%;
+  background-color: #fff;
+}
+#chart03,#chart04,#chart05{
+  width:100%;
+  height:32%;
+  margin-bottom:3%;
+  background-color: #fff;
+}
+#mainMap{
+  width:100vw;
+  height:100vh;
+}
+/*.colorDemo{
+  position: fixed;
+  top:15%;
+  right:35%;
+}
+.colorDemo span{
+  color:#eee;
+  font-size: 6px;
+}
+.linearGrad{
+  width:10px;
+  height:40px;
+  background: -webkit-linear-gradient(top, #FF0000 0%,#CCFF00 100%);
+}*/

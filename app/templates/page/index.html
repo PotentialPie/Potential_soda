@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>进出站流量</title>
+		<link rel="stylesheet" href="../css/map.css">
+		<script src="../plugin/jquery.min.js"></script>
+		<script src="../plugin/jquery.svg.pan.zoom.js"></script>
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="select">
+				<select id="in_out" onChange="">
+					<option selected value="in">进站客流</option>
+					<option value="out">出站客流</option>
+				</select>
+				<select id="date" onChange="">
+					<option selected>20150301</option>
+				</select>
+			</div>
+			<script type="text/javascript">
+				dateOption = document.getElementById('date');
+				var dateArray = ['20150301', '20150302', '20150303', '20150304', '20150305', '20150306', '20150307', '20150308', '20150309', '20150310', '20150311', '20150312', '20150313', '20150314', '20150315', '20150316', '20150317', '20150318', '20150319', '20150320', '20150321', '20150322', '20150323', '20150324', '20150325', '20150326', '20150327', '20150328', '20150329', '20150330', '20150331', '20150401', '20150402', '20150403', '20150404', '20150405', '20150406', '20150407', '20150408', '20150409', '20150410', '20150411', '20150412', '20150413', '20150414', '20150415', '20150416', '20150417', '20150418', '20150419', '20150420', '20150421', '20150422', '20150423', '20150424', '20150425', '20150426', '20150427', '20150428', '20150429', '20150430'];
+				var option = "";
+				for(d in dateArray) {
+					option += "<option>"+dateArray[d]+"</option>";
+				};
+				dateOption.innerHTML = option;
+			</script>
+
+			<span id="datebox"></span>
+			<span id="clock"></span>
+			<div class="screen">
+				<svg id="mainMap" xmlns="http://www.w3.org/2000/svg" viewBox="-18 5 850 850">
+					<!-- 地图 -->
+					<rect id="backGround" x="0" y="0" height="1000" width="1000" fill="#0a0a0a"></rect>
+					<!--图例-->
+					<!--<path d="M780,80 L780.01,157" stroke="url(#colorDemo)" stroke-width="10"></path>
+					<defs>
+						<linearGradient id="colorDemo" x1="0%" y1="0%" x2="0%" y2="100%">
+							<stop offset="0%" stop-color="#FF0000"></stop>
+							<stop offset="100%" stop-color="#CCFF00"></stop>
+						</linearGradient>
+					</defs>
+					<g>
+						<text font-size="10px" font-weight="bold" stroke="#040404" fill="#808080" stroke-width="0.1" x="750" y="86">拥堵</text>
+						<text font-size="10px" font-weight="bold" stroke="#040404" fill="#808080" stroke-width="0.1" x="750" y="157">正常</text>
+					</g>-->
+				</svg>
+			</div>
+		</div>
+		<script>
+			window.onload = function() {
+				var options = {
+					events: {
+						mouseWheel: true, // enables mouse wheel zooming events
+						doubleClick: false, // enables double-click to zoom-in events
+						drag: true, // enables drag and drop to move the SVG events
+						dragCursor: "drag" // cursor to use while dragging the SVG
+					},
+					animationTime: 100, // time in milliseconds to use as default for animations. Set 0 to remove the animation
+					zoomFactor: .08, // how much to zoom-in or zoom-out
+					maxZoom: 3, //maximum zoom in, must be a number bigger than 1
+					panFactor: 100, // how much to move the viewBox when calling .panDirection() methods
+					limits: { // the limits in which the image can be moved. If null or undefined will use the initialViewBox plus 15% in each direction
+						x: -150,
+						y: -300,
+						x2: 1150,
+						y2: 1150
+					}
+				};
+				var svgPanZoom = $("#mainMap").svgPanZoom(options);
+				var svgOptions = {
+					"mapId": "#mainMap",
+					"mapNum": 0,
+					"animate": false,
+					"lineColor": true,
+					"error": false,
+					"stationInfo": false,
+					"setError": false
+				}
+				drawSVG(svgOptions);
+			}
+		</script>
+		<script src="../js/stationNotes.js"></script>
+		<script src="../js/drawSVG.js"></script>
+		<script src="../js/showAndControl.js"></script>
+		<script src="../js/getLineContact.js"></script>
+		<script src="../js/lineAndStation.js"></script>
+		<script src="../js/getPassenger.js"></script>
+	</body>
+
+</html>

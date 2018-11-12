@@ -1,0 +1,163 @@
+.digitsNum{
+	display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.digitsNum div span{
+	background-color:#ff1658;
+	border-color:#ff1658;
+}
+ .digitsNum div{
+	text-align:left;
+	position:relative;
+	width: 10px;
+	height:20px;
+	display:inline-block;
+	margin:0 2px;
+}
+
+ .digitsNum div span{
+	opacity:0;
+	position:absolute;
+
+	-webkit-transition:0.25s;
+	-moz-transition:0.25s;
+	transition:0.25s;
+}
+
+ .digitsNum div span:before,
+ .digitsNum div span:after{
+	content:'';
+	position:absolute;
+	width:0;
+	height:0;
+	border:2px solid transparent;
+}
+
+ .digitsNum .d1{			height:2px;width:6px;top:0;left:2px;}
+ .digitsNum .d1:before{	border-width:0 2px 2px 0;border-right-color:inherit;left:-2px;}
+ .digitsNum .d1:after{	border-width:0 0 2px 2px;border-left-color:inherit;right:-2px;}
+
+ .digitsNum .d2{			height:2px;width:6px;top:8px;left:2px;}
+ .digitsNum .d2:before{	border-width:1px 2px 1px;border-right-color:inherit;left:-4px;}
+ .digitsNum .d2:after{	border-width:1px 2px 1px;border-left-color:inherit;right:-4px;}
+
+ .digitsNum .d3{			height:2px;width:6px;top:16px;left:2px;}
+ .digitsNum .d3:before{	border-width:2px 2px 0 0;border-right-color:inherit;left:-2px;}
+ .digitsNum .d3:after{	border-width:2px 0 0 2px;border-left-color:inherit;right:-2px;}
+
+ .digitsNum .d4{			width:2px;height:5px;top:2px;left:-1px;}
+ .digitsNum .d4:before{	border-width:0 2px 2px 0;border-bottom-color:inherit;top:-2px;}
+ .digitsNum .d4:after{	border-width:0 0 2px 2px;border-left-color:inherit;bottom:-2px;}
+
+ .digitsNum .d5{			width:2px;height:5px;top:2px;right:-1px;}
+ .digitsNum .d5:before{	border-width:0 0 2px 2px;border-bottom-color:inherit;top:-2px;}
+ .digitsNum .d5:after{	border-width:2px 0 0 2px;border-top-color:inherit;bottom:-2px;}
+
+ .digitsNum .d6{			width:2px;height:5px;top:11px;left:-1px;}
+ .digitsNum .d6:before{	border-width:0 2px 2px 0;border-bottom-color:inherit;top:-2px;}
+ .digitsNum .d6:after{	border-width:0 0 2px 2px;border-left-color:inherit;bottom:-2px;}
+
+ .digitsNum .d7{			width:2px;height:5px;top:11px;right:-1px;}
+ .digitsNum .d7:before{	border-width:0 0 2px 2px;border-bottom-color:inherit;top:-2px;}
+ .digitsNum .d7:after{	border-width:2px 0 0 2px;border-top-color:inherit;bottom:-2px;}
+
+/* 1 */
+
+ .digitsNum div.one .d5,
+ .digitsNum div.one .d7{
+	opacity:1;
+}
+
+/* 2 */
+
+ .digitsNum div.two .d1,
+ .digitsNum div.two .d5,
+ .digitsNum div.two .d2,
+ .digitsNum div.two .d6,
+ .digitsNum div.two .d3{
+	opacity:1;
+}
+
+/* 3 */
+
+ .digitsNum div.three .d1,
+ .digitsNum div.three .d5,
+ .digitsNum div.three .d2,
+ .digitsNum div.three .d7,
+ .digitsNum div.three .d3{
+	opacity:1;
+}
+
+/* 4 */
+
+ .digitsNum div.four .d5,
+ .digitsNum div.four .d2,
+ .digitsNum div.four .d4,
+ .digitsNum div.four .d7{
+	opacity:1;
+}
+
+/* 5 */
+
+ .digitsNum div.five .d1,
+ .digitsNum div.five .d2,
+ .digitsNum div.five .d4,
+ .digitsNum div.five .d3,
+ .digitsNum div.five .d7{
+	opacity:1;
+}
+
+/* 6 */
+
+ .digitsNum div.six .d1,
+ .digitsNum div.six .d2,
+ .digitsNum div.six .d4,
+ .digitsNum div.six .d3,
+ .digitsNum div.six .d6,
+ .digitsNum div.six .d7{
+	opacity:1;
+}
+
+
+/* 7 */
+
+ .digitsNum div.seven .d1,
+ .digitsNum div.seven .d5,
+ .digitsNum div.seven .d7{
+	opacity:1;
+}
+
+/* 8 */
+
+ .digitsNum div.eight .d1,
+ .digitsNum div.eight .d2,
+ .digitsNum div.eight .d3,
+ .digitsNum div.eight .d4,
+ .digitsNum div.eight .d5,
+ .digitsNum div.eight .d6,
+ .digitsNum div.eight .d7{
+	opacity:1;
+}
+
+/* 9 */
+
+ .digitsNum div.nine .d1,
+ .digitsNum div.nine .d2,
+ .digitsNum div.nine .d3,
+ .digitsNum div.nine .d4,
+ .digitsNum div.nine .d5,
+ .digitsNum div.nine .d7{
+	opacity:1;
+}
+
+/* 0 */
+
+ .digitsNum div.zero .d1,
+ .digitsNum div.zero .d3,
+ .digitsNum div.zero .d4,
+ .digitsNum div.zero .d5,
+ .digitsNum div.zero .d6,
+ .digitsNum div.zero .d7{
+	opacity:1;
+}

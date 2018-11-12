@@ -141,18 +141,18 @@
                         </li>
                         <li>
                             <img src="images/icon_list06.png" alt=""/>
-                            <span>当日该站点每分钟入账</span>
-                            <span><a data-toggle="modal" href="#addModal6">--</a> 万元</span>
+                            <span>当日该站点总人流量</span>
+                            <span><a id="totalflow" data-toggle="modal" href="#addModal6">--</a> 人</span>
                         </li>
                         <li>
                             <img src="images/icon_list08.png" alt=""/>
-                            <span>当日该站点出站优惠卡数</span>
+                            <span>当日该站点优惠刷卡次数</span>
                             <span><a id="totaldiscount" data-toggle="modal" href="#addModal7">--</a> 次</span>
                         </li>
                         <li>
                             <img src="images/icon_list08.png" alt=""/>
-                            <span>当日该站点进站优惠卡数</span>
-                            <span><a data-toggle="modal" href="#addModal8">--</a> 次</span>
+                            <span>当日该站点人流量/分钟</span>
+                            <span><a id="totalflowpermin" data-toggle="modal" href="#addModal8">--</a> 人</span>
                         </li>
                     </ul>
                     </div>
@@ -551,10 +551,12 @@
 							
 							totalamount = (parseInt(data["data"]["TOTALAMOUNT"])/10000).toFixed(2)
 							totaldiscount = parseInt(data["data"]["TOTALDISCOUNT"])
-							
+							totalflow = parseInt(data["data"]["TOTALRECORDS"])
 							
 							$("#totalamount").text(totalamount);
 							$("#totaldiscount").text(totaldiscount);
+							$("#totalflow").text(totalflow)
+                            $("#totalflowpermin").text((totalflow/24).toFixed(2))
 							
 							$(".view03>.data.mt10>.Title").text(siteNoName+" 数据汇总")
 							

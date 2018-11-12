@@ -1,0 +1,58 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	background-color: #0a0a0a;
+}
+
+#container {
+	width: 1000px;
+	height: 1000px;
+	margin: 0 auto;
+}
+
+#clock {
+	position: absolute;
+	float: left;
+	font-size: 30px;
+	width: 160px;
+	height: 40px;
+	color: whitesmoke;
+	top: 80px;
+	left: 450px;
+	/*border: red solid 1px;*/
+}
+
+#datebox {
+	position: absolute;
+	float: left;
+	font-size: 25px;
+	width: 300px;
+	height: 40px;
+	color: whitesmoke;
+	top: 15px;
+	left: 800px;
+	/*border: red solid 1px;*/
+}
+
+.screen {
+	width: 1000px;
+	height: 1000px;
+	margin: 0 auto;
+}
+
+#select {
+	position: absolute;
+	left: 300px;
+	top: 70px;
+	margin: 0 0;
+	width: 90px;
+	height: 50px;
+	/*border: red solid 1px;*/
+}
+select {
+	width: 90px;
+	height: 25px;
+	margin: 5px 0 0 0;
+}

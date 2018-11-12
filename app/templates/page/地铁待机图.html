@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/mainMapStyle.css">
+  <link rel="stylesheet" href="../css/style2.css">
+  <script src="../plugin/jQuery/jquery.min.js"></script>
+  <script src="../plugin/svgPanZoom/jquery.svg.pan.zoom.js"></script>
+  <script src="../plugin/echarts/echarts.min.js"></script>
+</head>
+<body>
+  <div class="screen">
+    <svg id="mainMap" xmlns="http://www.w3.org/2000/svg" viewBox="-100 -50 1000 1000">
+       <rect id="backGround" x="0" y="0" height="1000" width="1000" fill="#0a0a0a"></rect>
+       <path d="M780,80 L780.01,157" stroke="url(#colorDemo)" stroke-width="10"></path>
+       <defs>
+         <linearGradient id="colorDemo" x1="0%" y1="0%" x2="0%" y2="100%">
+           <stop offset="0%" stop-color="#FF0000"></stop>
+           <stop offset="100%" stop-color="#CCFF00"></stop>
+         </linearGradient>
+       </defs>
+       <g>
+         <text font-size="10px" font-weight="bold" stroke="#040404" fill="#808080" stroke-width="0.1" x="750" y="86">拥堵</text>
+         <text font-size="10px" font-weight="bold" stroke="#040404" fill="#808080" stroke-width="0.1" x="750" y="157">正常</text>
+       </g>
+    </svg>
+  </div>
+  <script>
+    window.onload = function(){
+      time();
+      setInterval(time,1000);
+      toDigits(123456);
+      var options = {
+          events: {
+              mouseWheel:true, // enables mouse wheel zooming events
+              doubleClick: false, // enables double-click to zoom-in events
+              drag: true, // enables drag and drop to move the SVG events
+              dragCursor:  "drag" // cursor to use while dragging the SVG
+          },
+          animationTime: 300, // time in milliseconds to use as default for animations. Set 0 to remove the animation
+          zoomFactor: .5, // how much to zoom-in or zoom-out
+          maxZoom: 5, //maximum zoom in, must be a number bigger than 1
+          panFactor: 100, // how much to move the viewBox when calling .panDirection() methods
+          limits: { // the limits in which the image can be moved. If null or undefined will use the initialViewBox plus 15% in each direction
+              x: -150,
+              y: -300,
+              x2: 1150,
+              y2: 1150
+          }
+      };
+      var svgPanZoom = $("#mainMap").svgPanZoom(options);
+      var svgOptions = {
+        "mapId":"#mainMap",
+        "mapNum":0,
+        "animate":false,
+        "lineColor":true,
+        "error":false,
+        "stationInfo":false,
+        "setError":false
+      }
+      drawSVG(svgOptions);
+    }
+  </script>
+  <script src="../js/stationNotes.js"></script>
+  <script src="../js/drawSVG.js"></script>
+  <script src="../js/stationInfo.js"></script>
+  <script src="../js/showAndControl.js"></script>
+  <script src="../js/getLineContact.js"></script>
+  <script src="../js/lineAndStation.js"></script>
+  <script src="../js/getPassenger.js"></script>
+  <script src="../js/chartsCreate.js"></script>
+</body>
+</html>

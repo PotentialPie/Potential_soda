@@ -1,0 +1,468 @@
+html,body{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100%;
+  position: relative;
+  overflow:hidden;
+  background-color: #050505;
+}
+ul,li{
+  list-style:none;
+  padding:0;
+  margin: 0;
+}
+#switchBox{
+  width:566px;
+  height:40px;
+  position: fixed;
+  top:20px;
+  left:40%;
+  margin-left: -283px;
+  right:1000px;
+  display: flex;
+  justify-content:space-between;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #666;
+  box-shadow: 0 0 3px #666;
+}
+#switchBox li{
+  width:140px;
+  height:40px;
+  font-size: 14px;
+  line-height:40px;
+  text-align: center;
+}
+#switchBox li span{
+  margin-left:10px;
+}
+.act{
+  background: -webkit-linear-gradient(#e72837, #e82833);
+  color:#eee;
+  cursor: default;
+}
+.unact{
+  background: -webkit-linear-gradient(#4f4f4f, #333132);
+  color:#eee;
+  cursor: pointer;
+}
+.screen:nth-child(3),.screen:nth-child(4),.screen:nth-child(5){
+  display: none;
+}
+.screen .infoBox{
+  width:25%;
+  height:100%;
+  position: fixed;
+  right:0;
+  top:0;
+}
+.screen:nth-child(3) .infoBox{
+  top:4%;
+}
+.screen .infoBox div{
+  width:100%;
+  background-color: #131313;
+  color:#a0a0a0;
+  margin-bottom: 2%;
+}
+.screen .infoBox div h5{
+  color:#eee;
+  margin: 10px 20px 0;
+  padding-top:10px;
+}
+.trainInfo,.passengerNum,.undefine,.trainInfo2,.trend,.effectStation,.lineImitate{
+  height:32%;
+}
+.switchLine{
+  position: absolute;
+  right:0;
+  top:2%;
+  width:25%;
+  height:4%;
+}
+.switchLine ul{
+  height:100%;
+  width:100%;
+  display: flex;
+  align-items: flex-end;
+}
+.switchLine ul li{
+  width:25%;
+  text-align: center;
+}
+.switchLine ul li.checked{
+  height:30px;
+  background-color: #131313;
+  color:#eee;
+  line-height: 30px;
+  cursor: default;
+}
+.switchLine ul li.unchecked{
+  height:26px;
+  background-color: #2d2d2d;
+  color:#aaa;
+  line-height: 26px;
+  font-size: 14px;
+  cursor: pointer;
+  border-right: 2px solid #222;
+}
+.powerControl{
+  height:28%;
+}
+.faultInfo{
+  height:20%;
+}
+.effectNum{
+  height:42%;
+}
+.trainInfo ul{
+  height:80%;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+}
+.trainInfo ul li{
+  height:20px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.trainInfo ul li span{
+  margin:0 20px;
+  font-size: 14px;
+}
+.faultInfo ul{
+  height:75%;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  margin-left: 20px;
+}
+.faultInfo ul li{
+  font-size: 10px;
+  height:12px;
+  display: flex;
+  justify-content: flex-start;
+}
+.faultInfo ul li span:last-child{
+  margin-left: 10px;
+}
+#selectBox{
+  width:400px;
+  height:360px;
+  margin-left: -300px;
+  margin-top: -180px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  background: #fff;
+  z-index: 100;
+  display: none;
+}
+#pop{
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 99;
+  display: none;
+}
+#selectBox .boxTitle{
+  padding:0 10px;
+  width:380px;
+  height:40px;
+  background-color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#selectBox .boxTitle span{
+  color:#eee;
+}
+#selectBox .boxTitle img{
+  cursor: pointer;
+}
+#selectBox form{
+  padding:20px;
+}
+#selectBox form ul li{
+  height:40px;
+  display: flex;
+  align-items: center;
+}
+#selectBox form ul li span{
+  margin-right:10px;
+}
+#selectBox form ul li select{
+  height:26px;
+  width:164px;
+}
+#selectBox form ul li input{
+  height:20px;
+  width:160px;
+}
+#selectBox form div{
+  margin:20px;
+}
+#selectBox form div button{
+  display: inline-block;
+  width:60px;
+  height:30px;
+  color:#eee;
+  line-height: 30px;
+  text-align: center;
+  border:1px solid #eee;
+}
+#selectBox form div button:first-child{
+  background-color: #00f;
+  border-color:#ff0;
+}
+#selectBox form div button:last-child{
+  margin-left: 40px;
+  background-color: #f00;
+  border-color:#0f0;
+}
+#faultReset{
+  width:60px;
+  height:30px;
+  line-height: 30px;
+  text-align: center;
+  color:#eee;
+  font-size: 14px;
+  background: -webkit-linear-gradient(#e72837, #e82833);
+  position: fixed;
+  top:4%;
+  right:26%;
+  cursor: pointer;
+  display: none;
+}
+.lineImitate ul{
+  margin-top: 10px;
+  margin-left: 20px
+}
+.lineImitate ul li{
+  margin-top: 10px;
+  height:40px;
+  line-height: 40px;
+}
+.lineImitate ul li span{
+  font-size: 16px;
+  color:#eee;
+}
+.lineImitate ul li select{
+  background-color: #3e3e3e;
+  color:#fefefe;
+  height:40px;
+  line-height: 40px;
+  font-size: 16px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+.selectbtn{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.selectbtn span{
+  display: block;
+  border:0;
+  margin:10px 20px;
+  border-radius: 6px;
+  width:140px;
+  height:40px;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  color:#efefef;
+}
+.resetFault{
+  background-color: #616161;
+}
+.query{
+  background-color: #e82835;
+}
+.opt{
+  width:60px;
+  text-align: justify;
+  float: left;
+}
+.opt:after{
+    content:'.';
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    height: 0;
+}
+.onWay,.limit{
+  height:16px;
+  margin-top: 7px;
+  width:56px;
+  line-height: 16px;
+  color:#fff;
+  text-align: center;
+}
+.onWay{
+  background-color: #0e8569;
+}
+.limit{
+  background-color: #c91b4e;
+}
+#map,#map2,#map3,#map4{
+  width:100vw;
+  height:100vh;
+}
+#stationName text{
+  font-size: 6px;
+}
+#trainsInfoBox,#setBox{
+  width:220px;
+  height:530px;
+  box-shadow: 0 0 3px #666;
+  background-color: #fff;
+  position: fixed;
+  border-radius: 10px;
+}
+#trainsInfoBox{
+  top:20px;
+  right:30px;
+}
+#setBox{
+  top:20px;
+  left:30px;
+}
+.title{
+  height:30px;
+  line-height: 30px;
+  text-align: center;
+}
+#infoBox,#stationInfoBox{
+  width:80%;
+  height:150px;
+  margin:20px 10%;
+  overflow-x: hidden;
+  border:1px solid #000;
+  border-radius: 5px;
+}
+.btn{
+  display: flex;
+  justify-content:space-around;
+}
+.btn button,#showClose{
+  width:60px;
+  height:30px;
+  border:1px solid #eee;
+  border-radius: 8px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+}
+#btnFresh{
+  color:#ff0;
+  background-color: #FF6666;
+}
+#btnClose{
+  color:#fff;
+  background-color: #666666;
+}
+#showClose{
+  margin-top: 10px;
+  color:#eee;
+  background-color: #FF6666;
+}
+#showInfo,#showOpen{
+  width:20px;
+  height:90px;
+  font-size: 14px;
+  line-height: 14px;
+  color:rgba(255,232,130,1);
+  text-align: center;
+  background-color: rgba(213,23,0,1);
+  padding:5px;
+  position: absolute;
+  bottom:10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#showInfo{
+  right:-30px;
+}
+#showOpen{
+  left:-30px;
+}
+#setBox h3{
+  text-align: center;
+}
+.option{
+  height:22px;
+  padding:0 10px;
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.option .btnTurn{
+  width:100px;
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+}
+#big0,#big1,#big2,#big3{
+    width: 27px;
+    height: 18px;
+    border-radius: 9px;
+    position: relative;
+}
+#sm0,#sm1,#sm2,#sm3{
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
+}
+.open1{
+    background: rgba(0,184,0,0.8);
+}
+.open2{
+    top: 1px;
+    right: 1px;
+}
+.close1{
+    background: rgba(255,255,255,0.4);
+    border:1px solid rgba(0,0,0,0.15);
+    border-left: transparent;
+}
+.close2{
+    left: 0px;
+    top: 0px;
+    border:1px solid rgba(0,0,0,0.1);
+}
+#lineBox{
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#lineBox .lineOpt{
+  width:60px;
+  height:20px;
+  margin:5px 0;
+  text-align: center;
+  line-height: 20px;
+  border:2px solid #666;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.light{
+  font-size: 14;
+  background-color: #666;
+  color:#eee;
+}
+.dark{
+  font-size: 12px;
+  background-color: #eee;
+  color:#666;
+}

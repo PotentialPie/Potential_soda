@@ -24,43 +24,32 @@
     <div class="cell analysis">
         <div class="viewBox">
             <div class="view">
-                <select id="sitenoselected">
-                    <option>地铁1号线</option>
-                    <option selected>地铁2号线</option>
+                <select class="selector" id="sitenoselected">
+                    <option selected>地铁1号线</option>
+                    <option>地铁2号线</option>
                     <option>地铁3号线</option>
                     <option>地铁4号线</option>
                     <option>地铁5号线</option>
                     <option>地铁6号线</option>
+                    <option>地铁7号线</option>
+                    <option>地铁8号线</option>
+                    <option>地铁9号线</option>
+                    <option>地铁10号线</option>
+                    <option>地铁11号线</option>
+                    <option>地铁12号线</option>
+                    <option>地铁13号线</option>
+                    <option>地铁16号线</option>
                 </select>
+                <input class="timeinput" id="timeselected" type="date" value="2018-01-01" min="2018-01-01" max="2018-03-31"/>
                 <hr class="hr-linebt"/>
                 <div class="viewCon">
                     <div class="total">
                         <span>全市上地铁在站总人数： 12万人</span>
                     </div>
                     <div class="Charts" id="main"></div>
-                    <div class="city">
+                    <div class="city" style="overflow:scroll; height:450px">
                         <ul>
-                            <li><span>徐泾东</span> <em>67800</em></li>
-                            <li><span>虹桥火车站</span> <em>34569</em></li>
-                            <li><span>虹桥2好航站楼</span> <em>3456</em></li>
-                            <li><span>淞虹路</span> <em>3456</em></li>
-                            <li><span>北新泾</span> <em>3456</em></li>
-                            <li><span>威宁路</span> <em>3456</em></li>
-                            <li><span>娄山关路</span> <em>3456</em></li>
-                            <li><span>中山公园</span> <em>3456</em></li>
-                            <li><span>江苏路</span> <em>3456</em></li>
-                            <li><span>静安寺</span> <em>3456</em></li>
-                            <li><span>南京西路</span> <em>3456</em></li>
-                            <li><span>人民广场</span> <em>3456</em></li>
-                            <li><span>南京东路</span> <em>3456</em></li>
-                            <li><span>陆家嘴</span> <em>3456</em></li>
-                            <li><span>东昌路</span> <em>3456</em></li>
-                            <li><span>世纪大道</span> <em>3456</em></li>
-                            <li><span>上海科技馆</span> <em>3456</em></li>
-                            <li><span>世纪公园</span> <em>3456</em></li>
-                            <li><span>龙阳路</span> <em>3456</em></li>
-                            <li><span>张江高科</span> <em>3456</em></li>
-                            <li><span>金科路</span> <em>3456</em></li>
+
                         </ul>
                     </div>
                 </div>
@@ -76,68 +65,104 @@
 
                 <hr class="hr-linebt"/>
                 <div class="dataCon clearfix">
+                    <!--
                     <ul>
                         <li>
                             <img src="images/icon_list02.png" alt=""/>
                             <span>当日该站点出站人数汇总</span>
-                            <span><a data-toggle="modal" href="#addModal">8678</a> 名乘客</span>
+                            <span><a data-toggle="modal" href="#addModal">--</a> 名乘客</span>
                         </li>
                         <li>
                             <img src="images/icon_list02.png" alt=""/>
                             <span>当日该站点进站人数汇总</span>
-                            <span><a data-toggle="modal" href="#addModal2">9346</a> 名乘客</span>
+                            <span><a data-toggle="modal" href="#addModal2">--</a> 名乘客</span>
                         </li>
                         <li>
                             <img src="images/icon_list03.png" alt=""/>
                             <span>当日平均每分钟进站人数</span>
-                            <span><a data-toggle="modal" href="#addModal3">47</a> 名乘客</span>
+                            <span><a data-toggle="modal" href="#addModal3">--</a> 名乘客</span>
                         </li>
                         <li>
                             <img src="images/icon_list03.png" alt=""/>
                             <span>当日平均每分钟出站人数</span>
-                            <span><a data-toggle="modal" href="#addModal4">46</a> 名乘客</span>
+                            <span><a data-toggle="modal" href="#addModal4">--</a> 名乘客</span>
                         </li>
                         <li>
                             <img src="images/icon_list06.png" alt=""/>
                             <span >当日该站点总营业额</span>
-                            <span><a id="totalamount" data-toggle="modal" href="#addModal5">78</a> 万元</span>
+                            <span><a id="totalamount" data-toggle="modal" href="#addModal5">--</a> 万元</span>
                         </li>
                         <li>
                             <img src="images/icon_list06.png" alt=""/>
                             <span>当日该站点每分钟入账</span>
-                            <span><a data-toggle="modal" href="#addModal6">0.4</a> 万元</span>
+                            <span><a data-toggle="modal" href="#addModal6">--</a> 万元</span>
                         </li>
                         <li>
                             <img src="images/icon_list08.png" alt=""/>
                             <span>当日该站点出站优惠卡数</span>
-                            <span><a id = "totaldiscount" data-toggle="modal" href="#addModal7">871</a> 次</span>
+                            <span><a id="totaldiscount" data-toggle="modal" href="#addModal7">--</a> 次</span>
                         </li>
                         <li>
                             <img src="images/icon_list08.png" alt=""/>
                             <span>当日该站点进站优惠卡数</span>
-                            <span><a data-toggle="modal" href="#addModal8">786</a> 次</span>
+                            <span><a data-toggle="modal" href="#addModal8">--</a> 次</span>
                         </li>
                     </ul>
+                    -->
+                     <div class="Charts" id="zzz" style="width: 850px; height: 250px"></div>
                 </div>
             </div>
         </div>
         <div class="assistantBox">
             <ul>
-                <li class="view01">
-                    <div class="Title"><a data-toggle="modal" href="#addModal9">该站点当日进站人员身份分布</a></div>
+                <li class="view01" style="height:282px;">
+                    <div class="Title"><a data-toggle="modal" href="#addModal9">该站点当日进站人员身份分布</a>
+                    </div>
                     <hr class="hr-linebt"/>
                     <div class="Charts" id="z"></div>
 
                 </li>
-                <li class="view02">
+                <li class="view02" style="height:282px;">
                     <div class="Title"><a data-toggle="modal" href="#addModal10">该站点当日出站人员身份分布</a></div>
                     <hr class="hr-linebt"/>
                     <div class="Charts" id="zz"></div>
                 </li>
-                <li class="view03">
-                    <div class="Title"><a data-toggle="modal" href="#addModal11">该站点当日人流量变化曲线</a></div>
+                <li class="view03" style="height:282px;">
+                    <div class="data mt10">
+                    <div class="Title"><a data-toggle="modal" href="#addModal11">该站点当日人流量变化曲线</a>
+                        <select id="sitenameselected">
+                            <option selected>广兰路</option>
+                            <option>金科路</option>
+                            <option>龙阳路</option>
+                        </select>
+                    </div>
                     <hr class="hr-linebt"/>
-                    <div class="Charts" id="zzz" style="width: 550px; height: 280px"></div>
+                    <div class="dataCon clearfix">
+                    <ul>
+                        <li>
+                            <img src="images/icon_list06.png" alt=""/>
+                            <span >当日该站点总营业额</span>
+                            <span><a id="totalamount" data-toggle="modal" href="#addModal5">--</a> 万元</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list06.png" alt=""/>
+                            <span>当日该站点每分钟入账</span>
+                            <span><a data-toggle="modal" href="#addModal6">--</a> 万元</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list08.png" alt=""/>
+                            <span>当日该站点出站优惠卡数</span>
+                            <span><a id="totaldiscount" data-toggle="modal" href="#addModal7">--</a> 次</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list08.png" alt=""/>
+                            <span>当日该站点进站优惠卡数</span>
+                            <span><a data-toggle="modal" href="#addModal8">--</a> 次</span>
+                        </li>
+                    </ul>
+                    </div>
+                    </div>
+                    <!--<div class="Charts" id="zzz" style="width: 550px; height: 280px"></div>-->
                 </li>
             </ul>
         </div>
@@ -364,31 +389,63 @@
 </script>
 
 <script type="text/javascript">
-	var siteno = '2号线'
-	
-
+	var siteno = '1号线'
+    var date_time = $('#timeselected').val();
 	$(function(){
-			showFlow('2号线广兰路');
+			listSiteName(siteno, date_time);
 		});
+
+    $(function(){
+			addSiteitem(siteno, date_time);
+		});
+    /*
+	$(function(){
+			showFlow('2号线广兰路', '2018-01-01');
+		});
+		*/
 	
 
 	$('#sitenoselected').change(function(){
 		siteno = $('#sitenoselected').val().split('地铁')[1];
+		var date_time = $('#timeselected').val();
+		//alert(siteno)
+        //alert(date_time)
 		
 		$(function(){
-			listSiteName(siteno);
+			listSiteName(siteno, date_time);
 		});
 		
 		$(function(){
-			addSiteitem(siteno);
+			addSiteitem(siteno, date_time);
+		});
+
+	});
+
+	$('#timeselected').change(function(){
+		siteno = $('#sitenoselected').val().split('地铁')[1];
+		var date_time = $('#timeselected').val();
+		var sitename = $('#sitenameselected').val();
+		//alert(siteno)
+        //alert(date_time)
+
+		$(function(){
+			listSiteName(siteno, date_time);
+		});
+
+		$(function(){
+			showFlow(siteno+sitename, date_time);
 		});
 
 	});
 	
 	$('#sitenameselected').change(function(){
 		var sitename = $('#sitenameselected').val();
+		var date_time = $('#timeselected').val();
+		//alert(sitename)
+        //alert(date_time)
+
 		$(function(){
-			showFlow(siteno+sitename);
+			showFlow(siteno+sitename, date_time);
 		});
 			
 	});
@@ -401,11 +458,11 @@
 <script>
     //all the functions
 	//选择线路后，显示实时的人流量
-	function listSiteName(siteno){
+	function listSiteName(siteno, date_time){
 	$.ajax({
 		type:'GET',
 		url: 'http://localhost:58480/v1/api/soda/base/query_site_flow_records_by_site_num_and_date',
-		data:{'site_num':siteno,'date':'2018-03-06'},
+		data:{'site_num':siteno,'date':date_time},
 		dataType:'json',
 		success:function(data){
 		$('.city>ul').empty();
@@ -424,7 +481,7 @@
 	
 	
 	//加载在选择线路后可以选择的站点名字
-	function addSiteitem(siteno){
+	function addSiteitem(siteno, date_time){
 	$.ajax({
 		type:'GET',
 		url: 'http://localhost:58480/v1/api/soda/base/query_site_by_line_num',
@@ -442,7 +499,7 @@
 			
 		var sitename = $('#sitenameselected').val();
 			$(function(){
-			showFlow(siteno+sitename);
+			showFlow(siteno+sitename, date_time);
 		});
 
 		
@@ -454,7 +511,7 @@
 	}
 	
 	
-	function showFlow(siteNoName){
+	function showFlow(siteNoName, date_time){
 	// 路径配置
     require.config({
         paths: {
@@ -477,7 +534,7 @@
 				
 				var data={
 						'site':siteNoName,
-						'date':'2018-03-06'
+						'date':date_time
 						};
 				var pnum = [];
 				
@@ -500,10 +557,10 @@
 							totaldiscount = data["data"]["TOTALDISCOUNT"]
 							
 							
-							$("#totalamount").empty();
-							$("#totalamount").append(totalamount);
-							$("totaldiscount").empty();
-							$("#totaldiscount").append(totaldiscount);
+							//$("#totalamount").empty();
+							$("#totalamount").text(totalamount);
+							//$("totaldiscount").empty();
+							$("#totaldiscount").text(totaldiscount);
 							
 							
 						

@@ -44,6 +44,7 @@ class SDCodeMsg():
     PARAMS_ERROR = CM(102, "请检查相关参数")
     SITE_RECORD_NOT_FOUND = CM(103, "没有查询到相关的站点记录")
     SITE_FLOW_RECORD_NOT_FOUND = CM(104, "某有查询到相关线路所有站点的人流总量记录")
+    CLUSTER_RECORD_NOT_FOUND = CM(105, "没有查询到相关聚类数据")
 
 class SDResource(Resource):
     def __init__(self, api=None, *args, **kwargs):

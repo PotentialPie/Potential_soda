@@ -18,13 +18,23 @@ class SodaVisualizationService():
 
     def query24hourFlowBySiteAndData(self, site, data):
         """
-        根据site 、data、year 查询某站点某天24小时的流量记录
+        根据site 、data、查询某站点某天24小时的流量记录
         :param site: 站点名称
         :param data: 日期
         :return: 当日当前站点人流量记录
         """
 
         return SubwayStaByHourModel.query.filter_by(SITE=site, DATA=data).first()
+
+    def queryPredictedFlowBySiteAndDate(self, site, date):
+        """
+        根据site 、date查询某站点未来一天24小时的流量记录
+        date的范围会0～8
+        :param site:
+        :param date:
+        :return:
+        """
+        return FlowPredModel.query.filter_by(SITE=site, DATE=date).first()
 
     def querySiteTotalRecordsBySiteNumAndDate(self, site_num, date):
         """
@@ -75,22 +85,33 @@ class SodaVisualizationService():
         siteModels = digiccyDB.session.query(SiteModel).filter_by(**filters).all()
         return [ele.as_dict() for ele in siteModels]
 
+    def queryClusterBySiteAndDate(self, site, date):
+        """
+        根据站点和日期来查询当天当站点的聚类记录
+        :param site:
+        :param date:
+        :return:
+        """
+        return ClusterModel.query.filter_by(SITE=site, DATE=date).first()
 
 
-'''
-class SodaRailwayModel180101(digiccyDB.Model):
-    __tablename__ = "soda_s180101_tb"
+
+
+
+class ClusterModel(digiccyDB.Model):
+    __tablename__ = "cluster_per_day_per_site_tb"
     __table_args__ = {"useexisting": True}
-    CARD_ID = digiccyDB.Column(digiccyDB.VARCHAR(255), primary_key=False, nullable=True)
-    DATE = digiccyDB.Column(digiccyDB.VARCHAR(255), primary_key=False, nullable=True)
-    TIME = digiccyDB.Column(digiccyDB.VARCHAR(255), primary_key=False, nullable=True)
-    LINE = digiccyDB.Column(digiccyDB.VARCHAR(255), primary_key=False, nullable=True)
-    AMOUNT = digiccyDB.Column(digiccyDB.Float, primary_key=False, nullable=True)
-    IS_DISCOUNT = digiccyDB.Column(digiccyDB.INTEGER, primary_key=False, nullable=True)
-    WEEK = digiccyDB.Column(digiccyDB.VARCHAR(255), primary_key=False, nullable=True)
+    SITE = digiccyDB.Column(digiccyDB.VARCHAR(255), primary_key=True, nullable=True)
+    DATE = digiccyDB.Column(digiccyDB.VARCHAR(255), primary_key=True, nullable=True)
+    CLUSTER_ONE = digiccyDB.Column(digiccyDB.INTEGER, primary_key=False, nullable=True)
+    CLUSTER_TWO = digiccyDB.Column(digiccyDB.INTEGER, primary_key=False, nullable=True)
+    CLUSTER_THREE = digiccyDB.Column(digiccyDB.INTEGER, primary_key=False, nullable=True)
+    CLUSTER_FOUR = digiccyDB.Column(digiccyDB.INTEGER, primary_key=False, nullable=True)
+    CLUSTER_FIVE = digiccyDB.Column(digiccyDB.INTEGER, primary_key=False, nullable=True)
+    CLUSTER_SIX = digiccyDB.Column(digiccyDB.INTEGER, primary_key=False, nullable=True)
     def as_dict(self):
         return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}
-'''
+
 
 
 class SubwayStaByHourModel(digiccyDB.Model):
@@ -135,6 +156,39 @@ class SiteModel(digiccyDB.Model):
     SITE_ID = digiccyDB.Column(digiccyDB.INTEGER, primary_key=True, nullable=False)
     SITE_NAME = digiccyDB.Column(digiccyDB.VARCHAR(255), primary_key=False, nullable=False)
     SITE_NUM = digiccyDB.Column(digiccyDB.VARCHAR(255), primary_key=False, nullable=False)
+
+    def as_dict(self):
+        return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}
+
+class FlowPredModel(digiccyDB.Model):
+    __tablename__ = "flow_prediction_result_tb"
+    #__table_args__ = {"useexisting": True}
+    SITE = digiccyDB.Column(digiccyDB.VARCHAR(255), primary_key=True, nullable=True)
+    DATE = digiccyDB.Column(digiccyDB.INTEGER, primary_key=True, nullable=True)
+    TIME0 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME1 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME2 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME3 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME4 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME5 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME6 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME7 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME8 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME9 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME10 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME11 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME12 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME13 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME14 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME15 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME16 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME17 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME18 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME19 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME20 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME21 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME22 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
+    TIME23 = digiccyDB.Column(digiccyDB.Float, default=0, primary_key=False, nullable=True)
 
     def as_dict(self):
         return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}

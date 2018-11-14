@@ -40,7 +40,7 @@ function dateConvert(date) {
 
 function setStationAndColor(options, color) {
 	function getFeed(in_out, date, time_slice) {
-		var url = "../jsonData/" + in_out + "_site/" + in_out + "_site_" + date + ".json";
+		var url = "./jsonData/" + in_out + "_site/" + in_out + "_site_" + date + ".json";
 		$.getJSON(url, function(result) {
 			var res = new Object();
 			$.each(result, function(site_code, people) {
@@ -51,6 +51,7 @@ function setStationAndColor(options, color) {
 		});
 	}
 
+	/*
 	var in_out = document.getElementById('in_out').value;
 	var date = document.getElementById('date').value;
 	var timeBox = document.getElementById("clock");
@@ -61,11 +62,15 @@ function setStationAndColor(options, color) {
 	} else {
 		dateBox.innerHTML = dateConvert(date) + '出站流量';
 	}
+	*/
+	var in_out = 'in'
+	var date = document.getElementById('date').value;
 	var t = 72;
 	getFeed(in_out, date, t);
 	setInterval(function() {
 		in_outInit = in_out;
-		in_out = document.getElementById('in_out').value;
+		//in_out = document.getElementById('in_out').value;
+		in_out = 'in'
 		dateInit = date;
 		date = document.getElementById('date').value;
 
@@ -85,5 +90,5 @@ function setStationAndColor(options, color) {
 			dateBox.innerHTML = dateConvert(date) + '出站流量';
 		}
 		getFeed(in_out, date, t);
-	}, 1000);
+	}, 50);
 }

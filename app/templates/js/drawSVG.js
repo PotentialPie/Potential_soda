@@ -1,6 +1,6 @@
 //绘制svg地铁图
 function drawSVG(opt) {
-	$.getJSON("../jsonData/Underground-geo.json", function(json) {
+	$.getJSON("./jsonData/Underground-geo.json", function(json) {
 		var mapId = opt["mapId"];
 		var mapNum = opt["mapNum"];
 		var isAnimate = opt["animate"];
@@ -9,7 +9,9 @@ function drawSVG(opt) {
 		var isStationInfo = opt["stationInfo"];
 		var isSetError = opt["setError"];
 
+		//站名列表[{"xx":坐标},{"xx":坐标},{"xx":坐标},...]
 		var g = new Array();
+		//线路名list['line01','line02',...]
 		var lineName = new Array();
 		var stationGeo = new Object();
 
@@ -19,6 +21,7 @@ function drawSVG(opt) {
 			lineName.push(field["lineName"]);
 		});
 		//读取各条线路包含的车站到 stationGeo
+		//{line01:{{"xx":坐标},{"xx":坐标},{"xx":坐标},...},line02:{{"xx":坐标},{"xx":坐标},{"xx":坐标},...},...}
 		for(var i = 0; i < json.length; i++) {
 			stationGeo[json[i]["lineName"]] = json[i]["upline"];
 			//    if(i<json.length-1){

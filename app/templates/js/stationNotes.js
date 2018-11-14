@@ -1,5 +1,5 @@
 function getStationNotes(id,num){
-  $.getJSON("../jsonData/stationNotes.json",function(result){
+  $.getJSON("./jsonData/stationNotes.json",function(result){
     var notes = svgCreate('g',{'id':'map'+num+'stationNotes'});
     $(id).append(notes);
     var notes = new Array();

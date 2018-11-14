@@ -1,0 +1,727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>铁达达-城市轨道交通人流量分布分析及预测系统</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery-easyui-1.4.5/themes/icon.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery-easyui-1.4.5/themes/bootstrap/easyui.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/jquery.modal.js" type="text/javascript"></script>
+    <script src="jquery-easyui-1.4.5/jquery.easyui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="echarts/build/dist/echarts.js"></script>
+    <script src="./plugin/jquery.min.js"></script>
+    <script src="./plugin/jquery.svg.pan.zoom.js"></script>
+    <link rel="stylesheet" href="./css/map.css">
+</head>
+<body style="background-color: #558db3;">
+<div class="header">
+    <div class="logo">
+    	<h1><a title="铁达达-城市轨道交通人流量分布分析及预测系统" href="index.html">铁达达-城市轨道交通人流量分布分析及预测系统</a></h1>
+    </div>
+</div>
+<div class="row">
+    <!--内容-->
+    <div class="cell analysis">
+        <div class="viewBox">
+            <div class="view">
+                <select class="selector" id="sitenoselected">
+                    <option selected>地铁1号线</option>
+                    <option>地铁2号线</option>
+                    <option>地铁3号线</option>
+                    <option>地铁4号线</option>
+                    <option>地铁5号线</option>
+                    <option>地铁6号线</option>
+                    <option>地铁7号线</option>
+                    <option>地铁8号线</option>
+                    <option>地铁9号线</option>
+                    <option>地铁10号线</option>
+                    <option>地铁11号线</option>
+                    <option>地铁12号线</option>
+                    <option>地铁13号线</option>
+                    <option>地铁16号线</option>
+                </select>
+                <input class="timeinput" id="timeselected" type="date" value="2018-01-01" min="2018-01-01" max="2018-03-31"/>
+                <select id="date" onChange="">
+					<option selected>20150301</option>
+				</select>
+                <select id="in_out" onChange="">
+					<option selected value="in">进站客流</option>
+					<option value="out">出站客流</option>
+				</select>
+                <span id="datebox"></span>
+                <span id="clock"></span>
+                <hr class="hr-linebt"/>
+                <div class="viewCon">
+                    <div class="total">
+                        <span>全市上地铁在站总人数： 12万人</span>
+                    </div>
+                    <svg id="mainMap" xmlns="http://www.w3.org/2000/svg" viewBox="-18 5 850 850">
+					<!-- 地图 -->
+					<rect id="backGround" x="0" y="0" height="1000" width="1000" fill="#FFFFF0" opacity="0"></rect>
+					<!--图例-->
+					<!--<path d="M780,80 L780.01,157" stroke="url(#colorDemo)" stroke-width="10"></path>
+					<defs>
+						<linearGradient id="colorDemo" x1="0%" y1="0%" x2="0%" y2="100%">
+							<stop offset="0%" stop-color="#FF0000"></stop>
+							<stop offset="100%" stop-color="#CCFF00"></stop>
+						</linearGradient>
+					</defs>
+					<g>
+						<text font-size="10px" font-weight="bold" stroke="#040404" fill="#808080" stroke-width="0.1" x="750" y="86">拥堵</text>
+						<text font-size="10px" font-weight="bold" stroke="#040404" fill="#808080" stroke-width="0.1" x="750" y="157">正常</text>
+					</g>-->
+				    </svg>
+                    <div class="city" style="overflow-x:hidden;overflow-y:scroll; height:435px">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="data mt10">
+                <div class="Title">站点当日人流量变化曲线
+                    <select id="sitenameselected">
+                            <option selected>广兰路</option>
+                            <option>金科路</option>
+                            <option>龙阳路</option>
+                    </select>
+                </div>
+
+                <hr class="hr-linebt"/>
+                <div class="dataCon clearfix">
+                    <!--
+                    <ul>
+                        <li>
+                            <img src="images/icon_list02.png" alt=""/>
+                            <span>当日该站点出站人数汇总</span>
+                            <span><a data-toggle="modal" href="#addModal">--</a> 名乘客</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list02.png" alt=""/>
+                            <span>当日该站点进站人数汇总</span>
+                            <span><a data-toggle="modal" href="#addModal2">--</a> 名乘客</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list03.png" alt=""/>
+                            <span>当日平均每分钟进站人数</span>
+                            <span><a data-toggle="modal" href="#addModal3">--</a> 名乘客</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list03.png" alt=""/>
+                            <span>当日平均每分钟出站人数</span>
+                            <span><a data-toggle="modal" href="#addModal4">--</a> 名乘客</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list06.png" alt=""/>
+                            <span >当日该站点总营业额</span>
+                            <span><a id="totalamount" data-toggle="modal" href="#addModal5">--</a> 万元</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list06.png" alt=""/>
+                            <span>当日该站点每分钟入账</span>
+                            <span><a data-toggle="modal" href="#addModal6">--</a> 万元</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list08.png" alt=""/>
+                            <span>当日该站点出站优惠卡数</span>
+                            <span><a id="totaldiscount" data-toggle="modal" href="#addModal7">--</a> 次</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list08.png" alt=""/>
+                            <span>当日该站点进站优惠卡数</span>
+                            <span><a data-toggle="modal" href="#addModal8">--</a> 次</span>
+                        </li>
+                    </ul>
+                    -->
+                     <div class="Charts" id="zzz" style="width:110%; height:230px"></div>
+                </div>
+            </div>
+        </div>
+        <div class="assistantBox">
+            <ul>
+                <li class="view01" style="height:282px;">
+                    <div class="Title"><a data-toggle="modal" href="#addModal9">该站点当日进站人员身份分布</a>
+                    </div>
+                    <hr class="hr-linebt"/>
+                    <div class="Charts" id="z"></div>
+
+                </li>
+                <li class="view02" style="height:282px;">
+                    <div class="Title"><a data-toggle="modal" href="#addModal10">该站点当日出站人员身份分布</a></div>
+                    <hr class="hr-linebt"/>
+                    <div class="Charts" id="zz"></div>
+                </li>
+                <li class="view03" style="height:282px;">
+                    <div class="data mt10">
+                    <div class="Title"><a data-toggle="modal" href="#addModal11">该站点数据汇总</a>
+                    </div>
+                    <hr class="hr-linebt"/>
+                    <div class="dataCon clearfix">
+                    <ul>
+                        <li>
+                            <img src="images/icon_list06.png" alt=""/>
+                            <span >当日该站点总营业额</span>
+                            <span><a id="totalamount" data-toggle="modal" href="#addModal5">--</a> 万元</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list06.png" alt=""/>
+                            <span>当日该站点总人流量</span>
+                            <span><a id="totalflow" data-toggle="modal" href="#addModal6">--</a> 人</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list08.png" alt=""/>
+                            <span>当日该站点优惠刷卡次数</span>
+                            <span><a id="totaldiscount" data-toggle="modal" href="#addModal7">--</a> 次</span>
+                        </li>
+                        <li>
+                            <img src="images/icon_list08.png" alt=""/>
+                            <span>当日该站点人流量/分钟</span>
+                            <span><a id="totalflowpermin" data-toggle="modal" href="#addModal8">--</a> 人</span>
+                        </li>
+                    </ul>
+                    </div>
+                    </div>
+                    <!--<div class="Charts" id="zzz" style="width: 550px; height: 280px"></div>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+			window.onload = function() {
+				var options = {
+					events: {
+						mouseWheel: true, // enables mouse wheel zooming events
+						doubleClick: false, // enables double-click to zoom-in events
+						drag: true, // enables drag and drop to move the SVG events
+						dragCursor: "drag" // cursor to use while dragging the SVG
+					},
+					animationTime: 100, // time in milliseconds to use as default for animations. Set 0 to remove the animation
+					zoomFactor: .08, // how much to zoom-in or zoom-out
+					maxZoom: 3, //maximum zoom in, must be a number bigger than 1
+					panFactor: 100, // how much to move the viewBox when calling .panDirection() methods
+					limits: { // the limits in which the image can be moved. If null or undefined will use the initialViewBox plus 15% in each direction
+						x: -150,
+						y: -300,
+						x2: 1150,
+						y2: 1150
+					}
+				};
+				var svgPanZoom = $("#mainMap").svgPanZoom(options);
+				var svgOptions = {
+					"mapId": "#mainMap",
+					"mapNum": 0,
+					"animate": false,
+					"lineColor": true,
+					"error": false,
+					"stationInfo": false,
+					"setError": false
+				}
+				drawSVG(svgOptions);
+			}
+		</script>
+		<script src="./js/stationNotes.js"></script>
+		<script src="./js/drawSVG.js"></script>
+		<script src="./js/showAndControl.js"></script>
+		<script src="./js/getLineContact.js"></script>
+		<script src="./js/lineAndStation.js"></script>
+		<script src="./js/getPassenger.js"></script>
+
+
+<script type="text/javascript">
+    dateOption = document.getElementById('date');
+    var dateArray = ['20150301', '20150302', '20150303', '20150304', '20150305', '20150306', '20150307', '20150308', '20150309', '20150310', '20150311', '20150312', '20150313', '20150314', '20150315', '20150316', '20150317', '20150318', '20150319', '20150320', '20150321', '20150322', '20150323', '20150324', '20150325', '20150326', '20150327', '20150328', '20150329', '20150330', '20150331', '20150401', '20150402', '20150403', '20150404', '20150405', '20150406', '20150407', '20150408', '20150409', '20150410', '20150411', '20150412', '20150413', '20150414', '20150415', '20150416', '20150417', '20150418', '20150419', '20150420', '20150421', '20150422', '20150423', '20150424', '20150425', '20150426', '20150427', '20150428', '20150429', '20150430'];
+    var option = "";
+    for(d in dateArray) {
+        option += "<option>"+dateArray[d]+"</option>";
+    };
+    dateOption.innerHTML = option;
+</script>
+
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/map' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));
+                var ecConfig = require('echarts/config');
+                var zrEvent = require('zrender/tool/event');
+                var curIndx = 0;
+                var mapType = [
+                    'china',
+                    // 23个省
+                    '广东', '青海', '四川', '海南', '陕西',
+                    '甘肃', '云南', '湖南', '湖北', '黑龙江',
+                    '贵州', '山东', '江西', '河南', '河北',
+                    '山西', '安徽', '福建', '浙江', '江苏',
+                    '吉林', '辽宁', '台湾',
+                    // 5个自治区
+                    '新疆', '广西', '宁夏', '内蒙古', '西藏',
+                    // 4个直辖市
+                    '北京', '天津', '上海', '重庆',
+                    // 2个特别行政区
+                    '香港', '澳门'
+                ];
+                myChart.on(ecConfig.EVENT.MAP_SELECTED, function (param){
+                    var len = mapType.length;
+                    var mt = mapType[curIndx % len];
+                    if (mt == 'china') {
+                        // 全国选择时指定到选中的省份
+                        var selected = param.selected;
+                        for (var i in selected) {
+                            if (selected[i]) {
+                                mt = i;
+                                while (len--) {
+                                    if (mapType[len] == mt) {
+                                        curIndx = len;
+                                    }
+                                }
+                                break;
+                            }
+                        }
+
+                    }
+                    else {
+                        curIndx = 0;
+                        mt = 'china';
+
+                    }
+                    option.series[0].mapType = mt;
+                    myChart.setOption(option, true);
+                });
+                option = {
+                    title: {
+                        textStyle : {color: '#fff'}
+                    },
+                    tooltip : {
+                        trigger: 'item',
+
+                    },
+                    dataRange: {
+                        min: 0,
+                        max: 10000,
+                        color:['orange','yellow'],
+                        text:['高','低'],           // 文本，默认为数值文本
+                        calculable : true,
+                        textStyle : {color: '#fff'}
+                    },
+                    series : [
+                        {
+                            name: '贫困人口',
+                            type: 'map',
+                            mapType: '广东',
+                            selectedMode : 'single',
+                            itemStyle:{
+                                normal:{label:{show:true}},
+                                emphasis:{label:{show:true}}
+                            },
+                            data:[
+                                {name: '清远市',value: Math.round(Math.random()*10000)},
+                                {name: '韶关市',value: Math.round(Math.random()*10000)},
+                                {name: '湛江市',value: Math.round(Math.random()*10000)},
+                                {name: '梅州市',value: Math.round(Math.random()*10000)},
+                                {name: '河源市',value: Math.round(Math.random()*10000)},
+                                {name: '肇庆市',value: Math.round(Math.random()*10000)},
+                                {name: '惠州市',value: Math.round(Math.random()*10000)},
+                                {name: '茂名市',value: Math.round(Math.random()*10000)},
+                                {name: '江门市',value: Math.round(Math.random()*10000)},
+                                {name: '阳江市',value: Math.round(Math.random()*10000)},
+                                {name: '云浮市',value: Math.round(Math.random()*10000)},
+                                {name: '广州市',value: Math.round(Math.random()*10000)},
+                                {name: '汕尾市',value: Math.round(Math.random()*10000)},
+                                {name: '揭阳市',value: Math.round(Math.random()*10000)},
+                                {name: '珠海市',value: Math.round(Math.random()*10000)},
+                                {name: '佛山市',value: Math.round(Math.random()*10000)},
+                                {name: '潮州市',value: Math.round(Math.random()*10000)},
+                                {name: '汕头市',value: Math.round(Math.random()*10000)},
+                                {name: '深圳市',value: Math.round(Math.random()*10000)},
+                                {name: '东莞市',value: Math.round(Math.random()*10000)},
+                                {name: '中山市',value: Math.round(Math.random()*10000)},
+
+                            ]
+                        }
+                    ]
+                };
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+            }
+    );
+</script>
+
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/pie'
+            ],
+            function (ec) {
+                var myChartZz = ec.init(document.getElementById('z'));
+                var ecConfig = require('echarts/config');
+                var zz = {
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'身份分布',
+                            type:'pie',
+                            radius : [20, 70],
+                            center : ['50%','50%'],
+                            roseType : 'area',
+                            x: '50%',               // for funnel
+                            max: 40,                // for funnel
+                            sort : 'ascending',     // for funnel
+                            data:[
+                                {value:2423, name:'大学生'},
+                                {value:1723, name:'上班族'},
+                                {value:436, name:'游客'},
+                                {value:3789, name:'老年人'},
+                                {value:178, name:'中小学生'},
+                                {value:399, name:'其他'}
+                            ]
+                        }
+                    ]
+                };
+
+                myChartZz.setOption(zz);
+            });
+
+</script>
+
+<script type="text/javascript">
+    // 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/pie'
+            ],
+            function (ec) {
+                var myChartZz = ec.init(document.getElementById('zz'));
+                var ecConfig = require('echarts/config');
+                var zz = {
+                    tooltip : {
+                        trigger: 'item',
+                        formatter: "{a} <br/>{b} : {c} ({d}%)"
+                    },
+                    calculable : true,
+                    series : [
+                        {
+                            name:'身份分布',
+                            type:'pie',
+                            radius : [20, 70],
+                            center : ['50%','50%'],
+                            roseType : 'area',
+                            x: '50%',               // for funnel
+                            max: 40,                // for funnel
+                            sort : 'ascending',     // for funnel
+                            data:[
+                                {value:1423, name:'大学生'},
+                                {value:2723, name:'上班族'},
+                                {value:436, name:'游客'},
+                                {value:789, name:'老年人'},
+                                {value:78, name:'中小学生'},
+                                {value:2399, name:'其他'}
+                            ]
+                        }
+                    ]
+                };
+
+                myChartZz.setOption(zz);
+            });
+
+</script>
+
+<script type="text/javascript">
+	var siteno = '1号线'
+    var date_time = $('#timeselected').val();
+	$(function(){
+			listSiteName(siteno, date_time);
+		});
+
+    $(function(){
+			addSiteitem(siteno, date_time);
+		});
+    /*
+	$(function(){
+			showFlow('2号线广兰路', '2018-01-01');
+		});
+		*/
+	
+
+	$('#sitenoselected').change(function(){
+		siteno = $('#sitenoselected').val().split('地铁')[1];
+		var date_time = $('#timeselected').val();
+		//alert(siteno)
+        //alert(date_time)
+		
+		$(function(){
+			listSiteName(siteno, date_time);
+		});
+		
+		$(function(){
+			addSiteitem(siteno, date_time);
+		});
+
+	});
+
+	$('#timeselected').change(function(){
+		siteno = $('#sitenoselected').val().split('地铁')[1];
+		var date_time = $('#timeselected').val();
+		var sitename = $('#sitenameselected').val();
+		//alert(siteno)
+        //alert(date_time)
+
+		$(function(){
+			listSiteName(siteno, date_time);
+		});
+
+		$(function(){
+			showFlow(siteno+sitename, date_time);
+		});
+
+	});
+	
+	$('#sitenameselected').change(function(){
+		var sitename = $('#sitenameselected').val();
+		var date_time = $('#timeselected').val();
+		//alert(sitename)
+        //alert(date_time)
+
+		$(function(){
+			showFlow(siteno+sitename, date_time);
+		});
+			
+	});
+	
+
+</script>
+
+
+
+<script>
+    //all the functions
+	//选择线路后，显示实时的人流量
+	function listSiteName(siteno, date_time){
+	$.ajax({
+		type:'GET',
+		url: 'http://localhost:58480/v1/api/soda/base/query_site_flow_records_by_site_num_and_date',
+		data:{'site_num':siteno,'date':date_time},
+		dataType:'json',
+		success:function(data){
+		$('.city>ul').empty();
+		
+		
+		for(var key in data["data"]){			
+			$(".city>ul").append("<li><span>"+key.split(siteno)[1]+"</span> <em>"+data["data"][key]+"</em></li>")//"<li>"+sitename[i]+","+sitepnum[i]+"</li>")
+
+			}
+		
+		}//success
+
+		});//ajax0
+
+	}
+	
+	
+	//加载在选择线路后可以选择的站点名字
+	function addSiteitem(siteno, date_time){
+	$.ajax({
+		type:'GET',
+		url: 'http://localhost:58480/v1/api/soda/base/query_site_by_line_num',
+		data:{'site_num':siteno},
+		dataType:'json',
+		success:function(data){
+		
+		$("#sitenameselected").empty();
+
+		for(var i=0;i < data["data"].length; i++){
+			var temname = data["data"][i]['SITE_NAME'].split(siteno)[1]
+		
+			$("#sitenameselected").append("<option>"+temname+"</option>")
+			}
+			
+		var sitename = $('#sitenameselected').val();
+			$(function(){
+			showFlow(siteno+sitename, date_time);
+		});
+
+		
+		}//success
+		
+		
+
+			});//ajax1
+	}
+	
+	
+	function showFlow(siteNoName, date_time){
+	// 路径配置
+    require.config({
+        paths: {
+            echarts: 'echarts/build/dist/'
+        }
+    });
+    // 使用
+    require(
+            [
+                'echarts',
+                'echarts/chart/bar'
+            ],
+            function (ec) {
+                var myChartZzz = ec.init(document.getElementById('zzz'));
+                var ecConfig = require('echarts/config');
+ 
+                
+				//myChartZzz.setOption(cx);
+				myChartZzz.showLoading();
+				
+				var data={
+						'site':siteNoName,
+						'date':date_time
+						};
+				var pnum = [];
+				
+				$.ajax({
+						type:'GET',
+						url: 'http://localhost:58480/v1/api/soda/base/query_flow',
+						data:data,
+						dataType:'json',
+        				success:function(data){
+							//alert(JSON.stringify(data));
+
+			
+						for(var i=5;i < 24; i++){
+							var tem = 'TIME'+i
+							//pnum.push(data["data"][tem])
+							pnum.push(parseInt(data["data"][tem]))
+
+							}
+							
+							totalamount = (parseInt(data["data"]["TOTALAMOUNT"])/10000).toFixed(2)
+							totaldiscount = parseInt(data["data"]["TOTALDISCOUNT"])
+							totalflow = parseInt(data["data"]["TOTALRECORDS"])
+							
+							$("#totalamount").text(totalamount);
+							$("#totaldiscount").text(totaldiscount);
+							$("#totalflow").text(totalflow)
+                            $("#totalflowpermin").text((totalflow/24).toFixed(2))
+							
+							$(".view03>.data.mt10>.Title").text(siteNoName+" 数据汇总")
+							
+							
+						
+							
+							myChartZzz.hideLoading();
+							
+							
+							var cx = {
+                    tooltip : {
+                        trigger: 'axis'
+                    },
+                    color:["#ffec00","#2786fc"],
+                    calculable : true,
+           
+                    xAxis : [
+                        {
+                            type : 'category',
+							//data:['0:00~1:00', '1:00~2:00', '2:00~3:00', '3:00~4:00', '4:00~5:00', '5:00~6:00', '6:00~7:00', '7:00~8:00', '8:00~9:00', '9:00~10:00', '10:00~11:00', '11:00~12:00', '12:00~13:00', '13:00~14:00', '14:00~15:00', '15:00~16:00', '16:00~17:00', '17:00~18:00', '18:00~19:00', '19:00~20:00', '20:00~21:00', '21:00~22:00', '22:00~23:00', '23:00~24:00'],
+							data:['5:00~6:00', '6:00~7:00', '7:00~8:00', '8:00~9:00', '9:00~10:00', '10:00~11:00', '11:00~12:00', '12:00~13:00', '13:00~14:00', '14:00~15:00', '15:00~16:00', '16:00~17:00', '17:00~18:00', '18:00~19:00', '19:00~20:00', '20:00~21:00', '21:00~22:00', '22:00~23:00', '23:00~24:00'],
+
+                            axisLabel:{
+                                show: true,
+                                interval: '1',
+                                rotate:+35,
+                                formatter: null,
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ],
+                    yAxis : [
+                        {
+
+                            type : 'value',
+                            name : '乘客数量',
+                            axisLabel : {
+                                formatter: '{value} 人',
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            }
+                        }
+                    ],
+					grid:{
+						x:50,
+						y:20//,
+						//y2:4
+					},
+                    series : [
+
+                        {  
+                            name:'站点人数',
+                            type:'bar',
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: true,
+                                        position: 'top'
+                                    }
+                                }
+                            },
+                            data:pnum,
+							barWidth:10,
+
+
+                        }
+                    ]
+				 
+
+                };
+							
+							myChartZzz.setOption(cx);
+							
+			 
+
+											}
+						});
+				
+				
+            });
+			}
+
+</script>
+
+
+
+</body>
+</html>

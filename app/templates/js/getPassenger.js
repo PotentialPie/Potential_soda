@@ -40,7 +40,9 @@ function dateConvert(date) {
 
 function setStationAndColor(options, color) {
 	function getFeed(in_out, date, time_slice) {
-		var url = "./jsonData/" + in_out + "_site/" + in_out + "_site_" + date + ".json";
+		//alert(data)
+		//var url = "./jsonData/" + in_out + "_site/" + in_out + "_site_" + date + ".json";
+		var url = "./jsonData/site/s" + date + ".csv.json";
 		$.getJSON(url, function(result) {
 			var res = new Object();
 			$.each(result, function(site_code, people) {
@@ -63,8 +65,12 @@ function setStationAndColor(options, color) {
 		dateBox.innerHTML = dateConvert(date) + '出站流量';
 	}
 	*/
+	var timeBox = document.getElementById("clock");
+	timeBox.innerHTML = "06:00";
 	var in_out = 'in'
-	var date = document.getElementById('date').value;
+	var date = document.getElementById('timeselected').value;
+	date = date.replace(/-/g,"")
+	date = date.substring(2, date.length)
 	var t = 72;
 	getFeed(in_out, date, t);
 	setInterval(function() {
@@ -72,7 +78,9 @@ function setStationAndColor(options, color) {
 		//in_out = document.getElementById('in_out').value;
 		in_out = 'in'
 		dateInit = date;
-		date = document.getElementById('date').value;
+		date = document.getElementById('timeselected').value;
+		date = date.replace(/-/g,"")
+		date = date.substring(2, date.length)
 
 		if(dateInit != date || in_outInit != in_out) {
 			t = 72;
@@ -84,11 +92,12 @@ function setStationAndColor(options, color) {
 		timeStr += ':';
 		timeStr += zfill((t * 5) % 60);
 		timeBox.innerHTML = timeStr;
+		/*
 		if(in_out == 'in') {
 			dateBox.innerHTML = dateConvert(date) + '进站流量';
 		} else {
 			dateBox.innerHTML = dateConvert(date) + '出站流量';
-		}
+		}*/
 		getFeed(in_out, date, t);
 	}, 50);
 }

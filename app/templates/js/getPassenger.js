@@ -99,5 +99,5 @@ function setStationAndColor(options, color) {
 			dateBox.innerHTML = dateConvert(date) + '出站流量';
 		}*/
 		getFeed(in_out, date, t);
-	}, 50);
+	}, 150);
 }

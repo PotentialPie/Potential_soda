@@ -118,8 +118,8 @@ html,body{
   background-color: #fff;
 }
 #mainMap{
-  width:100vw;
-  height:100vh;
+  width:800px;
+  height:300px;
 }
 /*.colorDemo{
   position: fixed;

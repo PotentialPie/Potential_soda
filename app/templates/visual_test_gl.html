@@ -62,7 +62,8 @@
                     <div class="total">
                         <span>全市上地铁在站总人数： 12万人</span>
                     </div>
-                    <svg id="mainMap" xmlns="http://www.w3.org/2000/svg" viewBox="-18 5 850 850">
+                    <div class="Charts">
+                    <svg id="mainMap" xmlns="http://www.w3.org/2000/svg" viewBox="-18 5 1200 850">
 					<!-- 地图 -->
 					<rect id="backGround" x="0" y="0" height="1000" width="1000" fill="#FFFFF0" opacity="0"></rect>
 					<!--图例-->
@@ -78,6 +79,7 @@
 						<text font-size="10px" font-weight="bold" stroke="#040404" fill="#808080" stroke-width="0.1" x="750" y="157">正常</text>
 					</g>-->
 				    </svg>
+                    </div>
                     <div class="city" style="overflow-x:hidden;overflow-y:scroll; height:435px">
                         <ul>
 
@@ -405,7 +407,7 @@
 		$(function(){
 			showFlow(siteno+sitename, date_time);
 			showCluster(siteno+sitename, date_time);
-			showPredict(siteno);
+			showPredict(siteno+sitename);
 		});
 
 	});
@@ -419,7 +421,7 @@
 		$(function(){
 			showFlow(siteno+sitename, date_time);
 			showCluster(siteno+sitename, date_time);
-			showPredict(siteno);
+			showPredict(siteno+sitename);
 		});
 			
 	});
@@ -475,7 +477,7 @@
 			$(function(){
 			showFlow(siteno+sitename, date_time);
 			showCluster(siteno+sitename, date_time);
-			showPredict(siteno);
+			showPredict(siteno+sitename);
 		});
 
 		
@@ -718,14 +720,17 @@
 					if(data['code']==101){
 						alert(siteNoName+"不是热门站点，无预测数据")
 					}
+					alert(JSON.stringify(data))
 					
 					var preds = []
 					
-					for (var j=0; j<7;j++){
-						var pnum = []
+					for (var j=0;j<7;j++){
+						//var tem2 = ''
+                        alert(data['data'][j])
+					    var pnum = []
 						for(var i=0;i < 24; i++){
 							var tem = 'TIME'+i
-							pnum.push(parseInt(data["data"][tem]))
+							pnum.push(parseInt(data['data'][j][tem]))
 							}//i
 						preds.push(pnum)
 					}//j

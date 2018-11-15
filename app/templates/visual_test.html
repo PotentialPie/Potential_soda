@@ -234,15 +234,6 @@
 		<script src="./js/getPassenger.js"></script>
 
 
-<script type="text/javascript">
-    dateOption = document.getElementById('date');
-    var dateArray = ['20150301', '20150302', '20150303', '20150304', '20150305', '20150306', '20150307', '20150308', '20150309', '20150310', '20150311', '20150312', '20150313', '20150314', '20150315', '20150316', '20150317', '20150318', '20150319', '20150320', '20150321', '20150322', '20150323', '20150324', '20150325', '20150326', '20150327', '20150328', '20150329', '20150330', '20150331', '20150401', '20150402', '20150403', '20150404', '20150405', '20150406', '20150407', '20150408', '20150409', '20150410', '20150411', '20150412', '20150413', '20150414', '20150415', '20150416', '20150417', '20150418', '20150419', '20150420', '20150421', '20150422', '20150423', '20150424', '20150425', '20150426', '20150427', '20150428', '20150429', '20150430'];
-    var option = "";
-    for(d in dateArray) {
-        option += "<option>"+dateArray[d]+"</option>";
-    };
-    dateOption.innerHTML = option;
-</script>
 
 <script type="text/javascript">
     // 路径配置
@@ -378,55 +369,6 @@
                 'echarts/chart/pie'
             ],
             function (ec) {
-                var myChartZz = ec.init(document.getElementById('z'));
-                var ecConfig = require('echarts/config');
-                var zz = {
-                    tooltip : {
-                        trigger: 'item',
-                        formatter: "{a} <br/>{b} : {c} ({d}%)"
-                    },
-                    calculable : true,
-                    series : [
-                        {
-                            name:'身份分布',
-                            type:'pie',
-                            radius : [20, 70],
-                            center : ['50%','50%'],
-                            roseType : 'area',
-                            x: '50%',               // for funnel
-                            max: 40,                // for funnel
-                            sort : 'ascending',     // for funnel
-                            data:[
-                                {value:2423, name:'大学生'},
-                                {value:1723, name:'上班族'},
-                                {value:436, name:'游客'},
-                                {value:3789, name:'老年人'},
-                                {value:178, name:'中小学生'},
-                                {value:399, name:'其他'}
-                            ]
-                        }
-                    ]
-                };
-
-                myChartZz.setOption(zz);
-            });
-
-</script>
-
-<script type="text/javascript">
-    // 路径配置
-    require.config({
-        paths: {
-            echarts: 'echarts/build/dist/'
-        }
-    });
-    // 使用
-    require(
-            [
-                'echarts',
-                'echarts/chart/pie'
-            ],
-            function (ec) {
                 var myChartZz = ec.init(document.getElementById('zz'));
                 var ecConfig = require('echarts/config');
                 var zz = {
@@ -508,6 +450,7 @@
 
 		$(function(){
 			showFlow(siteno+sitename, date_time);
+			showCluster(siteno+sitename, date_time);
 		});
 
 	});
@@ -520,6 +463,7 @@
 
 		$(function(){
 			showFlow(siteno+sitename, date_time);
+			showCluster(siteno+sitename, date_time);
 		});
 			
 	});
@@ -574,6 +518,7 @@
 		var sitename = $('#sitenameselected').val();
 			$(function(){
 			showFlow(siteno+sitename, date_time);
+			showCluster(siteno+sitename, date_time);
 		});
 
 		
@@ -720,9 +665,80 @@
 				
             });
 			}
+		
+		//显示聚类身份函数
+	function showCluster(siteNoName, date_time){
+			   // 路径配置
+			require.config({
+				paths: {
+				echarts: 'echarts/build/dist/'}
+				});
+				
+			    // 使用
+			require(
+					[
+						'echarts',
+						'echarts/chart/pie'
+					],
+            function (ec) {
+                var myChartZz = ec.init(document.getElementById('z'));
+                var ecConfig = require('echarts/config');
+				
+				var clusname = ['大学生','上班族','游客','老年人','中小学生','其他']
+				var cluster = []
+				$.ajax({
+		
+					type:'GET',
+					url: 'http://localhost:58480/v1/api/soda/base/query_cluster',
+					data:{'site':siteNoName,'date':date_time},
+					dataType:'json',
+					success:function(data){
+						//alert(JSON.stringify(data))
+						
+						var count=0
+						for(var key in data['data']){
+						    if(key=='SITE' || key=='DATE'){continue}
+							cluster.push({value:(data['data'][key]), name: clusname[count]})
+							count+=1
+						}//for
+						
+						
+						var zz = {
+							tooltip : {
+										trigger: 'item',
+										formatter: "{a} <br/>{b} : {c} ({d}%)"
+										},
+							calculable : true,
+							series : [
+										{
+									name:'身份分布',
+									type:'pie',
+									radius : [20, 70],
+									center : ['50%','50%'],
+									roseType : 'area',
+									x: '50%',               // for funnel
+									max: 40,                // for funnel
+									sort : 'ascending',     // for funnel
+									data:cluster
+                        }
+                    ]
+                };
+
+                myChartZz.setOption(zz);
+						}//success
+					});
+                
+				
+				
+            });
+				
+			
+			
+		
+		}//function showCluster
+		
 
 </script>
-
 
 
 </body>

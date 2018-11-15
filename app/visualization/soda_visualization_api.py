@@ -88,6 +88,42 @@ class GetPredFlowInterface(SDResource):
         ret.headers['Access-Control-Allow-Origin'] = '*'
         return ret
 
+@base_ns.route("/query_seven_pred_flow")
+class GetSevenPredFlowInterface(SDResource):
+    @base_ns.doc("query_seven_pred_flow",
+                 params={"site": "站点名称"},
+                 description=u"根据站点名称来获取未来七天每天24小时的人流量数据。\n"
+                             u"返回200：成功\n"
+                             u"返回101：没有查询到相关人流量记录\n"
+                             u"返回102：参数错误，检查参数")
+    def get(self):
+        parser_ = SDRequestParser()
+        parser_.add_argument("site", type=str, required=True)
+
+        params = parser_.parse_args()
+        site = params['site']
+
+        seven_flow_data = []
+        for i in range(1, 8):
+            # 查询当日当前站点人流量数据
+            flow_data = sodaVisualizationService.queryPredictedFlowBySiteAndDate(site, i)
+            seven_flow_data.append(flow_data.as_dict())
+        # 判断人流量数据是否为空，为空则返回错误
+        if seven_flow_data is None or len(seven_flow_data) != 7:
+            ret = SDCommonJsonRet(code=SDCodeMsg.FLOW_RECORD_NOT_FOUND.code,
+                                  success=False,
+                                  msg=SDCodeMsg.FLOW_RECORD_NOT_FOUND.msg,
+                                  data=SDCodeMsg.FLOW_RECORD_NOT_FOUND.msg)
+        else:
+            # 不为空，则返回数据
+            ret = SDCommonJsonRet(code=SDCodeMsg.SUCCESS.code,
+                                  success=True,
+                                  msg=SDCodeMsg.SUCCESS.msg,
+                                  data=seven_flow_data)
+        ret = make_response(ret.toJsonStr())
+        ret.headers['Access-Control-Allow-Origin'] = '*'
+        return ret
+
 @base_ns.route("/query_cluster")
 class GetClusterInterface(SDResource):
     @base_ns.doc("query_cluster",

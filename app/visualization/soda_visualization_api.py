@@ -107,6 +107,14 @@ class GetSevenPredFlowInterface(SDResource):
         for i in range(1, 8):
             # 查询当日当前站点人流量数据
             flow_data = sodaVisualizationService.queryPredictedFlowBySiteAndDate(site, i)
+            if flow_data is None or flow_data == '':
+                ret = SDCommonJsonRet(code=SDCodeMsg.FLOW_RECORD_NOT_FOUND.code,
+                                      success=False,
+                                      msg=SDCodeMsg.FLOW_RECORD_NOT_FOUND.msg,
+                                      data=SDCodeMsg.FLOW_RECORD_NOT_FOUND.msg)
+                ret = make_response(ret.toJsonStr())
+                ret.headers['Access-Control-Allow-Origin'] = '*'
+                return ret
             seven_flow_data.append(flow_data.as_dict())
         # 判断人流量数据是否为空，为空则返回错误
         if seven_flow_data is None or len(seven_flow_data) != 7:
